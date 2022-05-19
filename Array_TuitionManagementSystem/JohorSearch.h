@@ -20,7 +20,11 @@ void JohorSearchTutor(Tutor tutorArray[])
 	int tutorID;
 
 	cout << "Insert Tutor ID :";
-	cin >> tutorID;
+	while (!(cin >> tutorID)) {
+		cout << "Error: insert Tutor ID :";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
 
 	int index = JohorLinearSearchTutor(tutorArray, tutorID);
 	if (index == -1)
