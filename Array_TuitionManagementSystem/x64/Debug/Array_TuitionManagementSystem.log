@@ -1,4 +1,2 @@
 ﻿  Main.cpp
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\GenerateData.h(5,6): error C2084: function 'void GenerateData(Tutor [])' already has a body
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\AddTutor.h(64): message : see previous definition of 'GenerateData'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Main.cpp(29,2): error C2065: 'GenerateData': undeclared identifier
+  Array_TuitionManagementSystem.vcxproj -> C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe

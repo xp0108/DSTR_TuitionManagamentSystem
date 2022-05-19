@@ -20,7 +20,6 @@ void searchTutor(Tutor tutorArray[])
 	int tutorID;
 
 	cout << "Insert Tutor ID :";
-	//cin >> tutorID;
 	while (!(cin >> tutorID)) {
 		cout << "Error: insert Tutor ID :";
 		cin.clear();
