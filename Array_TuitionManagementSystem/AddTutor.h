@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "DataStruc.h"
 
@@ -66,15 +67,18 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[50].dateJoin = "12/05/2021";
     tutor_info[50].dateTerminated = "12/06/2021";
     tutor_info[50].hourlyRate = 10;
+    tutor_info[50].tutionCode = 1;
+    tutor_info[50].subjectCode = 1;
     tutor_info[50].tutorPhone = "0123456789";
     tutor_info[50].tutorAddress = "Bukit Jalil";
 
-    cout << "Tutor ID: " << tutor_info[50].tutorID << endl;
-    cout << "Tutor name: " << tutor_info[50].tutorName << endl;
-    cout << "Date joined: " << tutor_info[50].dateJoin << endl;
-    cout << "Date terminated: " << tutor_info[50].dateTerminated << endl;
-    cout << "Hourly rate: " << tutor_info[50].hourlyRate << endl;
-    cout << "Phone number: " << tutor_info[50].tutorPhone << endl;
-    cout << "Address: " << tutor_info[50].tutorAddress << endl;
-    cout << endl;
+    tutor_info[51].tutorID = 51;
+    tutor_info[51].tutorName = "Khor";
+    tutor_info[51].dateJoin = "12/05/2021";
+    tutor_info[51].dateTerminated = "12/06/2021";
+    tutor_info[51].hourlyRate = 10;
+    tutor_info[51].tutionCode = 2;
+    tutor_info[51].subjectCode = 3;
+    tutor_info[51].tutorPhone = "111111111";
+    tutor_info[51].tutorAddress = "KL";
 }

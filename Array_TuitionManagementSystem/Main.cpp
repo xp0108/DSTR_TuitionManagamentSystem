@@ -4,6 +4,8 @@
 
 using namespace std;
 
+
+
 void loopSymbol(int times = 20, string symbol = "=")
 {
 	for (int i = 0; i < times; i++)
@@ -24,9 +26,7 @@ int main()
 	Tutor tutor_info[100];
 
 	GenerateData(tutor_info);
-	Login();
+	Login(tutor_info);
 
 	return 0;
 }
-
-
