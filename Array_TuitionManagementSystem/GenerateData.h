@@ -23,13 +23,13 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[51].tutorPhone = "0129304940";
     tutor_info[51].tutorAddress = "Petaling Jaya";
 
-    tutor_info[51].tutorID = 52;
-    tutor_info[51].tutorName = "Michelle";
-    tutor_info[51].dateJoin = "12/05/2021";
-    tutor_info[51].dateTerminated = "12/06/2021";
-    tutor_info[51].hourlyRate = 10;
-    tutor_info[51].tutionCode = 3;
-    tutor_info[51].subjectCode = 4;
-    tutor_info[51].tutorPhone = "0122930940";
-    tutor_info[51].tutorAddress = "Selangor";
+    tutor_info[52].tutorID = 52;
+    tutor_info[52].tutorName = "Michelle";
+    tutor_info[52].dateJoin = "12/05/2021";
+    tutor_info[52].dateTerminated = "12/06/2021";
+    tutor_info[52].hourlyRate = 10;
+    tutor_info[52].tutionCode = 3;
+    tutor_info[52].subjectCode = 4;
+    tutor_info[52].tutorPhone = "0122930940";
+    tutor_info[52].tutorAddress = "Selangor";
 }
