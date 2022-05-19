@@ -1,27 +1,2 @@
 ﻿  Main.cpp
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DataStruc.h(5,1): error C2011: 'Tutor': 'struct' type redefinition
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DataStruc.h(4): message : see declaration of 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DataStruc.h(19,1): error C2011: 'Subject': 'struct' type redefinition
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DataStruc.h(18): message : see declaration of 'Subject'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DataStruc.h(26,1): error C2011: 'Tuition': 'struct' type redefinition
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DataStruc.h(25): message : see declaration of 'Tuition'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Search.h(14,6): error C2027: use of undefined type 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DataStruc.h(4): message : see declaration of 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Search.h(18,11): error C2027: use of undefined type 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DataStruc.h(4): message : see declaration of 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Search.h(38,43): error C2059: syntax error: ']'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Search.h(46,49): error C2027: use of undefined type 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DataStruc.h(4): message : see declaration of 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Search.h(47,51): error C2027: use of undefined type 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DataStruc.h(4): message : see declaration of 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Search.h(48,52): error C2027: use of undefined type 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DataStruc.h(4): message : see declaration of 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Search.h(49,54): error C2027: use of undefined type 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DataStruc.h(4): message : see declaration of 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Main.cpp(26,8): error C2079: 'tutor_info' uses undefined struct 'Tutor'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Main.cpp(28,25): error C2664: 'void GenerateData(Tutor [])': cannot convert argument 1 from 'int' to 'Tutor []'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Main.cpp(28,15): message : Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\AddTutor.h(63,6): message : see declaration of 'GenerateData'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Main.cpp(29,18): error C2664: 'void Login(Tutor [])': cannot convert argument 1 from 'int' to 'Tutor []'
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Main.cpp(29,8): message : Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\Login.h(160,6): message : see declaration of 'Login'
+LINK : fatal error LNK1168: cannot open C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe for writing

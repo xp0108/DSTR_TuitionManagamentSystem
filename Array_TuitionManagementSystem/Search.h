@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "DataStruc.h"
 
@@ -35,7 +36,7 @@ void searchTutor(Tutor tutorArray[])
 	std::cout << "Insert Tutor ID :";
 	std::cin >> tutorID;
 	
-	int index = binarySearchTutor(tutorArray[], tutorID);
+	int index = binarySearchTutor(tutorArray, tutorID);
 	if (index == -1)
 	{
 		std::cout << "Tutor ID not found" << std::endl;

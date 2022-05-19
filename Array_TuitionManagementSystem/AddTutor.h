@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "DataStruc.h"
 
@@ -61,13 +62,11 @@ void RegisterTutorFunction() {
 }
 
 void GenerateData(Tutor tutor_info[]) {
-    for (int i = 0; i < sizeof(tutor_info); i++) {
-        tutor_info[i].tutorID = i;
-        tutor_info[i].tutorName = "Onn";
-        tutor_info[i].dateJoin = "12/05/2021";
-        tutor_info[i].dateTerminated = "12/06/2021";
-        tutor_info[i].hourlyRate = 10;
-        tutor_info[i].tutorPhone = "0123456789";
-        tutor_info[i].tutorAddress = "Bukit Jalil";
-    }
+    tutor_info[50].tutorID = 50;
+    tutor_info[50].tutorName = "Onn";
+    tutor_info[50].dateJoin = "12/05/2021";
+    tutor_info[50].dateTerminated = "12/06/2021";
+    tutor_info[50].hourlyRate = 10;
+    tutor_info[50].tutorPhone = "0123456789";
+    tutor_info[50].tutorAddress = "Bukit Jalil";
 }

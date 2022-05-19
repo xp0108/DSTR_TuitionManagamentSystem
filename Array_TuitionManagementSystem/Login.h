@@ -1,7 +1,7 @@
+#pragma once
 #include <iostream>
 #include "AddTutor.h"
 #include "Search.h"
-#include "DataStruc.h"
 using namespace std;
 
 void KLAdminMenu()
