@@ -1,7 +1,6 @@
-// ARRAY Approach - Tuition Management System
+// Linked List Approach - Tuition Management System
 #include <iostream>
 #include "Login.h"
-#include "GenerateData.h"
 
 using namespace std;
 
@@ -24,10 +23,7 @@ int main()
 
 	cout << endl << endl;
 
-	Tutor tutor_info[100];
-
-	GenerateData(tutor_info);
-	Login(tutor_info);
+	Login();
 
 	return 0;
 }

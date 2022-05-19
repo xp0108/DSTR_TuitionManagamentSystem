@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e8f5aeda-7741-4d1d-b60f-11ce2eec0f8b}</ProjectGuid>
-    <RootNamespace>ArrayTuitionManagementSystem</RootNamespace>
+    <ProjectGuid>{abbcfcde-2299-4f2e-a87d-7be5840fdcfa}</ProjectGuid>
+    <RootNamespace>LinkedListTuitionManagementSystem</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,13 +142,8 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AddTutor.h" />
-    <ClInclude Include="DataStruc.h" />
-    <ClInclude Include="GenerateData.h" />
-    <ClInclude Include="JohorSearch.h" />
-    <ClInclude Include="KLSearch.h" />
+    <ClInclude Include="DataStruct.h" />
     <ClInclude Include="Login.h" />
-    <ClInclude Include="HRSearch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

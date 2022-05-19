@@ -1,12 +1,9 @@
 #pragma once
 #include <iostream>
-#include "AddTutor.h"
-#include "HRSearch.h"
-#include "KLSearch.h"
-#include "JohorSearch.h"
+#include "DataStruct.h"
 using namespace std;
 
-void KLAdminMenu(Tutor tutorArray[])
+void KLAdminMenu()
 {
 	for (;;)
 	{
@@ -38,7 +35,7 @@ void KLAdminMenu(Tutor tutorArray[])
 			//function();
 			break;
 		case 5:
-			klSearchTutor(tutorArray);
+			//function();
 			break;
 		case 6:
 			//function();
@@ -54,7 +51,7 @@ void KLAdminMenu(Tutor tutorArray[])
 	}
 }
 
-void JohorAdminMenu(Tutor tutorArray[])
+void JohorAdminMenu()
 {
 	for (;;)
 	{
@@ -86,7 +83,7 @@ void JohorAdminMenu(Tutor tutorArray[])
 			//function();
 			break;
 		case 5:
-			JohorSearchTutor(tutorArray);
+			//function();
 			break;
 		case 6:
 			//function();
@@ -102,7 +99,7 @@ void JohorAdminMenu(Tutor tutorArray[])
 	}
 }
 
-void HRManagerMenu(Tutor tutorArray[])
+void HRManagerMenu()
 {
 	for (;;)
 	{
@@ -124,7 +121,7 @@ void HRManagerMenu(Tutor tutorArray[])
 		switch (hrChoice)
 		{
 		case 1:
-			RegisterTutorFunction(tutorArray);
+			//function();
 			break;
 		case 2:
 			//function();
@@ -133,10 +130,10 @@ void HRManagerMenu(Tutor tutorArray[])
 			//function();
 			break;
 		case 4:
-			//PrintTutorInfo();
+			//function();
 			break;
 		case 5:
-			searchTutor(tutorArray);
+			//function();
 			break;
 		case 6:
 			//function();
@@ -158,7 +155,7 @@ void HRManagerMenu(Tutor tutorArray[])
 	}
 }
 
-void Login(Tutor tutorArray[])
+void Login()
 {
 	int loginCount = 0;
 
@@ -173,17 +170,17 @@ void Login(Tutor tutorArray[])
 		if (username == "kl" && password == "123")
 		{
 			cout << "Here is KL Branch";
-			KLAdminMenu(tutorArray);
+			KLAdminMenu();
 		}
 		else if (username == "johor" && password == "123")
 		{
 			cout << "Here is Johor Branch";
-			JohorAdminMenu(tutorArray);
+			JohorAdminMenu();
 		}
 		else if (username == "hr" && password == "123")
 		{
 			cout << "Here is HR Manager";
-			HRManagerMenu(tutorArray);
+			HRManagerMenu();
 
 		}
 		else
