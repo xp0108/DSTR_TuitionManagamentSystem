@@ -1,6 +1,7 @@
 // ARRAY Approach - Tuition Management System
 #include <iostream>
 #include "Login.h"
+#include "GenerateData.h"
 
 using namespace std;
 
