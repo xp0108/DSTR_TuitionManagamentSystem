@@ -124,7 +124,7 @@ void HRManagerMenu(Tutor tutorArray[])
 		switch (hrChoice)
 		{
 		case 1:
-			RegisterTutorFunction();
+			RegisterTutorFunction(tutorArray);
 			break;
 		case 2:
 			//function();
@@ -133,7 +133,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			//function();
 			break;
 		case 4:
-			//function();
+			//PrintTutorInfo();
 			break;
 		case 5:
 			searchTutor(tutorArray);
