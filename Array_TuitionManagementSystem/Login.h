@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "AddTutor.h"
 using namespace std;
 
 void KLAdminMenu()
@@ -121,7 +121,7 @@ void HRManagerMenu()
 		switch (hrChoice)
 		{
 		case 1:
-			//function();
+			RegisterTutorFunction();
 			break;
 		case 2:
 			//function();
