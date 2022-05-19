@@ -59,3 +59,22 @@ void RegisterTutorFunction() {
 
     PrintTutorInfo(arraysize, tutor_info);
 }
+
+void GenerateData(Tutor tutor_info[]) {
+    tutor_info[50].tutorID = 50;
+    tutor_info[50].tutorName = "Onn";
+    tutor_info[50].dateJoin = "12/05/2021";
+    tutor_info[50].dateTerminated = "12/06/2021";
+    tutor_info[50].hourlyRate = 10;
+    tutor_info[50].tutorPhone = "0123456789";
+    tutor_info[50].tutorAddress = "Bukit Jalil";
+
+    cout << "Tutor ID: " << tutor_info[50].tutorID << endl;
+    cout << "Tutor name: " << tutor_info[50].tutorName << endl;
+    cout << "Date joined: " << tutor_info[50].dateJoin << endl;
+    cout << "Date terminated: " << tutor_info[50].dateTerminated << endl;
+    cout << "Hourly rate: " << tutor_info[50].hourlyRate << endl;
+    cout << "Phone number: " << tutor_info[50].tutorPhone << endl;
+    cout << "Address: " << tutor_info[50].tutorAddress << endl;
+    cout << endl;
+}

@@ -21,6 +21,9 @@ int main()
 
 	cout << endl << endl;
 
+	Tutor tutor_info[100];
+
+	GenerateData(tutor_info);
 	Login();
 
 	return 0;
