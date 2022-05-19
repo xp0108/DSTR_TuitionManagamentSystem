@@ -1,1 +1,2 @@
 C:\Users\Hong Yen Wai\Desktop\DSTR\Array_TuitionManagementSystem v0.2\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe
+C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe

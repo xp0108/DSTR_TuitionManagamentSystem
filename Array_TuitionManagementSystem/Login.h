@@ -1,5 +1,7 @@
 #include <iostream>
 #include "AddTutor.h"
+#include "Search.h"
+#include "DataStruc.h"
 using namespace std;
 
 void KLAdminMenu()
@@ -99,13 +101,13 @@ void JohorAdminMenu()
 	}
 }
 
-void HRManagerMenu()
+void HRManagerMenu(Tutor tutorArray[])
 {
 	for (;;)
 	{
 		int hrChoice;
 		cout << endl;
-		cout << " **JOHOR ADMIN** " << endl;
+		cout << " **HR ADMIN** " << endl;
 		cout << "1. Register Tutor" << endl;
 		cout << "2. Update Tutor Record" << endl;
 		cout << "3. Delete Tutor Record" << endl;
@@ -133,7 +135,7 @@ void HRManagerMenu()
 			//function();
 			break;
 		case 5:
-			//function();
+			searchTutor(tutorArray);
 			break;
 		case 6:
 			//function();
@@ -155,7 +157,7 @@ void HRManagerMenu()
 	}
 }
 
-void Login()
+void Login(Tutor tutorArray[])
 {
 	int loginCount = 0;
 
@@ -180,7 +182,7 @@ void Login()
 		{
 			cout << "Here is HR Manager";
 
-			HRManagerMenu();
+			HRManagerMenu(tutorArray);
 
 		}
 		else
