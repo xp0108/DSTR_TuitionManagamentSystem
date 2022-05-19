@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="AddTutor.h" />
     <ClInclude Include="DataStruc.h" />
+    <ClInclude Include="GenerateData.h" />
     <ClInclude Include="JohorSearch.h" />
     <ClInclude Include="KLSearch.h" />
     <ClInclude Include="Login.h" />
