@@ -32,7 +32,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[52].hourlyRate = 10;
     tutor_info[52].tutorPhone = "0122930940";
     tutor_info[52].tutorAddress = "Selangor";
-    tutor_info[52].tutionCode = 3;
+    tutor_info[52].tutionCode = 1;
     tutor_info[52].subjectCode = 4;
     tutor_info[52].rating = 5;
 }
