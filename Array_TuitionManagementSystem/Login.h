@@ -1,16 +1,17 @@
 #pragma once
 #include <iostream>
 #include "AddTutor.h"
-#include "Search.h"
+#include "HRSearch.h"
+#include "KLSearch.h"
+#include "JohorSearch.h"
 using namespace std;
 
-void KLAdminMenu()
+void KLAdminMenu(Tutor tutorArray[])
 {
 	for (;;)
 	{
-		cout << endl;
 		int klAdminChoice;
-		cout << endl;
+		cout << endl << endl;
 		cout << " **KL ADMIN** " << endl;
 		cout << "1. Add rating for tutor" << endl;
 		cout << "2. Search a Tutor by Tutor ID" << endl;
@@ -37,7 +38,7 @@ void KLAdminMenu()
 			//function();
 			break;
 		case 5:
-			//function();
+			klSearchTutor(tutorArray);
 			break;
 		case 6:
 			//function();
@@ -53,12 +54,12 @@ void KLAdminMenu()
 	}
 }
 
-void JohorAdminMenu()
+void JohorAdminMenu(Tutor tutorArray[])
 {
 	for (;;)
 	{
 		int johorAdminChoice;
-		cout << endl;
+		cout << endl << endl;
 		cout << " **JOHOR ADMIN** " << endl;
 		cout << "1. Add rating for tutor" << endl;
 		cout << "2. Search a Tutor by Tutor ID" << endl;
@@ -85,7 +86,7 @@ void JohorAdminMenu()
 			//function();
 			break;
 		case 5:
-			//function();
+			JohorSearchTutor(tutorArray);
 			break;
 		case 6:
 			//function();
@@ -106,7 +107,7 @@ void HRManagerMenu(Tutor tutorArray[])
 	for (;;)
 	{
 		int hrChoice;
-		cout << endl;
+		cout << endl << endl;
 		cout << " **HR ADMIN** " << endl;
 		cout << "1. Register Tutor" << endl;
 		cout << "2. Update Tutor Record" << endl;
@@ -171,17 +172,17 @@ void Login(Tutor tutorArray[])
 
 		if (username == "kl" && password == "123")
 		{
-			KLAdminMenu();
+			cout << "Here is KL Branch";
+			KLAdminMenu(tutorArray);
 		}
 		else if (username == "johor" && password == "123")
 		{
-			cout << "Here is Johor";
-			JohorAdminMenu();
+			cout << "Here is Johor Branch";
+			JohorAdminMenu(tutorArray);
 		}
 		else if (username == "hr" && password == "123")
 		{
 			cout << "Here is HR Manager";
-
 			HRManagerMenu(tutorArray);
 
 		}

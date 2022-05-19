@@ -144,8 +144,10 @@
   <ItemGroup>
     <ClInclude Include="AddTutor.h" />
     <ClInclude Include="DataStruc.h" />
+    <ClInclude Include="JohorSearch.h" />
+    <ClInclude Include="KLSearch.h" />
     <ClInclude Include="Login.h" />
-    <ClInclude Include="Search.h" />
+    <ClInclude Include="HRSearch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

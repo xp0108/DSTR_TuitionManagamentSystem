@@ -1,1 +1,2 @@
-﻿LINK : fatal error LNK1168: cannot open C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe for writing
+﻿  Main.cpp
+  Array_TuitionManagementSystem.vcxproj -> C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe
