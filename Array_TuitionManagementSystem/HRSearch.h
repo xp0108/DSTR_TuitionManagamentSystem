@@ -20,7 +20,12 @@ void searchTutor(Tutor tutorArray[])
 	int tutorID;
 
 	cout << "Insert Tutor ID :";
-	cin >> tutorID;
+	//cin >> tutorID;
+	while (!(cin >> tutorID)) {
+		cout << "Error: insert Tutor ID :";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
 
 	int index = linearSearchTutor(tutorArray, tutorID);
 	if (index == -1)

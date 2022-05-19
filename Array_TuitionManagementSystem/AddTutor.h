@@ -72,7 +72,6 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[50].tutionCode = 1;
     tutor_info[50].subjectCode = 1;
     tutor_info[50].rating = 0;
-    
 
     tutor_info[51].tutorID = 51;
     tutor_info[51].tutorName = "Khor";
