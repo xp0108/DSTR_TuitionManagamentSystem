@@ -41,7 +41,7 @@ void KLAdminMenu(Tutor tutorArray[])
 			klSearchTutor(tutorArray);
 			break;
 		case 6:
-			//function();
+			KLSearchTutorByRating(tutorArray);
 			break;
 		case 7:
 			//function();
@@ -89,7 +89,7 @@ void JohorAdminMenu(Tutor tutorArray[])
 			JohorSearchTutor(tutorArray);
 			break;
 		case 6:
-			//function();
+			JohorSearchTutorByRating(tutorArray);
 			break;
 		case 7:
 			//function();
@@ -139,7 +139,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			searchTutor(tutorArray);
 			break;
 		case 6:
-			//function();
+			searchTutorByRating(tutorArray);
 			break;
 		case 7:
 			//function();
