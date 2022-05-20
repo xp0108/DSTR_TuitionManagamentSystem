@@ -2,18 +2,9 @@
 #include <iostream>
 #include "Login.h"
 #include "GenerateData.h"
+#include "AdditionalFeature.h"
 
 using namespace std;
-
-
-
-void loopSymbol(int times = 20, string symbol = "=")
-{
-	for (int i = 0; i < times; i++)
-	{
-		cout << symbol;
-	}
-}
 
 int main()
 {
