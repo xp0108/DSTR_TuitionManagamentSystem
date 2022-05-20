@@ -15,7 +15,7 @@ int main()
 
 	cout << endl << endl;
 
-	Tutor tutor_info[100];
+	static Tutor tutor_info[100];
 
 	GenerateData(tutor_info);
 	Login(tutor_info);
