@@ -14,6 +14,7 @@ void SwapTutorID(int* a, int* b) {
 void printArray(Tutor tutorArray[]) {
     int size = 100;
     for (int i = 0; i < size; i++) {
+        if (tutorArray[i].tutorID != 0)
         cout << tutorArray[i].tutorID << " ";
     }
     cout << endl;
