@@ -2,10 +2,22 @@
 #include <iostream>
 #include "DataStruc.h"
 
-void AddTutor(int arraysize, Tutor tutor_info[]) {
+int InputArraySize() {
+    int arraysize;
+
+    cout << "Number of tutor(s) to add (integers only): ";
+    cin >> arraysize;
+    cout << endl;
+
+    return arraysize;
+};
+
+void AddTutor(Tutor tutor_info[]) {
+
+    int size = InputArraySize();
 
     // add value to tutor_info
-    for (int row = 0; row < arraysize; row++) {
+    for (int row = 0; row < size; row++) {
         cout << "Tutor ID (integers only): ";
         cin >> tutor_info[row].tutorID;
         cout << "Full name: ";
@@ -44,19 +56,11 @@ void PrintTutorInfo(int arraysize, Tutor tutor_info[]) {
     cout << string(100, '-') << endl;
 }
 
-void RegisterTutorFunction() {
+void RegisterTutorFunction(Tutor tutor_info[]) {
 
-    int arraysize;
+    AddTutor(tutor_info);
 
-    cout << "Number of tutor(s) to add (integers only): ";
-    cin >> arraysize;
-    cout << endl;
+    cout << endl << endl;
 
-    Tutor tutor_info[100];
-
-    AddTutor(arraysize, tutor_info);
-
-    cout << endl << endl << endl;
-
-    PrintTutorInfo(arraysize, tutor_info);
+    //PrintTutorInfo(arraysize, tutor_info);
 }
