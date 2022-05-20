@@ -101,4 +101,4 @@ void JohorSearchTutorByRating(Tutor tutorArray[])
 			}
 		}
 	}
-};
+}
