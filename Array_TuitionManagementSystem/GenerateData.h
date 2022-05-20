@@ -23,7 +23,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[51].tutorAddress = "KL";
     tutor_info[51].tutionCode = 2;
     tutor_info[51].subjectCode = 3;
-    tutor_info[51].rating = 3;
+    tutor_info[51].rating = 4;
 
     tutor_info[52].tutorID = 52;
     tutor_info[52].tutorName = "Michelle";
@@ -34,5 +34,5 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[52].tutorAddress = "Selangor";
     tutor_info[52].tutionCode = 1;
     tutor_info[52].subjectCode = 4;
-    tutor_info[52].rating = 5;
+    tutor_info[52].rating = 4;
 }
