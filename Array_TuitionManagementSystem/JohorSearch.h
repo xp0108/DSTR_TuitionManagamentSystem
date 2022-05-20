@@ -50,3 +50,55 @@ void JohorSearchTutor(Tutor tutorArray[])
 		cout << "Tutor Rating: " << tutorArray[index].rating;
 	}
 };
+
+//serch for all tutor with user input rating
+void JohorSearchTutorByRating(Tutor tutorArray[])
+{
+	int rating;
+	int size = 100;
+	int count = 0;
+
+	cout << "Insert Tutor Rating :";
+	while (!(cin >> rating)) {
+		cout << "Error: insert Tutor Rating :";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
+
+	for (int i = 0; i < size; i++)
+	{
+		if (tutorArray[i].rating == rating && tutorArray[i].tutionCode == 2)
+		{
+			count++;
+		}
+	}
+
+	if (count == 0)
+	{
+		system("cls");
+		cout << endl;
+		cout << "Tutor Rating not found";
+	}
+	else
+	{
+		system("cls");
+		cout << endl;
+		cout << "Tutor Rating found" << endl;
+		for (int i = 0; i < size; i++)
+		{
+			if (tutorArray[i].rating == rating && tutorArray[i].tutionCode == 2)
+			{
+				cout << "Tutor ID: " << tutorArray[i].tutorID << endl;
+				cout << "Tutor Name: " << tutorArray[i].tutorName << endl;
+				cout << "Tutor Date Join: " << tutorArray[i].dateJoin << endl;
+				cout << "Tutor Date Terminated: " << tutorArray[i].dateTerminated << endl;
+				cout << "Tutor Hourly Rate: " << tutorArray[i].hourlyRate << endl;
+				cout << "Tutor Phone: " << tutorArray[i].tutorPhone << endl;
+				cout << "Tutor Address: " << tutorArray[i].tutorAddress << endl;
+				cout << "Tutor Tuition Code: " << tutorArray[i].tutionCode << endl;
+				cout << "Tutor Subject Code: " << tutorArray[i].subjectCode << endl;
+				cout << "Tutor Rating: " << tutorArray[i].rating << endl << endl;
+			}
+		}
+	}
+};
