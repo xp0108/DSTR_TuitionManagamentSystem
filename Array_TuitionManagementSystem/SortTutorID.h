@@ -11,37 +11,38 @@ void SwapTutorID(int* a, int* b) {
 }
 
 // function to print an array
-void printArray(int array[], int size) {
+void printArray(Tutor tutorArray[]) {
+    int size = 100;
     for (int i = 0; i < size; i++) {
-        cout << array[i] << " ";
+        cout << tutorArray[i].tutorID << " ";
     }
     cout << endl;
 }
 
-void TutorIDSelectionSort(int array[], int size) {
+void TutorIDSelectionSort(Tutor tutorArray[]) {
+    int size = 100;
     for (int step = 0; step < size - 1; step++) {
         int min_idx = step;
         for (int i = step + 1; i < size; i++) {
 
             // To sort in descending order, change > to < in this line.
             // Select the minimum element in each loop.
-            if (array[i] < array[min_idx])
+            if (tutorArray[i].tutorID < tutorArray[min_idx].tutorID)
                 min_idx = i;
         }
 
         // put min at the correct position
-        SwapTutorID(&array[min_idx], &array[step]);
+        SwapTutorID(&tutorArray[min_idx].tutorID, &tutorArray[step].tutorID);
     }
 }
 
 // driver code
-void SortTutorID() {
+void SortTutorID(Tutor tutorArray[]) {
     system("cls");
-    int data[] = { 20, 12, 10, 15, 2 };
-    int size = sizeof(data) / sizeof(data[0]);
-    TutorIDSelectionSort(data, size);
+    int size = sizeof(tutorArray) / sizeof(tutorArray[0]);
+    TutorIDSelectionSort(tutorArray);
     cout << "Sorted array in Acsending Order:\n";
-    printArray(data, size); 
+    printArray(tutorArray);
 
     loopSymbol(120);
 }

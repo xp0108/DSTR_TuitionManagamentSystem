@@ -143,7 +143,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			searchTutorByRating(tutorArray);
 			break;
 		case 7:
-			SortTutorID();
+			SortTutorID(tutorArray);
 			break;
 		case 8:
 			//function();
