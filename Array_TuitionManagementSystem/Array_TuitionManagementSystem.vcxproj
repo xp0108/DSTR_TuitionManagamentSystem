@@ -142,6 +142,7 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdditionalFeature.h" />
     <ClInclude Include="AddTutor.h" />
     <ClInclude Include="DataStruc.h" />
     <ClInclude Include="GenerateData.h" />
@@ -149,6 +150,7 @@
     <ClInclude Include="KLSearch.h" />
     <ClInclude Include="Login.h" />
     <ClInclude Include="HRSearch.h" />
+    <ClInclude Include="SortTutorID.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
