@@ -7,7 +7,7 @@ using namespace std;
 int JohorLinearSearchTutor(Tutor* tutorArray, int tutorID) {
 	int size = 100;
 	for (int i = 0; i < size; i++) {
-		if (tutorArray[i].tutorID == tutorID && tutorArray[i].tutionCode == 2) {
+		if (tutorArray[i].tutorID == tutorID && tutorArray[i].tutionName == "JOHOR") {
 			return i;
 		}
 	}
@@ -45,7 +45,7 @@ void JohorSearchTutor(Tutor tutorArray[])
 		cout << "Tutor Hourly Rate: " << tutorArray[index].hourlyRate << endl;
 		cout << "Tutor Phone: " << tutorArray[index].tutorPhone << endl;
 		cout << "Tutor Address: " << tutorArray[index].tutorAddress << endl;
-		cout << "Tutor Tuition Code: " << tutorArray[index].tutionCode << endl;
+		cout << "Tutor Tuition Code: " << tutorArray[index].tutionName << endl;
 		cout << "Tutor Subject Code: " << tutorArray[index].subjectCode << endl;
 		cout << "Tutor Rating: " << tutorArray[index].rating;
 	}
@@ -67,7 +67,7 @@ void JohorSearchTutorByRating(Tutor tutorArray[])
 
 	for (int i = 0; i < size; i++)
 	{
-		if (tutorArray[i].rating == rating && tutorArray[i].tutionCode == 2)
+		if (tutorArray[i].rating == rating && tutorArray[i].tutionName == "JOHOR")
 		{
 			count++;
 		}
@@ -86,7 +86,7 @@ void JohorSearchTutorByRating(Tutor tutorArray[])
 		cout << "Tutor Rating found" << endl;
 		for (int i = 0; i < size; i++)
 		{
-			if (tutorArray[i].rating == rating && tutorArray[i].tutionCode == 2)
+			if (tutorArray[i].rating == rating && tutorArray[i].tutionName == "JOHOR")
 			{
 				cout << "Tutor ID: " << tutorArray[i].tutorID << endl;
 				cout << "Tutor Name: " << tutorArray[i].tutorName << endl;
@@ -95,7 +95,7 @@ void JohorSearchTutorByRating(Tutor tutorArray[])
 				cout << "Tutor Hourly Rate: " << tutorArray[i].hourlyRate << endl;
 				cout << "Tutor Phone: " << tutorArray[i].tutorPhone << endl;
 				cout << "Tutor Address: " << tutorArray[i].tutorAddress << endl;
-				cout << "Tutor Tuition Code: " << tutorArray[i].tutionCode << endl;
+				cout << "Tutor Tuition Code: " << tutorArray[i].tutionName << endl;
 				cout << "Tutor Subject Code: " << tutorArray[i].subjectCode << endl;
 				cout << "Tutor Rating: " << tutorArray[i].rating << endl << endl;
 			}

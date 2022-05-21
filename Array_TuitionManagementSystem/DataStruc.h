@@ -11,7 +11,7 @@ struct Tutor
 	double hourlyRate;
 	string tutorPhone;
 	string tutorAddress;
-	int tutionCode;
+	string tutionName;
 	int subjectCode;
 	double rating;
 };
@@ -21,11 +21,4 @@ struct Subject
 	int subjectCode;
 	string subjectName;
 	double subjectPaid;
-};
-
-struct Tuition
-{
-	int tutionCode;
-	string tutionName;
-	string tutionAddress;
 };
