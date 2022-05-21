@@ -29,19 +29,19 @@ void KLAdminMenu(Tutor tutorArray[])
 			//function();
 			break;
 		case 2:
-			//function();
+			klSearchTutor(tutorArray);
 			break;
 		case 3:
-			//function();
+			KLSearchTutorByRating(tutorArray);
 			break;
 		case 4:
 			//function();
 			break;
 		case 5:
-			klSearchTutor(tutorArray);
+			//function();
 			break;
 		case 6:
-			KLSearchTutorByRating(tutorArray);
+			//function();
 			break;
 		case 7:
 			//function();
@@ -77,19 +77,19 @@ void JohorAdminMenu(Tutor tutorArray[])
 			//function();
 			break;
 		case 2:
-			//function();
+			JohorSearchTutor(tutorArray);
 			break;
 		case 3:
-			//function();
+			JohorSearchTutorByRating(tutorArray);
 			break;
 		case 4:
 			//function();
 			break;
 		case 5:
-			JohorSearchTutor(tutorArray);
+			//function();
 			break;
 		case 6:
-			JohorSearchTutorByRating(tutorArray);
+			//function();
 			break;
 		case 7:
 			//function();

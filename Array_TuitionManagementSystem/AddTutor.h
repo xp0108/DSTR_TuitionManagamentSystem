@@ -32,6 +32,12 @@ void AddTutor(Tutor tutor_info[]) {
         cin >> tutor_info[row].tutorPhone;
         cout << "Address: ";
         cin >> tutor_info[row].tutorAddress;
+        cout << "Tuition Center: ";
+        cin >> tutor_info[row].tutionName;
+        cout << "Subject Code: ";
+        cin >> tutor_info[row].subjectCode;
+        cout << "Rating: ";
+        cin >> tutor_info[row].rating;
         cout << endl;
     }
 }

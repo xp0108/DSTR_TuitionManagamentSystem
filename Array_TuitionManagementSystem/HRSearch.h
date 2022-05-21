@@ -45,7 +45,7 @@ void searchTutor(Tutor tutorArray[])
 		cout << "Tutor Hourly Rate: " << tutorArray[index].hourlyRate << endl;
 		cout << "Tutor Phone: " << tutorArray[index].tutorPhone << endl;
 		cout << "Tutor Address: " << tutorArray[index].tutorAddress << endl;
-		cout << "Tutor Tuition Code: " << tutorArray[index].tutionCode << endl;
+		cout << "Tutor Tuition Code: " << tutorArray[index].tutionName << endl;
 		cout << "Tutor Subject Code: " << tutorArray[index].subjectCode << endl;
 		cout << "Tutor Rating: " << tutorArray[index].rating;
 	}
@@ -95,7 +95,7 @@ void searchTutorByRating(Tutor tutorArray[])
 				cout << "Tutor Hourly Rate: " << tutorArray[i].hourlyRate << endl;
 				cout << "Tutor Phone: " << tutorArray[i].tutorPhone << endl;
 				cout << "Tutor Address: " << tutorArray[i].tutorAddress << endl;
-				cout << "Tutor Tuition Code: " << tutorArray[i].tutionCode << endl;
+				cout << "Tutor Tuition Code: " << tutorArray[i].tutionName << endl;
 				cout << "Tutor Subject Code: " << tutorArray[i].subjectCode << endl;
 				cout << "Tutor Rating: " << tutorArray[i].rating << endl << endl;
 			}
