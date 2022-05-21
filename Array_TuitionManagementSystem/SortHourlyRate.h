@@ -33,6 +33,5 @@ void SortHourlyRate(Tutor tutorArray[]) {
 	system("cls");
 	HourlyRateSelectionSort(tutorArray);
 	cout << "Sorted array in Acsending Order:\n";
-	DisplayTutor(tutorArray);
-	//printArray(tutorArray);
+	DisplayTutor(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
 }
