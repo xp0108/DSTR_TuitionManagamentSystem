@@ -6,6 +6,7 @@
 #include "JohorSearch.h"
 #include "SortTutorID.h"
 #include "DisplayTutor.h"
+#include "SortHourlyRate.h"
 using namespace std;
 
 void KLAdminMenu(Tutor tutorArray[])
@@ -147,7 +148,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			SortTutorID(tutorArray);
 			break;
 		case 8:
-			//function();
+			SortHourlyRate(tutorArray);
 			break;
 		case 9:
 			//function();
