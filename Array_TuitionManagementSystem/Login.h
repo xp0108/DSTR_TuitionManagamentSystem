@@ -5,6 +5,7 @@
 #include "KLSearch.h"
 #include "JohorSearch.h"
 #include "SortTutorID.h"
+#include "DisplayTutor.h"
 using namespace std;
 
 void KLAdminMenu(Tutor tutorArray[])
@@ -134,7 +135,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			//function();
 			break;
 		case 4:
-			//PrintTutorInfo();
+			DisplayTutor(tutorArray);
 			break;
 		case 5:
 			searchTutor(tutorArray);
