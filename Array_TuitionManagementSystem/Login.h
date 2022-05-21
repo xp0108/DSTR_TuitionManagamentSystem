@@ -4,6 +4,9 @@
 #include "HRSearch.h"
 #include "KLSearch.h"
 #include "JohorSearch.h"
+#include "SortTutorID.h"
+#include "DisplayTutor.h"
+#include "SortHourlyRate.h"
 using namespace std;
 
 void KLAdminMenu(Tutor tutorArray[])
@@ -133,7 +136,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			//function();
 			break;
 		case 4:
-			//PrintTutorInfo();
+			DisplayTutor(tutorArray);
 			break;
 		case 5:
 			searchTutor(tutorArray);
@@ -142,10 +145,10 @@ void HRManagerMenu(Tutor tutorArray[])
 			searchTutorByRating(tutorArray);
 			break;
 		case 7:
-			//function();
+			SortTutorID(tutorArray);
 			break;
 		case 8:
-			//function();
+			SortHourlyRate(tutorArray);
 			break;
 		case 9:
 			//function();
