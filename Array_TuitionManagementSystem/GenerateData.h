@@ -102,13 +102,13 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[58].subjectCode = 9;
     tutor_info[58].rating = 3;
 
-    tutor_info[59].tutorID = 18;
-    tutor_info[59].tutorName = "Kimmy";
+    tutor_info[59].tutorID = 36;
+    tutor_info[59].tutorName = "Johnson";
     tutor_info[59].dateJoin = "26/02/2021";
     tutor_info[59].dateTerminated = "";
     tutor_info[59].hourlyRate = 75;
     tutor_info[59].tutorPhone = "0128690385";
-    tutor_info[59].tutorAddress = "Kulai";
+    tutor_info[59].tutorAddress = "Muar";
     tutor_info[59].tutionName = "JOHOR";
     tutor_info[59].subjectCode = 10;
     tutor_info[59].rating = 4.5;
