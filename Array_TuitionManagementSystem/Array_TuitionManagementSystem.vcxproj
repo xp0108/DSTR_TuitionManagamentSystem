@@ -145,6 +145,7 @@
     <ClInclude Include="AdditionalFeature.h" />
     <ClInclude Include="AddTutor.h" />
     <ClInclude Include="DataStruc.h" />
+    <ClInclude Include="Generate Report.h" />
     <ClInclude Include="GenerateData.h" />
     <ClInclude Include="DisplayTutor.h" />
     <ClInclude Include="SortHourlyRate.h" />

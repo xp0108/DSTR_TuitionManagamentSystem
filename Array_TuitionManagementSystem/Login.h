@@ -7,6 +7,7 @@
 #include "SortTutorID.h"
 #include "DisplayTutor.h"
 #include "SortHourlyRate.h"
+#include "Generate Report.h"
 using namespace std;
 
 void KLAdminMenu(Tutor tutorArray[])
@@ -47,7 +48,7 @@ void KLAdminMenu(Tutor tutorArray[])
 			//function();
 			break;
 		case 7:
-			//function();
+			generateKLTutorReport(tutorArray);
 			break;
 		case 8:exit(0);
 			break;
@@ -95,7 +96,7 @@ void JohorAdminMenu(Tutor tutorArray[])
 			//function();
 			break;
 		case 7:
-			//function();
+			generateJohorTutorReport(tutorArray);
 			break;
 		case 8:exit(0);
 			break;
