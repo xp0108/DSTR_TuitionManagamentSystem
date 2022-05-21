@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "DataStruc.h"
 
 void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
@@ -8,13 +9,41 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
     int arraysize = 100;
     cout << endl << string(100, '-') << endl << displayString  << endl << string(100, '-') << endl;
 
+    //Heading
+    cout
+        << left
+        << setw(15)
+        << "TutorID"
+        << left
+        << setw(15)
+        << "TutorName"
+        << left
+        << setw(15)
+        << "DateJoined"
+        << left
+        << setw(15)
+        << "DateTerminated"
+        << left
+        << setw(15)
+        << "HourlyRate"
+        << left
+        << setw(15)
+        << "PhoneNumber"
+        << left
+        << setw(15)
+        << "Address"
+        << left
+        << setw(15)
+        << "TuitionName"
+        << endl;
+
     // print out tutor_info
     for (int row = 0; row < arraysize; row++) {
 
         //Skip NULL values
         if (tutor_info[row].tutorID != NULL) {
 
-                cout << "Tutor ID: " << tutor_info[row].tutorID << endl;
+                /*cout << "Tutor ID: " << tutor_info[row].tutorID << endl;
                 cout << "Tutor name: " << tutor_info[row].tutorName << endl;
                 cout << "Date joined: " << tutor_info[row].dateJoin << endl;
                 cout << "Date terminated: " << tutor_info[row].dateTerminated << endl;
@@ -22,7 +51,34 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
                 cout << "Phone number: " << tutor_info[row].tutorPhone << endl;
                 cout << "Address: " << tutor_info[row].tutorAddress << endl;
                 cout << "Tuition name: " << tutor_info[row].tutionName << endl;
-                cout << endl;
+                cout << endl;*/
+
+            cout
+                << left
+                << setw(15)
+                << tutor_info[row].tutorID
+                << left
+                << setw(15)
+                << tutor_info[row].tutorName
+                << left
+                << setw(15)
+                << tutor_info[row].dateJoin
+                << left
+                << setw(15)
+                << tutor_info[row].dateTerminated
+                << left
+                << setw(15)
+                << tutor_info[row].hourlyRate
+                << left
+                << setw(15)
+                << tutor_info[row].tutorPhone
+                << left
+                << setw(15)
+                << tutor_info[row].tutorAddress
+                << left
+                << setw(15)
+                << tutor_info[row].tutionName
+                << endl;
             
         }
     }
@@ -37,6 +93,33 @@ void DisplayKLTutor(Tutor tutor_info[], string displayString = "Kuala Lumpur - T
     int arraysize = 100;
     cout << endl << string(100, '-') << endl << displayString << endl << string(100, '-') << endl;
 
+    cout
+        << left
+        << setw(15)
+        << "TutorID"
+        << left
+        << setw(15)
+        << "TutorName"
+        << left
+        << setw(15)
+        << "DateJoined"
+        << left
+        << setw(15)
+        << "DateTerminated"
+        << left
+        << setw(15)
+        << "HourlyRate"
+        << left
+        << setw(15)
+        << "PhoneNumber"
+        << left
+        << setw(15)
+        << "Address"
+        << left
+        << setw(15)
+        << "TuitionName"
+        << endl;
+
     // print out tutor_info
     for (int row = 0; row < arraysize; row++) {
 
@@ -45,7 +128,7 @@ void DisplayKLTutor(Tutor tutor_info[], string displayString = "Kuala Lumpur - T
 
             if (tutor_info[row].tutionName == "KL") {
 
-                cout << "Tutor ID: " << tutor_info[row].tutorID << endl;
+                /*cout << "Tutor ID: " << tutor_info[row].tutorID << endl;
                 cout << "Tutor name: " << tutor_info[row].tutorName << endl;
                 cout << "Date joined: " << tutor_info[row].dateJoin << endl;
                 cout << "Date terminated: " << tutor_info[row].dateTerminated << endl;
@@ -53,7 +136,34 @@ void DisplayKLTutor(Tutor tutor_info[], string displayString = "Kuala Lumpur - T
                 cout << "Phone number: " << tutor_info[row].tutorPhone << endl;
                 cout << "Address: " << tutor_info[row].tutorAddress << endl;
                 cout << "Tuition name: " << tutor_info[row].tutionName << endl;
-                cout << endl;
+                cout << endl;*/
+
+                cout
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutorID
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutorName
+                    << left
+                    << setw(15)
+                    << tutor_info[row].dateJoin
+                    << left
+                    << setw(15)
+                    << tutor_info[row].dateTerminated
+                    << left
+                    << setw(15)
+                    << tutor_info[row].hourlyRate
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutorPhone
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutorAddress
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutionName
+                    << endl;
             }
         }
     }
@@ -67,6 +177,34 @@ void DisplayJohorTutor(Tutor tutor_info[], string displayString = "Johor - Tutor
     int arraysize = 100;
     cout << endl << string(100, '-') << endl << displayString << endl << string(100, '-') << endl;
 
+    //Heading
+    cout
+        << left
+        << setw(15)
+        << "TutorID"
+        << left
+        << setw(15)
+        << "TutorName"
+        << left
+        << setw(15)
+        << "DateJoined"
+        << left
+        << setw(15)
+        << "DateTerminated"
+        << left
+        << setw(15)
+        << "HourlyRate"
+        << left
+        << setw(15)
+        << "PhoneNumber"
+        << left
+        << setw(15)
+        << "Address"
+        << left
+        << setw(15)
+        << "TuitionName"
+        << endl;
+
     // print out tutor_info
     for (int row = 0; row < arraysize; row++) {
 
@@ -75,7 +213,7 @@ void DisplayJohorTutor(Tutor tutor_info[], string displayString = "Johor - Tutor
 
             if (tutor_info[row].tutionName == "JOHOR") {
 
-                cout << "Tutor ID: " << tutor_info[row].tutorID << endl;
+                /*cout << "Tutor ID: " << tutor_info[row].tutorID << endl;
                 cout << "Tutor name: " << tutor_info[row].tutorName << endl;
                 cout << "Date joined: " << tutor_info[row].dateJoin << endl;
                 cout << "Date terminated: " << tutor_info[row].dateTerminated << endl;
@@ -84,7 +222,34 @@ void DisplayJohorTutor(Tutor tutor_info[], string displayString = "Johor - Tutor
                 cout << "Address: " << tutor_info[row].tutorAddress << endl;
                 cout << "Tuition name: " << tutor_info[row].tutionName << endl;
                 
-                cout << endl;
+                cout << endl;*/
+
+                cout
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutorID
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutorName
+                    << left
+                    << setw(15)
+                    << tutor_info[row].dateJoin
+                    << left
+                    << setw(15)
+                    << tutor_info[row].dateTerminated
+                    << left
+                    << setw(15)
+                    << tutor_info[row].hourlyRate
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutorPhone
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutorAddress
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutionName
+                    << endl;
             }
         }
     }
