@@ -24,7 +24,7 @@ void KLAdminMenu(Tutor tutorArray[])
 		cout << "5. Sort and display by Tutors Hourly Pay Rate in ascending order" << endl;
 		cout << "6. Sort and display by Tutors Overall Performance in ascending order" << endl;
 		cout << "7. generate report" << endl;
-		cout << "8. Exit" << endl;
+		cout << "8. Exit" << endl << endl;
 		cout << "Enter your choice: ";
 		cin >> klAdminChoice;
 		switch (klAdminChoice)
@@ -72,7 +72,7 @@ void JohorAdminMenu(Tutor tutorArray[])
 		cout << "5. Sort and display by Tutors Hourly Pay Rate in ascending order" << endl;
 		cout << "6. Sort and display by Tutors Overall Performance in ascending order" << endl;
 		cout << "7. generate report" << endl;
-		cout << "8. Exit" << endl;
+		cout << "8. Exit" << endl << endl;
 		cout << "Enter your choice: ";
 		cin >> johorAdminChoice;
 		switch (johorAdminChoice)
@@ -122,13 +122,13 @@ void HRManagerMenu(Tutor tutorArray[])
 		cout << "7. Sort and display by Tutors ID in ascending order" << endl;
 		cout << "8. Sort and display by Tutors Hourly Pay Rate in ascending order" << endl;
 		cout << "9. Sort and display by Tutors Overall Performance in ascending order" << endl;
-		cout << "10. Exit" << endl;
+		cout << "10. Exit" << endl << endl;
 		cout << "Enter your choice: ";
 		cin >> hrChoice;
 		switch (hrChoice)
 		{
 		case 1:
-			RegisterTutorFunction(tutorArray);
+			AddTutor(tutorArray);
 			break;
 		case 2:
 			//function();
