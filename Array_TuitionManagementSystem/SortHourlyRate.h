@@ -5,8 +5,8 @@
 using namespace std;
 
 // function to swap the the position of two elements
-void SwapHourlyRate(double* currentCarry, double* minCarry) {
-	int temp = *currentCarry;
+void SwapHourlyRate(Tutor* currentCarry, Tutor* minCarry) {
+	Tutor temp = *currentCarry;
 	*currentCarry = *minCarry;
 	*minCarry = temp;
 }
@@ -16,6 +16,7 @@ void HourlyRateSelectionSort(Tutor tutorArray[]) {
 	int tutorArraySize = 100;
 	for (int current = 0; current < tutorArraySize - 1; current++) {
 		int minHourlyRate = current;
+		// Compare next array
 		for (int i = current + 1; i < tutorArraySize; i++) {
 
 			// Select the minimum element in each loop.
@@ -24,7 +25,7 @@ void HourlyRateSelectionSort(Tutor tutorArray[]) {
 		}
 
 		// put min at the correct position
-		SwapHourlyRate(&tutorArray[minHourlyRate].hourlyRate, &tutorArray[current].hourlyRate);
+		SwapTutorID(&tutorArray[minHourlyRate], &tutorArray[current]);
 	}
 }
 
@@ -33,5 +34,5 @@ void SortHourlyRate(Tutor tutorArray[]) {
 	HourlyRateSelectionSort(tutorArray);
 	cout << "Sorted array in Acsending Order:\n";
 	DisplayTutor(tutorArray);
-	
+	//printArray(tutorArray);
 }
