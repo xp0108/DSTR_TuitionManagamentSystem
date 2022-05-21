@@ -1,15 +1,9 @@
 #pragma once
 #include <iostream>
 #include "AdditionalFeature.h"
+#include "SortTutorID.h"
 #include "DisplayTutor.h"
 using namespace std;
-
-// function to swap the the position of two elements
-void SwapHourlyRate(Tutor* currentCarry, Tutor* minCarry) {
-	Tutor temp = *currentCarry;
-	*currentCarry = *minCarry;
-	*minCarry = temp;
-}
 
 // Loop and Swap - Selection Sort
 void HourlyRateSelectionSort(Tutor tutorArray[]) {
@@ -25,7 +19,7 @@ void HourlyRateSelectionSort(Tutor tutorArray[]) {
 		}
 
 		// put min at the correct position
-		SwapTutorID(&tutorArray[minHourlyRate], &tutorArray[current]);
+		SwapArray(&tutorArray[minHourlyRate], &tutorArray[current]);
 	}
 }
 
