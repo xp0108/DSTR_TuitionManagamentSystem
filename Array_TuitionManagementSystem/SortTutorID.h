@@ -5,8 +5,8 @@
 using namespace std;
 
 // function to swap the the position of two elements
-void SwapTutorID(int* currentCarry, int* minCarry) {
-	int temp = *currentCarry;
+void SwapTutorID(Tutor* currentCarry, Tutor* minCarry) {
+	Tutor temp = *currentCarry;
 	*currentCarry = *minCarry;
 	*minCarry = temp;
 }
@@ -16,6 +16,7 @@ void TutorIDSelectionSort(Tutor tutorArray[]) {
 	int tutorArraySize = 100;
 	for (int current = 0; current < tutorArraySize - 1; current++) {
 		int minTutorID = current;
+		// Compare next array
 		for (int i = current + 1; i < tutorArraySize; i++) {
 
 			// Select the minimum element in each loop.
@@ -24,7 +25,7 @@ void TutorIDSelectionSort(Tutor tutorArray[]) {
 		}
 
 		// put min at the correct position
-		SwapTutorID(&tutorArray[minTutorID].tutorID, &tutorArray[current].tutorID);
+		SwapTutorID(&tutorArray[minTutorID], &tutorArray[current]);
 	}
 }
 
