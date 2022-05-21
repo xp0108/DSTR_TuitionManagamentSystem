@@ -32,7 +32,7 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
 }
 
 
-void DisplayKLTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
+void DisplayKLTutor(Tutor tutor_info[], string displayString = "Kuala Lumpur - Tutor Records") {
     system("cls");
     int arraysize = 100;
     cout << endl << string(100, '-') << endl << displayString << endl << string(100, '-') << endl;
@@ -62,7 +62,7 @@ void DisplayKLTutor(Tutor tutor_info[], string displayString = "Tutor Records") 
     cout << string(100, '-') << endl;
 }
 
-void DisplayJohorTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
+void DisplayJohorTutor(Tutor tutor_info[], string displayString = "Johor - Tutor Records") {
     system("cls");
     int arraysize = 100;
     cout << endl << string(100, '-') << endl << displayString << endl << string(100, '-') << endl;

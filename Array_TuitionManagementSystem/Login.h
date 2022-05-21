@@ -39,10 +39,10 @@ void KLAdminMenu(Tutor tutorArray[])
 			KLSearchTutorByRating(tutorArray);
 			break;
 		case 4:
-			//function();
+			SortTutorIDKL(tutorArray);
 			break;
 		case 5:
-			//function();
+			SortHourlyRateKL(tutorArray);
 			break;
 		case 6:
 			//function();
@@ -87,10 +87,10 @@ void JohorAdminMenu(Tutor tutorArray[])
 			JohorSearchTutorByRating(tutorArray);
 			break;
 		case 4:
-			//function();
+			SortTutorIDJohor(tutorArray);
 			break;
 		case 5:
-			//function();
+			SortHourlyRateJohor(tutorArray);
 			break;
 		case 6:
 			//function();
