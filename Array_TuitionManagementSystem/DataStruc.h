@@ -20,5 +20,5 @@ struct Subject
 {
 	int subjectCode;
 	string subjectName;
-	double subjectPaid;
+	double MonthlyHour;
 };
