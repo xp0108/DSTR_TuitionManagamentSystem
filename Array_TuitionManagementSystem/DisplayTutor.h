@@ -22,10 +22,10 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
                 cout << "Address: " << tutor_info[row].tutorAddress << endl;
 
                 //Tuition branch print int to string
-                if (tutor_info[row].tutionCode == 1) {
+                if (tutor_info[row].tutionName == "KL") {
                     cout << "Tutor Branch: KL Branch"<< endl;
                 }
-                else if (tutor_info[row].tutionCode == 2) {
+                else if (tutor_info[row].tutionName == "JOHOR") {
                     cout << "Tutor Branch: Johor Branch" << endl;
                 }
                 cout << endl;
