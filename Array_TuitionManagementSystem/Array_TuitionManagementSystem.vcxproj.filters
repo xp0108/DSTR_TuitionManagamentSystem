@@ -53,7 +53,7 @@
     <ClInclude Include="SortHourlyRate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Generate Report.h">
+    <ClInclude Include="GenerateReport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
