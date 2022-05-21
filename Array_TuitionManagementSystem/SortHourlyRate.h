@@ -32,6 +32,17 @@ void HourlyRateSelectionSort(Tutor tutorArray[]) {
 void SortHourlyRate(Tutor tutorArray[]) {
 	system("cls");
 	HourlyRateSelectionSort(tutorArray);
-	cout << "Sorted array in Acsending Order:\n";
 	DisplayTutor(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
+}
+
+void SortHourlyRateKL(Tutor tutorArray[]) {
+	system("cls");
+	HourlyRateSelectionSort(tutorArray);
+	DisplayKLTutor(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
+}
+
+void SortHourlyRateJohor(Tutor tutorArray[]) {
+	system("cls");
+	HourlyRateSelectionSort(tutorArray);
+	DisplayJohorTutor(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
 }
