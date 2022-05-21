@@ -38,7 +38,8 @@ void UpdateTutor(Tutor tutorArray[])
 		checkTutorID = linearSearchTutor(tutorArray, tutorID);
 	}
 
-	for (;;)
+	bool exitFunction = true;
+	while (exitFunction != false)
 	{
 		int updateChoice;
 		cout << endl << endl;
@@ -63,6 +64,7 @@ void UpdateTutor(Tutor tutorArray[])
 			UpdateTutorAddress(tutorArray, tutorID);
 			break;
 		case 3:
+			exitFunction = false;
 			break;
 		default:
 			cout << "Invalid Option! Please Try Again";
@@ -70,3 +72,4 @@ void UpdateTutor(Tutor tutorArray[])
 	}
 
 }
+

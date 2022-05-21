@@ -152,6 +152,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			RegisterTutorFunction(tutorArray);
 			break;
 		case 2:
+
 			UpdateTutor(tutorArray);
 			break;
 		case 3:
