@@ -7,7 +7,7 @@
 #include "SortTutorID.h"
 #include "DisplayTutor.h"
 #include "SortHourlyRate.h"
-#include "Generate Report.h"
+#include "GenerateReport.h"
 using namespace std;
 
 void KLAdminMenu(Tutor tutorArray[])
