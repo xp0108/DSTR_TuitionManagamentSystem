@@ -13,22 +13,15 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
         //Skip NULL values
         if (tutor_info[row].tutorID != NULL) {
 
-                cout << "Tutor ID: " << tutor_info[row].tutorID << endl;
-                cout << "Tutor name: " << tutor_info[row].tutorName << endl;
-                cout << "Date joined: " << tutor_info[row].dateJoin << endl;
-                cout << "Date terminated: N/A" << endl;
-                cout << "Hourly rate: " << tutor_info[row].hourlyRate << endl;
-                cout << "Phone number: " << tutor_info[row].tutorPhone << endl;
-                cout << "Address: " << tutor_info[row].tutorAddress << endl;
-
-                //Tuition branch print int to string
-                if (tutor_info[row].tutionName == "KL") {
-                    cout << "Tutor Branch: KL Branch"<< endl;
-                }
-                else if (tutor_info[row].tutionName == "JOHOR") {
-                    cout << "Tutor Branch: Johor Branch" << endl;
-                }
-                cout << endl;
+            cout << "Tutor ID: " << tutor_info[row].tutorID << endl;
+            cout << "Tutor name: " << tutor_info[row].tutorName << endl;
+            cout << "Date joined: " << tutor_info[row].dateJoin << endl;
+            cout << "Date terminated: N/A" << endl;
+            cout << "Hourly rate: " << tutor_info[row].hourlyRate << endl;
+            cout << "Phone number: " << tutor_info[row].tutorPhone << endl;
+            cout << "Address: " << tutor_info[row].tutorAddress << endl;
+            cout << "Tuition name: " << tutor_info[row].tutionName << endl;
+            cout << endl;
             
         }
     }
