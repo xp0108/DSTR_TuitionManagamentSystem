@@ -3,7 +3,7 @@
 #include "DataStruc.h"
 
 void GenerateData(Tutor tutor_info[]) {
-    tutor_info[50].tutorID = 50;
+    tutor_info[50].tutorID = 99;
     tutor_info[50].tutorName = "Onn";
     tutor_info[50].dateJoin = "12/05/2021";
     tutor_info[50].dateTerminated = "12/06/2021";
@@ -14,7 +14,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[50].subjectCode = 1;
     tutor_info[50].rating = 0;
 
-    tutor_info[51].tutorID = 51;
+    tutor_info[51].tutorID = 22;
     tutor_info[51].tutorName = "Khor";
     tutor_info[51].dateJoin = "12/05/2021";
     tutor_info[51].dateTerminated = "12/06/2021";
@@ -25,7 +25,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[51].subjectCode = 3;
     tutor_info[51].rating = 4;
 
-    tutor_info[52].tutorID = 52;
+    tutor_info[52].tutorID = 75;
     tutor_info[52].tutorName = "Michelle";
     tutor_info[52].dateJoin = "12/05/2021";
     tutor_info[52].dateTerminated = "12/06/2021";
