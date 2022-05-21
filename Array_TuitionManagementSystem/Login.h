@@ -5,9 +5,11 @@
 #include "KLSearch.h"
 #include "JohorSearch.h"
 #include "SortTutorID.h"
+#include "SortHourlyRate.h"
 #include "DisplayTutor.h"
 #include "SortHourlyRate.h"
 #include "GenerateReport.h"
+#include "AdditionalFeature.h"
 using namespace std;
 
 void KLAdminMenu(Tutor tutorArray[])
@@ -26,7 +28,13 @@ void KLAdminMenu(Tutor tutorArray[])
 		cout << "7. generate report" << endl;
 		cout << "8. Exit" << endl;
 		cout << "Enter your choice: ";
-		cin >> klAdminChoice;
+		// Validate user input
+		while (!(cin >> klAdminChoice)) {
+			cout << endl << "Invalid Input !!!" << endl;
+			cout << "Enter you choice again: ";
+			cin.clear();
+			cin.ignore(123, '\n');
+		}
 		switch (klAdminChoice)
 		{
 		case 1:
@@ -75,6 +83,13 @@ void JohorAdminMenu(Tutor tutorArray[])
 		cout << "8. Exit" << endl;
 		cout << "Enter your choice: ";
 		cin >> johorAdminChoice;
+		// Validate user input
+		while (!(cin >> johorAdminChoice)) {
+			cout << endl << "Invalid Input !!!" << endl;
+			cout << "Enter you choice again: ";
+			cin.clear();
+			cin.ignore(123, '\n');
+		}
 		switch (johorAdminChoice)
 		{
 		case 1:
@@ -125,6 +140,13 @@ void HRManagerMenu(Tutor tutorArray[])
 		cout << "10. Exit" << endl;
 		cout << "Enter your choice: ";
 		cin >> hrChoice;
+		// Validate user input
+		while (!(cin >> hrChoice)) {
+			cout << endl << "Invalid Input !!!" << endl;
+			cout << "Enter you choice again: ";
+			cin.clear();
+			cin.ignore(123, '\n');
+		}
 		switch (hrChoice)
 		{
 		case 1:
