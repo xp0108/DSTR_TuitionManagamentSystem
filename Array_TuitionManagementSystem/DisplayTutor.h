@@ -80,6 +80,7 @@ void DisplayJohorTutor(Tutor tutor_info[], string displayString = "Tutor Records
                 cout << "Phone number: " << tutor_info[row].tutorPhone << endl;
                 cout << "Address: " << tutor_info[row].tutorAddress << endl;
                 cout << "Tuition name: " << tutor_info[row].tutionName << endl;
+                
                 cout << endl;
             }
         }
