@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "AdditionalFeature.h"
+#include "DisplayTutor.h"
 using namespace std;
 
 // function to swap the the position of two elements
@@ -8,18 +9,6 @@ void SwapTutorID(int* currentCarry, int* minCarry) {
 	int temp = *currentCarry;
 	*currentCarry = *minCarry;
 	*minCarry = temp;
-}
-
-// function to print an array
-void printArray(Tutor tutorArray[]) {
-	int tutorArraySize = 100;
-	for (int i = 0; i < tutorArraySize; i++) {
-		if (tutorArray[i].tutorID != 0)
-		{
-			cout << tutorArray[i].tutorID << endl;
-		}
-	}
-	cout << endl;
 }
 
 // Loop and Swap - Selection Sort
@@ -43,7 +32,6 @@ void SortTutorID(Tutor tutorArray[]) {
 	system("cls");
 	TutorIDSelectionSort(tutorArray);
 	cout << "Sorted array in Acsending Order:\n";
-	printArray(tutorArray);
-
-	loopSymbol(120);
+	DisplayTutor(tutorArray);
+	//printArray(tutorArray);
 }
