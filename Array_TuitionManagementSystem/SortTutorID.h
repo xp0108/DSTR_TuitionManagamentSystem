@@ -32,7 +32,5 @@ void TutorIDSelectionSort(Tutor tutorArray[]) {
 void SortTutorID(Tutor tutorArray[]) {
 	system("cls");
 	TutorIDSelectionSort(tutorArray);
-	cout << "Sorted array in Acsending Order:\n";
-	DisplayTutor(tutorArray);
-	//printArray(tutorArray);
+	DisplayTutor(tutorArray, "Sorted Tutor ID in Acsending Order");
 }
