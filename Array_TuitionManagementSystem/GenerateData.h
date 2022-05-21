@@ -18,7 +18,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[51].tutorName = "Khor";
     tutor_info[51].dateJoin = "12/05/2021";
     tutor_info[51].dateTerminated = "12/06/2021";
-    tutor_info[51].hourlyRate = 10;
+    tutor_info[51].hourlyRate = 20;
     tutor_info[51].tutorPhone = "111111111";
     tutor_info[51].tutorAddress = "KL";
     tutor_info[51].tutionCode = 2;
@@ -29,7 +29,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[52].tutorName = "Michelle";
     tutor_info[52].dateJoin = "12/05/2021";
     tutor_info[52].dateTerminated = "12/06/2021";
-    tutor_info[52].hourlyRate = 10;
+    tutor_info[52].hourlyRate = 40;
     tutor_info[52].tutorPhone = "0122930940";
     tutor_info[52].tutorAddress = "Selangor";
     tutor_info[52].tutionCode = 1;
