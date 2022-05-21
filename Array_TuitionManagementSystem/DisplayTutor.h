@@ -3,9 +3,9 @@
 #include <string>
 #include "DataStruc.h"
 
-void DisplayTutor(Tutor tutor_info[]) {
+void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
     int arraysize = 100;
-    cout << endl << string(100, '-') << endl << "Tutor Records" << endl << string(100, '-') << endl;
+    cout << endl << string(100, '-') << endl << displayString  << endl << string(100, '-') << endl;
 
     // print out tutor_info
     for (int row = 0; row < arraysize; row++) {
