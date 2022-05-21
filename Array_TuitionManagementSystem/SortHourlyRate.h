@@ -1,47 +1,37 @@
 #pragma once
 #include <iostream>
 #include "AdditionalFeature.h"
+#include "DisplayTutor.h"
 using namespace std;
 
 // function to swap the the position of two elements
-void SwapTutorID(int* a, int* b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+void SwapHourlyRate(double* currentCarry, double* minCarry) {
+	int temp = *currentCarry;
+	*currentCarry = *minCarry;
+	*minCarry = temp;
 }
 
-// function to print an array
-void printArray(int array[], int size) {
-    for (int i = 0; i < size; i++) {
-        cout << array[i] << " ";
-    }
-    cout << endl;
+// Loop and Swap - Selection Sort
+void HourlyRateSelectionSort(Tutor tutorArray[]) {
+	int tutorArraySize = 100;
+	for (int current = 0; current < tutorArraySize - 1; current++) {
+		int minHourlyRate = current;
+		for (int i = current + 1; i < tutorArraySize; i++) {
+
+			// Select the minimum element in each loop.
+			if (tutorArray[i].hourlyRate < tutorArray[minHourlyRate].hourlyRate)
+				minHourlyRate = i;
+		}
+
+		// put min at the correct position
+		SwapHourlyRate(&tutorArray[minHourlyRate].hourlyRate, &tutorArray[current].hourlyRate);
+	}
 }
 
-void TutorIDSelectionSort(int array[], int size) {
-    for (int step = 0; step < size - 1; step++) {
-        int min_idx = step;
-        for (int i = step + 1; i < size; i++) {
-
-            // To sort in descending order, change > to < in this line.
-            // Select the minimum element in each loop.
-            if (array[i] < array[min_idx])
-                min_idx = i;
-        }
-
-        // put min at the correct position
-        SwapTutorID(&array[min_idx], &array[step]);
-    }
-}
-
-// driver code
-void SortTutorID() {
-    system("cls");
-    int data[] = { 20, 12, 10, 15, 2 };
-    int size = sizeof(data) / sizeof(data[0]);
-    TutorIDSelectionSort(data, size);
-    cout << "Sorted array in Acsending Order:\n";
-    printArray(data, size);
-
-    loopSymbol(120);
+void SortHourlyRate(Tutor tutorArray[]) {
+	system("cls");
+	HourlyRateSelectionSort(tutorArray);
+	cout << "Sorted array in Acsending Order:\n";
+	DisplayTutor(tutorArray);
+	
 }

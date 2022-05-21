@@ -1,3 +1,7 @@
 ﻿  Main.cpp
+<<<<<<< Updated upstream
   LINK : C:\Users\qiuyi\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe not found or not built by the last incremental link; performing full link
+=======
+C:\Users\qiuyi\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\SortHourlyRate.h(9,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+>>>>>>> Stashed changes
   Array_TuitionManagementSystem.vcxproj -> C:\Users\qiuyi\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe
