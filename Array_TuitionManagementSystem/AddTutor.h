@@ -69,6 +69,8 @@ void AddTutor(Tutor tutor_info[]) {
             else {
                 tutor_info[row].hourlyRate = 0;
             }
+
+            tutor_info[row].payCheck = tutor_info[row].monthlyHour * tutor_info[row].hourlyRate;
         }
     }
 }
