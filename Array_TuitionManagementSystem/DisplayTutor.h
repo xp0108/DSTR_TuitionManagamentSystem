@@ -7,7 +7,7 @@
 void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
     system("cls");
     int arraysize = 100;
-    cout << endl << string(100, '-') << endl << displayString  << endl << string(100, '-') << endl;
+    cout << endl << string(180, '-') << endl << displayString  << endl << string(180, '-') << endl;
 
     //Heading
     cout
@@ -25,6 +25,9 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
         << "DateTerminated"
         << left
         << setw(15)
+        << "WorkingHour"
+        << left
+        << setw(15)
         << "HourlyRate"
         << left
         << setw(15)
@@ -35,6 +38,15 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
         << left
         << setw(15)
         << "TuitionName"
+        << left
+        << setw(15)
+        << "SubjectName"
+        << left
+        << setw(15)
+        << "Rating"
+        << left
+        << setw(15)
+        << "PayCheck"
         << endl;
 
     // print out tutor_info
@@ -68,6 +80,9 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
                 << tutor_info[row].dateTerminated
                 << left
                 << setw(15)
+                << tutor_info[row].monthlyHour
+                << left
+                << setw(15)
                 << tutor_info[row].hourlyRate
                 << left
                 << setw(15)
@@ -78,20 +93,29 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
                 << left
                 << setw(15)
                 << tutor_info[row].tutionName
+                << left
+                << setw(15)
+                << tutor_info[row].subjectName
+                << left
+                << setw(15)
+                << tutor_info[row].rating
+                << left
+                << setw(15)
+                << tutor_info[row].payCheck
                 << endl;
             
         }
     }
 
     cout << endl;
-    cout << string(100, '-') << endl;
+    cout << string(180, '-') << endl;
 }
 
 
 void DisplayKLTutor(Tutor tutor_info[], string displayString = "Kuala Lumpur - Tutor Records") {
     system("cls");
     int arraysize = 100;
-    cout << endl << string(100, '-') << endl << displayString << endl << string(100, '-') << endl;
+    cout << endl << string(200, '-') << endl << displayString << endl << string(100, '-') << endl;
 
     cout
         << left
@@ -108,6 +132,9 @@ void DisplayKLTutor(Tutor tutor_info[], string displayString = "Kuala Lumpur - T
         << "DateTerminated"
         << left
         << setw(15)
+        << "WorkingHour"
+        << left
+        << setw(15)
         << "HourlyRate"
         << left
         << setw(15)
@@ -118,6 +145,15 @@ void DisplayKLTutor(Tutor tutor_info[], string displayString = "Kuala Lumpur - T
         << left
         << setw(15)
         << "TuitionName"
+        << left
+        << setw(15)
+        << "SubjectName"
+        << left
+        << setw(15)
+        << "Rating"
+        << left
+        << setw(15)
+        << "PayCheck"
         << endl;
 
     // print out tutor_info
@@ -153,6 +189,9 @@ void DisplayKLTutor(Tutor tutor_info[], string displayString = "Kuala Lumpur - T
                     << tutor_info[row].dateTerminated
                     << left
                     << setw(15)
+                    << tutor_info[row].monthlyHour
+                    << left
+                    << setw(15)
                     << tutor_info[row].hourlyRate
                     << left
                     << setw(15)
@@ -163,19 +202,28 @@ void DisplayKLTutor(Tutor tutor_info[], string displayString = "Kuala Lumpur - T
                     << left
                     << setw(15)
                     << tutor_info[row].tutionName
+                    << left
+                    << setw(15)
+                    << tutor_info[row].subjectName
+                    << left
+                    << setw(15)
+                    << tutor_info[row].rating
+                    << left
+                    << setw(15)
+                    << tutor_info[row].payCheck
                     << endl;
             }
         }
     }
 
     cout << endl;
-    cout << string(100, '-') << endl;
+    cout << string(200, '-') << endl;
 }
 
 void DisplayJohorTutor(Tutor tutor_info[], string displayString = "Johor - Tutor Records") {
     system("cls");
     int arraysize = 100;
-    cout << endl << string(100, '-') << endl << displayString << endl << string(100, '-') << endl;
+    cout << endl << string(180, '-') << endl << displayString << endl << string(180, '-') << endl;
 
     //Heading
     cout
@@ -193,6 +241,9 @@ void DisplayJohorTutor(Tutor tutor_info[], string displayString = "Johor - Tutor
         << "DateTerminated"
         << left
         << setw(15)
+        << "WorkingHour"
+        << left
+        << setw(15)
         << "HourlyRate"
         << left
         << setw(15)
@@ -203,6 +254,15 @@ void DisplayJohorTutor(Tutor tutor_info[], string displayString = "Johor - Tutor
         << left
         << setw(15)
         << "TuitionName"
+        << left
+        << setw(15)
+        << "SubjectName"
+        << left
+        << setw(15)
+        << "Rating"
+        << left
+        << setw(15)
+        << "PayCheck"
         << endl;
 
     // print out tutor_info
@@ -239,6 +299,9 @@ void DisplayJohorTutor(Tutor tutor_info[], string displayString = "Johor - Tutor
                     << tutor_info[row].dateTerminated
                     << left
                     << setw(15)
+                    << tutor_info[row].monthlyHour
+                    << left
+                    << setw(15)
                     << tutor_info[row].hourlyRate
                     << left
                     << setw(15)
@@ -249,11 +312,20 @@ void DisplayJohorTutor(Tutor tutor_info[], string displayString = "Johor - Tutor
                     << left
                     << setw(15)
                     << tutor_info[row].tutionName
+                    << left
+                    << setw(15)
+                    << tutor_info[row].subjectName
+                    << left
+                    << setw(15)
+                    << tutor_info[row].rating
+                    << left
+                    << setw(15)
+                    << tutor_info[row].payCheck
                     << endl;
             }
         }
     }
 
     cout << endl;
-    cout << string(100, '-') << endl;
+    cout << string(180, '-') << endl;
 }

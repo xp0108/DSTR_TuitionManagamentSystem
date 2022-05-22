@@ -15,5 +15,6 @@ struct Tutor
 	string tutionName;
 	string subjectName;
 	double rating;
+	double payCheck;
 };
 
