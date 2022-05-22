@@ -8,6 +8,7 @@ struct Tutor
 	string tutorName;
 	string dateJoin;
 	string dateTerminated;
+	double monthlyHour;
 	double hourlyRate;
 	string tutorPhone;
 	string tutorAddress;
@@ -16,9 +17,3 @@ struct Tutor
 	double rating;
 };
 
-struct Subject
-{
-	int subjectCode;
-	string subjectName;
-	double MonthlyHour;
-};
