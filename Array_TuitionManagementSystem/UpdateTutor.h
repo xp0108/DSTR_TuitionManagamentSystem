@@ -13,6 +13,7 @@ using namespace std;
 //	tutorArray[0] = tutorArray[0] * tutorArray[1];
 //
 //	for (int i = 1; i < tutorID - 1; i++)
+//	{
 //		Tutor curr_element = tutorArray[i];
 //
 //		tutorArray[i] = prev_element * tutorArray[i + 1];
