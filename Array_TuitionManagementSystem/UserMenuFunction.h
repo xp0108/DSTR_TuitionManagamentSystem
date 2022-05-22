@@ -11,6 +11,7 @@
 #include "SortHourlyRate.h"
 #include "GenerateReport.h"
 #include "UpdateTutor.h"
+#include "DeleteTutor.h"
 using namespace std;
 
 void KLAdminMenu(Tutor tutorArray[])
@@ -156,7 +157,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			UpdateTutor(tutorArray);
 			break;
 		case 3:
-			//function();
+			//deleteTutor();
 			break;
 		case 4:
 			DisplayTutor(tutorArray);
