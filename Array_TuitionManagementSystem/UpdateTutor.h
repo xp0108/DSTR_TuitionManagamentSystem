@@ -5,18 +5,38 @@
 #include "DataStruc.h"
 using namespace std;
 
-void UpdateTutorAddress(Tutor updateTutorAdd[], int tutorArr) {
-	string updateTutorAddress;
-	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << " de Address: ";
-	cin >> updateTutorAddress;
-	updateTutorAdd[tutorArr].tutorAddress = updateTutorAddress;
-}
-
 void UpdateTutorPhone(Tutor updateTutorAdd[], int tutorArr) {
 	string updateTutorPhone;
-	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << " de Phone Number: ";
+	cout << endl;
+	loopSymbol(100, "-");
+	cout << endl;
+	cout << "Update Tutor Phone Number" << endl;
+	loopSymbol(100, "-");
+
+	cout << endl << endl;
+
+	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << "'s Phone Number: ";
 	cin >> updateTutorPhone;
 	updateTutorAdd[tutorArr].tutorPhone = updateTutorPhone;
+
+	cout << endl << "Tutor " << updateTutorAdd[tutorArr].tutorName << " Update Successfully !!!";
+}
+
+void UpdateTutorAddress(Tutor updateTutorAdd[], int tutorArr) {
+	string updateTutorAddress;
+	cout << endl;
+	loopSymbol(100, "-");
+	cout << endl;
+	cout << "Update Tutor Address" << endl;
+	loopSymbol(100, "-");
+
+	cout << endl << endl;
+
+	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << "'s Address: ";
+	cin >> updateTutorAddress;
+	updateTutorAdd[tutorArr].tutorAddress = updateTutorAddress;
+
+	cout << endl << "Tutor " << updateTutorAdd[tutorArr].tutorName << " Update Successfully !!!";
 }
 
 void UpdateTutor(Tutor tutorArray[])
@@ -36,15 +56,16 @@ void UpdateTutor(Tutor tutorArray[])
 	}
 
 	//Search Function - check tutor exist & return tutorArray
-	int checkTutorID = linearSearchTutor(tutorArray, tutorID); //tutorArray[index]
+	int checkTutorID = linearSearchTutor(tutorArray, tutorID);
 	while (checkTutorID == -1)
 	{
-		cout << "Tutor ID not found\t" << "INPUT AGAIN: ";
+		cout << "Tutor ID not found !!! " << endl << "Enter Tutor ID Again: ";
 		cin.clear();
 		cin >> tutorID;
 		checkTutorID = linearSearchTutor(tutorArray, tutorID);
 	}
 
+	cout << "Tutor Name: " << tutorArray[checkTutorID].tutorName << endl;
 	//Update Menu - address or phone
 	bool exitFunction = true;
 	while (exitFunction != false)
@@ -67,9 +88,11 @@ void UpdateTutor(Tutor tutorArray[])
 		{
 		case 1:
 			UpdateTutorPhone(tutorArray, checkTutorID);
+			exitFunction = false;
 			break;
 		case 2:
 			UpdateTutorAddress(tutorArray, checkTutorID);
+			exitFunction = false;
 			break;
 		case 3:
 			exitFunction = false;
