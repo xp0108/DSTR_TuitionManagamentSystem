@@ -154,7 +154,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			break;
 		case 2:
 
-			UpdateTutor();
+			UpdateTutor(tutorArray);
 			break;
 		case 3:
 			//deleteTutor();
