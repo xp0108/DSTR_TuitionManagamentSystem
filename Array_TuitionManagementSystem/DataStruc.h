@@ -12,7 +12,7 @@ struct Tutor
 	string tutorPhone;
 	string tutorAddress;
 	string tutionName;
-	int subjectCode;
+	string subjectName;
 	double rating;
 };
 

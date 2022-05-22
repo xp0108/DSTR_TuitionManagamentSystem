@@ -5,7 +5,6 @@
 #include "DataStruc.h"
 using namespace std;
 
-
 void Login(Tutor tutorArray[])
 {
 	int loginCount = 0;
