@@ -14,12 +14,12 @@ int InputArraySize() {
 
 //check if the tutorID axist in the tutor_info array
 int CheckTutorID(int tutorID, Tutor tutor_info[], int arraysize) {
-	for (int i = 0; i < arraysize; i++) {
-		if (tutorID == tutor_info[i].tutorID && !tutor_info[i].tutorName.empty()) {
-			cout << endl << "Tutor ID " << tutorID << " already exist.";
-			return 0;
-		}
-	}
+    for (int i = 0; i < arraysize; i++) {
+        if (tutorID == tutor_info[i].tutorID && !tutor_info[i].tutorName.empty()) {
+            cout << endl << "Tutor ID " << tutorID << " already exist.";
+            return 0;
+        }
+    }
     return -1;
 };
 
@@ -43,13 +43,15 @@ void AddTutor(Tutor tutor_info[]) {
             cin >> tutor_info[row].tutorName;
             cout << "Date joined: ";
             cin >> tutor_info[row].dateJoin;
+            cout << "Working Hour: ";
+            cin >> tutor_info[row].monthlyHour;
             cout << "Phone number: ";
             cin >> tutor_info[row].tutorPhone;
             cout << "Address: ";
             cin >> tutor_info[row].tutorAddress;
             cout << "Tuition Center: ";
             cin >> tutor_info[row].tutionName;
-            cout << "Subject Code: ";
+            cout << "Subject Name: ";
             cin >> tutor_info[row].subjectName;
             cout << "Rating: ";
             cin >> tutor_info[row].rating;
@@ -67,6 +69,8 @@ void AddTutor(Tutor tutor_info[]) {
             else {
                 tutor_info[row].hourlyRate = 0;
             }
+
+            tutor_info[row].payCheck = tutor_info[row].monthlyHour * tutor_info[row].hourlyRate;
         }
     }
 }

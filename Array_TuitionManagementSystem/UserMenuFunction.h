@@ -150,7 +150,7 @@ void HRManagerMenu(Tutor tutorArray[])
 		switch (hrChoice)
 		{
 		case 1:
-			RegisterTutorFunction(tutorArray);
+			AddTutor(tutorArray);
 			break;
 		case 2:
 
