@@ -87,7 +87,7 @@ void KLSearchTutorByRating(Tutor tutorArray[])
 		cout << "Tutor Rating found" << endl << endl;
 		for (int i = 0; i < size; i++)
 		{
-			if (tutorArray[i].rating == rating && tutorArray[i].tutionName == "KL")
+			if (tutorArray[i].rating == rating && tutorArray[i].tutionName == "KL" && !tutorArray[i].tutorName.empty())
 			{
 				cout << "Tutor ID: " << tutorArray[i].tutorID << endl;
 				cout << "Tutor Name: " << tutorArray[i].tutorName << endl;
