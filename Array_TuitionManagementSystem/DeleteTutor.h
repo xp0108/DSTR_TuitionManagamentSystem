@@ -56,9 +56,16 @@ void CheckDeleteTutor(Tutor tutorArray[], int tutorTDIndex) {
 
 	int diffDate = CountDiffDate(dateTerminated, dateToday);
 
+	int arrSize = 100;
 	if (diffDate >= 183) //6 months = 183 Days (https://www.datecalculator.org/months-to-days)
 	{
 		cout << "Yes Please Delete" << endl;
+		for (i = tutorTDIndex; i <= arrSize; i++)
+		{
+			tutorArray[i] = tutorArray[i + 1];
+			arrSize--;
+		}
+
 	}
 	else
 	{
@@ -97,4 +104,5 @@ void DeleteTutor(Tutor tutorArray[]) {
 	UpdateTutorTerminateDate(tutorArray, checkTutorID);
 	cout << endl << endl;
 	CheckDeleteTutor(tutorArray, checkTutorID);
+
 }
