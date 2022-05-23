@@ -1,8 +1,7 @@
 #pragma once
 #include <iostream>
-#include "AdditionalFeature.h"
 #include "UserMenuFunction.h"
-#include "DataStruc.h"
+
 using namespace std;
 
 void Login(Tutor tutorArray[])
@@ -20,17 +19,17 @@ void Login(Tutor tutorArray[])
 		if (username == "kl" && password == "123")
 		{
 			//cout << "Here is KL Branch";
-			KLAdminMenu(tutorArray);
+			KLAdminMenu();
 		}
 		else if (username == "johor" && password == "123")
 		{
 			//cout << "Here is Johor Branch";
-			JohorAdminMenu(tutorArray);
+			JohorAdminMenu();
 		}
 		else if (username == "hr" && password == "123")
 		{
 			//cout << "Here is HR Manager";
-			HRManagerMenu(tutorArray);
+			HRManagerMenu();
 
 		}
 		else
