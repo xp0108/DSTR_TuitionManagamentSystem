@@ -14,6 +14,7 @@ struct Tutor
 	int tutionCode;
 	int subjectCode;
 	double rating;
+	Tutor* next;
 };
 
 struct Subject

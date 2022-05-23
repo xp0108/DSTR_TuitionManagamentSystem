@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "DataStruct.h"
+#include "AddTutor.h"
 using namespace std;
 
 void KLAdminMenu()
@@ -121,7 +122,7 @@ void HRManagerMenu()
 		switch (hrChoice)
 		{
 		case 1:
-			//function();
+			CallAdd();
 			break;
 		case 2:
 			//function();

@@ -142,6 +142,7 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AddTutor.h" />
     <ClInclude Include="DataStruct.h" />
     <ClInclude Include="Login.h" />
   </ItemGroup>
