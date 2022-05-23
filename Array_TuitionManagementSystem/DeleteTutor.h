@@ -27,7 +27,7 @@ void UpdateTutorTerminateDate(Tutor updateTutorAdd[], int tutorArr) {
 	cout << endl << "Tutor " << updateTutorAdd[tutorArr].tutorName << "'s Termiantion Date Update Successfully !!!";
 }
 
-void CheckDeleteTutor(Tutor tutorArray[], int tutorTDIndex) {
+void CheckDeleteTutor(Tutor tutorArray[], int tutorTDIndex, Tutor* deleteArrayTutor) {
 	//Get today date - https://www.softwaretestinghelp.com/date-and-time-in-cpp/
 	time_t getTodayTime = time(0);
 	tm* local_time = localtime(&getTodayTime);
@@ -62,8 +62,7 @@ void CheckDeleteTutor(Tutor tutorArray[], int tutorTDIndex) {
 		cout << "Yes Please Delete" << endl;
 		for (i = tutorTDIndex; i <= arrSize; i++)
 		{
-			tutorArray[i] = tutorArray[i + 1];
-			arrSize--;
+			*deleteArrayTutor = {};
 		}
 
 	}
@@ -103,6 +102,6 @@ void DeleteTutor(Tutor tutorArray[]) {
 
 	UpdateTutorTerminateDate(tutorArray, checkTutorID);
 	cout << endl << endl;
-	CheckDeleteTutor(tutorArray, checkTutorID);
+	CheckDeleteTutor(tutorArray, checkTutorID, &tutorArray[checkTutorID]);
 
 }
