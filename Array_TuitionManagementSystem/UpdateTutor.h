@@ -43,12 +43,12 @@ void UpdateTutor(Tutor tutorArray[])
 {
 	system("cls");
 	loopSymbol(120);
-	cout << "Update Tutor Record" << endl;
+	cout << endl << "Update Tutor Record" << endl;
 	loopSymbol(120);
 	int tutorID;
 
 	// Check is int input
-	cout << "Enter Tutor ID :";
+	cout << endl << "Enter Tutor ID :";
 	while (!(cin >> tutorID)) {
 		cout << endl << "Integer Only !!" << endl << "Enter Tutor ID Again : ";
 		cin.clear();
