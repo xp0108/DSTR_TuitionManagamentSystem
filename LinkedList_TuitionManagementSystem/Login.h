@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void Login(Tutor tutorArray[])
+void Login()
 {
 	int loginCount = 0;
 
