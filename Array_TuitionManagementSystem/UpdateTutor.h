@@ -5,12 +5,38 @@
 #include "DataStruc.h"
 using namespace std;
 
-void UpdateTutorAddress(Tutor tutorArray[], int tutorID) {
-	cout << "mody addd" << endl;
+void UpdateTutorPhone(Tutor updateTutorAdd[], int tutorArr) {
+	string updateTutorPhone;
+	cout << endl;
+	loopSymbol(100, "-");
+	cout << endl;
+	cout << "Update Tutor Phone Number" << endl;
+	loopSymbol(100, "-");
+
+	cout << endl << endl;
+
+	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << "'s Phone Number: ";
+	cin >> updateTutorPhone;
+	updateTutorAdd[tutorArr].tutorPhone = updateTutorPhone;
+
+	cout << endl << "Tutor " << updateTutorAdd[tutorArr].tutorName << " Update Successfully !!!";
 }
 
-void UpdateTutorPhone(Tutor tutorArray[], int tutorID) {
-	cout << "mody phone" << endl;
+void UpdateTutorAddress(Tutor updateTutorAdd[], int tutorArr) {
+	string updateTutorAddress;
+	cout << endl;
+	loopSymbol(100, "-");
+	cout << endl;
+	cout << "Update Tutor Address" << endl;
+	loopSymbol(100, "-");
+
+	cout << endl << endl;
+
+	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << "'s Address: ";
+	cin >> updateTutorAddress;
+	updateTutorAdd[tutorArr].tutorAddress = updateTutorAddress;
+
+	cout << endl << "Tutor " << updateTutorAdd[tutorArr].tutorName << " Update Successfully !!!";
 }
 
 void UpdateTutor(Tutor tutorArray[])
@@ -21,6 +47,7 @@ void UpdateTutor(Tutor tutorArray[])
 	loopSymbol(120);
 	int tutorID;
 
+	// Check is int input
 	cout << "Enter Tutor ID :";
 	while (!(cin >> tutorID)) {
 		cout << endl << "Integer Only !!" << endl << "Enter Tutor ID Again : ";
@@ -32,12 +59,14 @@ void UpdateTutor(Tutor tutorArray[])
 	int checkTutorID = linearSearchTutor(tutorArray, tutorID);
 	while (checkTutorID == -1)
 	{
-		cout << "Tutor ID not found\t" << "INPUT AGAIN: ";
+		cout << "Tutor ID not found !!! " << endl << "Enter Tutor ID Again: ";
 		cin.clear();
 		cin >> tutorID;
 		checkTutorID = linearSearchTutor(tutorArray, tutorID);
 	}
 
+	cout << "Tutor Name: " << tutorArray[checkTutorID].tutorName << endl;
+	//Update Menu - address or phone
 	bool exitFunction = true;
 	while (exitFunction != false)
 	{
@@ -58,10 +87,12 @@ void UpdateTutor(Tutor tutorArray[])
 		switch (updateChoice)
 		{
 		case 1:
-			UpdateTutorPhone(tutorArray, tutorID);
+			UpdateTutorPhone(tutorArray, checkTutorID);
+			exitFunction = false;
 			break;
 		case 2:
-			UpdateTutorAddress(tutorArray, tutorID);
+			UpdateTutorAddress(tutorArray, checkTutorID);
+			exitFunction = false;
 			break;
 		case 3:
 			exitFunction = false;
@@ -72,4 +103,3 @@ void UpdateTutor(Tutor tutorArray[])
 	}
 
 }
-
