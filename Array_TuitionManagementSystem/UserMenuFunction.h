@@ -153,7 +153,6 @@ void HRManagerMenu(Tutor tutorArray[])
 			AddTutor(tutorArray);
 			break;
 		case 2:
-
 			UpdateTutor(tutorArray);
 			break;
 		case 3:

@@ -77,12 +77,12 @@ void CheckDeleteTutor(Tutor tutorArray[], int tutorTDIndex) {
 void DeleteTutor(Tutor tutorArray[]) {
 	system("cls");
 	loopSymbol(120);
-	cout << "Delete Tutor Record" << endl;
+	cout << endl << "Delete Tutor Record" << endl;
 	loopSymbol(120);
 	int tutorID;
 
 	// Check is int input
-	cout << "Enter Tutor ID :";
+	cout << endl << "Enter Tutor ID :";
 	while (!(cin >> tutorID)) {
 		cout << endl << "Integer Only !!" << endl << "Enter Tutor ID Again : ";
 		cin.clear();
