@@ -3,6 +3,7 @@
 #include "HRSearch.h"
 #include "UserMenuFunction.h"
 #include "DataStruc.h"
+#include "AddRating.h"
 using namespace std;
 
 void UpdateTutorPhone(Tutor updateTutorAdd[], int tutorArr) {
@@ -35,6 +36,23 @@ void UpdateTutorAddress(Tutor updateTutorAdd[], int tutorArr) {
 	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << "'s Address: ";
 	cin >> updateTutorAddress;
 	updateTutorAdd[tutorArr].tutorAddress = updateTutorAddress;
+
+	cout << endl << "Tutor " << updateTutorAdd[tutorArr].tutorName << " Update Successfully !!!";
+}
+
+void UpdateTutorRating(Tutor updateTutorAdd[], int tutorArr) {
+	double updateTutorRating;
+	cout << endl;
+	loopSymbol(100, "-");
+	cout << endl;
+	cout << "Update Tutor Rating" << endl;
+	loopSymbol(100, "-");
+
+	cout << endl << endl;
+
+	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << "'s New Rating: ";
+	cin >> updateTutorRating;
+	PushRating(updateTutorAdd, tutorArr, updateTutorRating);
 
 	cout << endl << "Tutor " << updateTutorAdd[tutorArr].tutorName << " Update Successfully !!!";
 }
@@ -75,7 +93,8 @@ void UpdateTutor(Tutor tutorArray[])
 		cout << " ** UPDATE MENU **" << endl;
 		cout << "1. Tutor Phone Number" << endl;
 		cout << "2. Tutor Address" << endl;
-		cout << "3. Exit Update Function" << endl;
+		cout << "3. Tutor Rating" << endl;
+		cout << "4. Exit Update Function" << endl;
 		cout << "Enter your choice: ";
 		// Validate user input
 		while (!(cin >> updateChoice)) {
@@ -95,6 +114,10 @@ void UpdateTutor(Tutor tutorArray[])
 			exitFunction = false;
 			break;
 		case 3:
+			UpdateTutorRating(tutorArray, checkTutorID);
+			exitFunction = false;
+			break;
+		case 4:
 			exitFunction = false;
 			break;
 		default:
