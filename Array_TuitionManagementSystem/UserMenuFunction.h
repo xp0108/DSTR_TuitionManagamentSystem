@@ -42,7 +42,7 @@ void KLAdminMenu(Tutor tutorArray[])
 		switch (klAdminChoice)
 		{
 		case 1:
-			cout << "Enter rating 2: ";
+			cout << "Enter rating: ";
 			cin >> rateValue;
 			PushRating(tutorArray, 50, rateValue);
 			break;
@@ -50,7 +50,7 @@ void KLAdminMenu(Tutor tutorArray[])
 			klSearchTutor(tutorArray);
 			break;
 		case 3:
-			KLSearchTutorByRating(tutorArray);
+			//KLSearchTutorByRating(tutorArray);
 			break;
 		case 4:
 			SortTutorIDKL(tutorArray);
@@ -101,10 +101,10 @@ void JohorAdminMenu(Tutor tutorArray[])
 			//function();
 			break;
 		case 2:
-			JohorSearchTutor(tutorArray);
+			//JohorSearchTutor(tutorArray);
 			break;
 		case 3:
-			JohorSearchTutorByRating(tutorArray);
+			//JohorSearchTutorByRating(tutorArray);
 			break;
 		case 4:
 			SortTutorIDJohor(tutorArray);
@@ -169,7 +169,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			searchTutor(tutorArray);
 			break;
 		case 6:
-			searchTutorByRating(tutorArray);
+			//searchTutorByRating(tutorArray);
 			break;
 		case 7:
 			SortTutorID(tutorArray);

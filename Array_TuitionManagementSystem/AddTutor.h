@@ -56,8 +56,6 @@ void AddTutor(Tutor tutor_info[]) {
             cout << "Subject Name: ";
             cin >> tutor_info[row].subjectName;
             cout << "Rating: ";
-            cin >> tutor_info[row].rating;
-            cout << "Rating 2: ";
             cin >> rateValue;
             PushRating(tutor_info, row, rateValue);
             cout << endl;

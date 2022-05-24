@@ -57,6 +57,7 @@ void klSearchTutor(Tutor tutorArray[])
 	}
 };
 
+/*
 //serch for all tutor with user input rating
 void KLSearchTutorByRating(Tutor tutorArray[])
 {
@@ -108,4 +109,4 @@ void KLSearchTutorByRating(Tutor tutorArray[])
 			}
 		}
 	}
-};
+}*/;

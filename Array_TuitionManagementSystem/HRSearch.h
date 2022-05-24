@@ -52,11 +52,12 @@ void searchTutor(Tutor tutorArray[])
 			cout << i << ' ';
 		}
 		cout << endl;
-		cout << "Tutor Rating 2: " << tutorArray[index].rating2.size() << endl;
+		cout << "Tutor Rating 2: " << tutorArray[index].rating.size() << endl;
 		cout << "Tutor PayCheck: " << tutorArray[index].payCheck;
 	}
 };
 
+/*
 //serch for all tutor with user input rating
 void searchTutorByRating(Tutor tutorArray[])
 {
@@ -108,4 +109,4 @@ void searchTutorByRating(Tutor tutorArray[])
 			}
 		}
 	}
-};
+}*/;

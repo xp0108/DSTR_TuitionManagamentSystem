@@ -14,6 +14,7 @@ int JohorLinearSearchTutor(Tutor* tutorArray, int tutorID) {
 	return -1;
 };
 
+/*
 //use linearSearchTutor funtion
 void JohorSearchTutor(Tutor tutorArray[])
 {
@@ -107,4 +108,4 @@ void JohorSearchTutorByRating(Tutor tutorArray[])
 			}
 		}
 	}
-}
+}*/

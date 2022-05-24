@@ -4,7 +4,7 @@
 using namespace std;
 
 void AddRating(Tutor rating_info[], int id, double rating) {
-	rating_info[id].rating = rating;
+	//rating_info[id].rating = rating;
 }
 
 void PushRating(Tutor rating_info[], int id, double ratevalue) {
