@@ -12,7 +12,7 @@ bool isEmpty(Tutor* head) {
 
 //void AddNode(Tutor*& head, Tutor*& last, int id, string name, string datejoin,
 //    double rate, string phone, string address, int tcode, int scode) {
-Tutor* AddNode(int id, string name, string datejoin, double rate, string phone, string address,
+Tutor* AddNode(int id, string name, string datejoin, double work, double rate, string phone, string address,
 	string tname, string subname, double rating, double paycheck) {
 	Tutor* newNode = new Tutor;
 
@@ -33,6 +33,7 @@ Tutor* AddNode(int id, string name, string datejoin, double rate, string phone, 
 	newNode->tutorName = name;
 	newNode->dateJoin = datejoin;
 	newNode->dateTerminated = "N/A";
+	newNode->workingHour = work;
 	newNode->hourlyRate = rate;
 	newNode->tutorPhone = phone;
 	newNode->tutorAddress = address;
@@ -100,6 +101,7 @@ void Display() { // no need pass the pointer, store in memory, jst direct refer
 			cout << "Tutor name: " << current->tutorName << endl;
 			cout << "Date joined: " << current->dateJoin << endl;
 			cout << "Date terminated: " << current->dateTerminated << endl;
+			cout << "Working Hour: " << current->workingHour << endl;
 			cout << "Hourly rate: " << current->hourlyRate << endl;
 			cout << "Phone: " << current->tutorPhone << endl;
 			cout << "Address: " << current->tutorAddress << endl;
@@ -119,7 +121,7 @@ void CallAdd() {
 	head = NULL; //head var no need define, cuz i make the head as global variable (refer data struct file)
 
 	int id;
-	double hrate, payCheck;
+	double workh, hrate, payCheck;
 	string name, datej, phone, address, tname, sname;
 
 	cout << "Tutor ID: ";
@@ -128,6 +130,8 @@ void CallAdd() {
 	cin >> name;
 	cout << "Date joined: ";
 	cin >> datej;
+	cout << "Working Hour: ";
+	cin >> workh;	
 	cout << "Hourly rate: ";
 	cin >> hrate;
 	cout << "Tutor phone: ";
@@ -145,7 +149,7 @@ void CallAdd() {
 	// AddTutor(head, last, id, name, datej, rate, phone, address, tcode, scode);
 	// Display(head);
 
-	Tutor* newNode = AddNode(id, name, datej, hrate, phone, address, tname, sname, 0, payCheck); //create Node
+	Tutor* newNode = AddNode(id, name, datej, workh, hrate, phone, address, tname, sname, 0, payCheck); //create Node
 	AddTutorToTheEnd(newNode);	//add the created node into LL
 	Display();
 

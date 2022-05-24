@@ -3,6 +3,7 @@
 #include <windows.h>
 #include "Login.h"
 #include "AdditionalFunction.h"
+#include "GenerateData.h"
 
 using namespace std;
 
@@ -14,6 +15,8 @@ int main()
 	GetWindowRect(console, &r); //stores the console's current dimensions
 
 	MoveWindow(console, r.left, r.top, 1350, 600, TRUE); // 800 width, 100 height
+	
+	generateData();
 
 	loopSymbol(120);
 	cout << endl;
@@ -21,7 +24,7 @@ int main()
 	loopSymbol(120);
 
 	cout << endl << endl;
-
+	GenerateData();
 	Login();
 
 	return 0;
