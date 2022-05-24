@@ -14,7 +14,6 @@
 #include "DeleteTutor.h"
 #include "AddRating.h"
 using namespace std;
-double rateValue;
 
 void KLAdminMenu(Tutor tutorArray[])
 {
@@ -42,9 +41,7 @@ void KLAdminMenu(Tutor tutorArray[])
 		switch (klAdminChoice)
 		{
 		case 1:
-			cout << "Enter rating: ";
-			cin >> rateValue;
-			PushRating(tutorArray, 50, rateValue);
+			AddRatingKL(tutorArray);
 			break;
 		case 2:
 			klSearchTutor(tutorArray);
@@ -98,7 +95,7 @@ void JohorAdminMenu(Tutor tutorArray[])
 		switch (johorAdminChoice)
 		{
 		case 1:
-			//function();
+			AddRatingJohor(tutorArray);
 			break;
 		case 2:
 			//JohorSearchTutor(tutorArray);
