@@ -10,6 +10,7 @@ struct Tutor
 	string tutorName;
 	string dateJoin;
 	string dateTerminated;
+	double workingHour;
 	double hourlyRate;
 	string tutorPhone;
 	string tutorAddress;
