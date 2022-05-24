@@ -48,6 +48,12 @@ void klSearchTutor(Tutor tutorArray[])
 		cout << "Tutor Tuition Name: " << tutorArray[index].tutionName << endl;
 		cout << "Tutor Subject Name: " << tutorArray[index].subjectName << endl;
 		cout << "Tutor Rating: " << tutorArray[index].rating << endl;
+		cout << "Real tutor ratings: ";
+		for (auto i : tutorArray[index].rating2) {
+			cout << i << ' ';
+		}
+		cout << endl;
+		cout << "Tutor Rating 2: " << tutorArray[index].rating2.size() << endl;
 		cout << "Tutor PayCheck: " << tutorArray[index].payCheck;
 	}
 };

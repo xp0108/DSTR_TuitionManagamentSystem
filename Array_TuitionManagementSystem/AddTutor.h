@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "DataStruc.h"
+#include "AddRating.h"
 
 int InputArraySize() {
     int arraysize;
@@ -26,6 +27,7 @@ int CheckTutorID(int tutorID, Tutor tutor_info[], int arraysize) {
 void AddTutor(Tutor tutor_info[]) {
 
     int size = InputArraySize();
+    int rateValue;
 
     // add value to tutor_info
     for (int row = 0; row < size; row++) {
@@ -55,6 +57,9 @@ void AddTutor(Tutor tutor_info[]) {
             cin >> tutor_info[row].subjectName;
             cout << "Rating: ";
             cin >> tutor_info[row].rating;
+            cout << "Rating 2: ";
+            cin >> rateValue;
+            PushRating(tutor_info, row, rateValue);
             cout << endl;
 
             if (tutor_info[row].subjectName == "English" || tutor_info[row].subjectName == "BM" || tutor_info[row].subjectName == "Mandarin") {

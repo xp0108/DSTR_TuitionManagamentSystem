@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdditionalFeature.h" />
+    <ClInclude Include="AddRating.h" />
     <ClInclude Include="AddTutor.h" />
     <ClInclude Include="DataStruc.h" />
     <ClInclude Include="DeleteTutor.h" />
@@ -154,6 +155,7 @@
     <ClInclude Include="KLSearch.h" />
     <ClInclude Include="Login.h" />
     <ClInclude Include="HRSearch.h" />
+    <ClInclude Include="SortOverallPerformance.h" />
     <ClInclude Include="SortTutorID.h" />
     <ClInclude Include="UpdateTutor.h" />
     <ClInclude Include="UserMenuFunction.h" />

@@ -14,6 +14,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[50].tutionName = "KL";
     tutor_info[50].subjectName = "History";
     tutor_info[50].rating = 0;
+    tutor_info[50].rating2 = {1};
     tutor_info[50].payCheck = tutor_info[50].monthlyHour * tutor_info[50].hourlyRate;
 
     tutor_info[51].tutorID = 22;

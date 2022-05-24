@@ -12,7 +12,9 @@
 #include "GenerateReport.h"
 #include "UpdateTutor.h"
 #include "DeleteTutor.h"
+#include "AddRating.h"
 using namespace std;
+double rateValue;
 
 void KLAdminMenu(Tutor tutorArray[])
 {
@@ -40,7 +42,9 @@ void KLAdminMenu(Tutor tutorArray[])
 		switch (klAdminChoice)
 		{
 		case 1:
-			//function();
+			cout << "Enter rating 2: ";
+			cin >> rateValue;
+			PushRating(tutorArray, 50, rateValue);
 			break;
 		case 2:
 			klSearchTutor(tutorArray);
