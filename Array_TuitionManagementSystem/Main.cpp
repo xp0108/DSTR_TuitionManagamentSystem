@@ -2,21 +2,19 @@
 #include <iostream>
 #include "Login.h"
 #include "GenerateData.h"
+#include "AdditionalFeature.h"
+#include <windows.h>
 
 using namespace std;
 
-
-
-void loopSymbol(int times = 20, string symbol = "=")
-{
-	for (int i = 0; i < times; i++)
-	{
-		cout << symbol;
-	}
-}
-
 int main()
 {
+	HWND console = GetConsoleWindow();
+	RECT r;
+	GetWindowRect(console, &r); //stores the console's current dimensions
+
+	MoveWindow(console, r.left, r.top, 1350, 600, TRUE); // 800 width, 100 height
+
 	loopSymbol(120);
 	cout << endl;
 	cout << "\t\t\t\t\teXcel Tuition Centre Management System" << endl;
@@ -24,7 +22,7 @@ int main()
 
 	cout << endl << endl;
 
-	Tutor tutor_info[100];
+	static Tutor tutor_info[100];
 
 	GenerateData(tutor_info);
 	Login(tutor_info);

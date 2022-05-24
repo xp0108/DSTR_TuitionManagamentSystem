@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+int sizeOfLinkedList = 0;
+
 struct Tutor
 {
 	int tutorID;
@@ -11,21 +13,9 @@ struct Tutor
 	double hourlyRate;
 	string tutorPhone;
 	string tutorAddress;
-	int tutionCode;
-	int subjectCode;
-	double rating;
-};
-
-struct Subject
-{
-	int subjectCode;
-	string subjectName;
-	double subjectPaid;
-};
-
-struct Tuition
-{
-	int tutionCode;
 	string tutionName;
-	string tutionAddress;
-};
+	string subjectName;
+	double rating;
+	double payCheck;
+	Tutor* nextAddress; //link
+} *head;

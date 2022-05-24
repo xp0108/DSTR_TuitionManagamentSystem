@@ -37,7 +37,7 @@ void searchTutor(Tutor tutorArray[])
 	{
 		system("cls");
 		cout << endl;
-		cout << "Tutor ID found" << endl;
+		cout << "Tutor ID found" << endl << endl;
 		cout << "Tutor ID: " << tutorArray[index].tutorID << endl;
 		cout << "Tutor Name: " << tutorArray[index].tutorName << endl;
 		cout << "Tutor Date Join: " << tutorArray[index].dateJoin << endl;
@@ -45,9 +45,10 @@ void searchTutor(Tutor tutorArray[])
 		cout << "Tutor Hourly Rate: " << tutorArray[index].hourlyRate << endl;
 		cout << "Tutor Phone: " << tutorArray[index].tutorPhone << endl;
 		cout << "Tutor Address: " << tutorArray[index].tutorAddress << endl;
-		cout << "Tutor Tuition Code: " << tutorArray[index].tutionCode << endl;
-		cout << "Tutor Subject Code: " << tutorArray[index].subjectCode << endl;
-		cout << "Tutor Rating: " << tutorArray[index].rating;
+		cout << "Tutor Tuition Name: " << tutorArray[index].tutionName << endl;
+		cout << "Tutor Subject Name: " << tutorArray[index].subjectName << endl;
+		cout << "Tutor Rating: " << tutorArray[index].rating << endl;
+		cout << "Tutor PayCheck: " << tutorArray[index].payCheck;
 	}
 };
 
@@ -83,10 +84,10 @@ void searchTutorByRating(Tutor tutorArray[])
 	{
 		system("cls");
 		cout << endl;
-		cout << "Tutor Rating found" << endl;
+		cout << "Tutor Rating found" << endl << endl;
 		for (int i = 0; i < size; i++)
 		{
-			if (tutorArray[i].rating == rating)
+			if (tutorArray[i].rating == rating && !tutorArray[i].tutorName.empty())
 			{
 				cout << "Tutor ID: " << tutorArray[i].tutorID << endl;
 				cout << "Tutor Name: " << tutorArray[i].tutorName << endl;
@@ -95,9 +96,10 @@ void searchTutorByRating(Tutor tutorArray[])
 				cout << "Tutor Hourly Rate: " << tutorArray[i].hourlyRate << endl;
 				cout << "Tutor Phone: " << tutorArray[i].tutorPhone << endl;
 				cout << "Tutor Address: " << tutorArray[i].tutorAddress << endl;
-				cout << "Tutor Tuition Code: " << tutorArray[i].tutionCode << endl;
-				cout << "Tutor Subject Code: " << tutorArray[i].subjectCode << endl;
-				cout << "Tutor Rating: " << tutorArray[i].rating << endl << endl;
+				cout << "Tutor Tuition Name: " << tutorArray[i].tutionName << endl;
+				cout << "Tutor Subject Name: " << tutorArray[i].subjectName << endl;
+				cout << "Tutor Rating: " << tutorArray[i].rating << endl;
+				cout << "Tutor PayCheck: " << tutorArray[i].payCheck << endl << endl;
 			}
 		}
 	}
