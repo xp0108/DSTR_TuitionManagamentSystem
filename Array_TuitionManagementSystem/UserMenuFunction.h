@@ -12,6 +12,7 @@
 #include "GenerateReport.h"
 #include "UpdateTutor.h"
 #include "DeleteTutor.h"
+#include "AddRating.h"
 using namespace std;
 
 void KLAdminMenu(Tutor tutorArray[])
@@ -40,13 +41,13 @@ void KLAdminMenu(Tutor tutorArray[])
 		switch (klAdminChoice)
 		{
 		case 1:
-			//function();
+			AddRatingKL(tutorArray);
 			break;
 		case 2:
 			klSearchTutor(tutorArray);
 			break;
 		case 3:
-			KLSearchTutorByRating(tutorArray);
+			//KLSearchTutorByRating(tutorArray);
 			break;
 		case 4:
 			SortTutorIDKL(tutorArray);
@@ -94,13 +95,13 @@ void JohorAdminMenu(Tutor tutorArray[])
 		switch (johorAdminChoice)
 		{
 		case 1:
-			//function();
+			AddRatingJohor(tutorArray);
 			break;
 		case 2:
-			JohorSearchTutor(tutorArray);
+			//JohorSearchTutor(tutorArray);
 			break;
 		case 3:
-			JohorSearchTutorByRating(tutorArray);
+			//JohorSearchTutorByRating(tutorArray);
 			break;
 		case 4:
 			SortTutorIDJohor(tutorArray);
@@ -165,7 +166,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			searchTutor(tutorArray);
 			break;
 		case 6:
-			searchTutorByRating(tutorArray);
+			//searchTutorByRating(tutorArray);
 			break;
 		case 7:
 			SortTutorID(tutorArray);
