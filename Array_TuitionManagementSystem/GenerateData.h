@@ -13,7 +13,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[50].tutorAddress = "Bukit Jalil";
     tutor_info[50].tutionName = "KL";
     tutor_info[50].subjectName = "History";
-    tutor_info[50].rating = {1};
+    tutor_info[50].rating = 1;
     tutor_info[50].payCheck = tutor_info[50].monthlyHour * tutor_info[50].hourlyRate;
 
     tutor_info[51].tutorID = 22;
@@ -26,7 +26,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[51].tutorAddress = "Pagoh";
     tutor_info[51].tutionName = "JOHOR";
     tutor_info[51].subjectName = "English";
-    tutor_info[51].rating = { 4.5 };
+    tutor_info[51].rating = 4.5;
     tutor_info[51].payCheck = tutor_info[51].monthlyHour * tutor_info[51].hourlyRate;
 
     tutor_info[52].tutorID = 15;
@@ -39,7 +39,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[52].tutorAddress = "Selangor";
     tutor_info[52].tutionName = "KL";
     tutor_info[52].subjectName = "Science";
-    tutor_info[52].rating = { 5 };
+    tutor_info[52].rating = 5;
     tutor_info[52].payCheck = tutor_info[52].monthlyHour * tutor_info[52].hourlyRate;
 
     tutor_info[53].tutorID = 45;
@@ -52,7 +52,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[53].tutorAddress = "Bukit Jalil";
     tutor_info[53].tutionName = "KL";
     tutor_info[53].subjectName = "Math";
-    tutor_info[53].rating = { 3 };
+    tutor_info[53].rating = 3;
     tutor_info[53].payCheck = tutor_info[53].monthlyHour * tutor_info[53].hourlyRate;
 
     tutor_info[54].tutorID = 21;
@@ -65,7 +65,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[54].tutorAddress = "Kluang";
     tutor_info[54].tutionName = "JOHOR";
     tutor_info[54].subjectName = "Computing";
-    tutor_info[54].rating = { 4.2 };
+    tutor_info[54].rating = 4.2;
     tutor_info[54].payCheck = tutor_info[54].monthlyHour * tutor_info[54].hourlyRate;
 
     tutor_info[55].tutorID = 33;
@@ -78,7 +78,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[55].tutorAddress = "Serdang";
     tutor_info[55].tutionName = "KL";
     tutor_info[55].subjectName = "BM";
-    tutor_info[55].rating = { 3.5 };
+    tutor_info[55].rating = 3.5;
     tutor_info[55].payCheck = tutor_info[55].monthlyHour * tutor_info[55].hourlyRate;
 
     tutor_info[56].tutorID = 18;
@@ -91,7 +91,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[56].tutorAddress = "Kulai";
     tutor_info[56].tutionName = "JOHOR";
     tutor_info[56].subjectName = "Economics";
-    tutor_info[56].rating = { 2.5 };
+    tutor_info[56].rating = 2.5;
 	tutor_info[56].payCheck = tutor_info[56].monthlyHour * tutor_info[56].hourlyRate;
 
     tutor_info[57].tutorID = 10;
@@ -104,7 +104,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[57].tutorAddress = "Nilai";
     tutor_info[57].tutionName = "KL";
     tutor_info[57].subjectName = "Accounting";
-    tutor_info[57].rating = { 3.5 };
+    tutor_info[57].rating = 3.5;
 	tutor_info[57].payCheck = tutor_info[57].monthlyHour * tutor_info[57].hourlyRate;
 
     tutor_info[58].tutorID = 11;
@@ -117,7 +117,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[58].tutorAddress = "Pontian";
     tutor_info[58].tutionName = "JOHOR";
     tutor_info[58].subjectName = "Mandarin";
-    tutor_info[58].rating = { 3 };
+    tutor_info[58].rating = 3;
 	tutor_info[58].payCheck = tutor_info[58].monthlyHour * tutor_info[58].hourlyRate;
 
     tutor_info[59].tutorID = 36;
@@ -130,6 +130,6 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[59].tutorAddress = "Muar";
     tutor_info[59].tutionName = "JOHOR";
     tutor_info[59].subjectName = "AddMath";
-    tutor_info[59].rating = { 4.5 };
+    tutor_info[59].rating = 4.5;
 	tutor_info[59].payCheck = tutor_info[59].monthlyHour * tutor_info[59].hourlyRate;
 }

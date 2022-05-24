@@ -47,17 +47,11 @@ void searchTutor(Tutor tutorArray[])
 		cout << "Tutor Address: " << tutorArray[index].tutorAddress << endl;
 		cout << "Tutor Tuition Name: " << tutorArray[index].tutionName << endl;
 		cout << "Tutor Subject Name: " << tutorArray[index].subjectName << endl;
-		cout << "Tutor ratings: ";
-		for (auto i : tutorArray[index].rating) {
-			cout << i << ' ';
-		}
-		cout << endl;
-		cout << "Tutor Rating 2: " << tutorArray[index].rating.size() << endl;
+		cout << "Tutor Overall Performance: " << tutorArray[index].rating << endl;
 		cout << "Tutor PayCheck: " << tutorArray[index].payCheck;
 	}
 };
 
-/*
 //serch for all tutor with user input rating
 void searchTutorByRating(Tutor tutorArray[])
 {
@@ -109,4 +103,4 @@ void searchTutorByRating(Tutor tutorArray[])
 			}
 		}
 	}
-}*/;
+};

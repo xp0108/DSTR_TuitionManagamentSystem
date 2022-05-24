@@ -71,5 +71,8 @@
     <ClInclude Include="SortOverallPerformance.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CalculateOverallPerformance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

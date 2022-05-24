@@ -14,7 +14,6 @@ int JohorLinearSearchTutor(Tutor* tutorArray, int tutorID) {
 	return -1;
 };
 
-/*
 //use linearSearchTutor funtion
 void JohorSearchTutor(Tutor tutorArray[])
 {
@@ -48,11 +47,7 @@ void JohorSearchTutor(Tutor tutorArray[])
 		cout << "Tutor Address: " << tutorArray[index].tutorAddress << endl;
 		cout << "Tutor Tuition Name: " << tutorArray[index].tutionName << endl;
 		cout << "Tutor Subject Name: " << tutorArray[index].subjectName << endl;
-		cout << "Tutor ratings: ";
-		for (auto i : tutorArray[index].rating) {
-			cout << i << ' ';
-		}
-		cout << endl;
+		cout << "Tutor Overall Performance: " << tutorArray[index].rating << endl;
 		cout << "Tutor PayCheck: " << tutorArray[index].payCheck;
 	}
 };
@@ -108,4 +103,4 @@ void JohorSearchTutorByRating(Tutor tutorArray[])
 			}
 		}
 	}
-}*/
+}

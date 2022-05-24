@@ -145,6 +145,7 @@
     <ClInclude Include="AdditionalFeature.h" />
     <ClInclude Include="AddRating.h" />
     <ClInclude Include="AddTutor.h" />
+    <ClInclude Include="CalculateOverallPerformance.h" />
     <ClInclude Include="DataStruc.h" />
     <ClInclude Include="DeleteTutor.h" />
     <ClInclude Include="GenerateReport.h" />

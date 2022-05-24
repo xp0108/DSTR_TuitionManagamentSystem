@@ -1,12 +1,10 @@
 #pragma once
 #include "DataStruc.h"
+#include "CalculateOverallPerformance.h"
 
 using namespace std;
 
-void AddRating(Tutor rating_info[], int id, double rating) {
-	//rating_info[id].rating = rating;
-}
-
 void PushRating(Tutor rating_info[], int id, double ratevalue) {
-	rating_info[id].rating.push_back(ratevalue);
+	rating_info[id].ratingVector.push_back(ratevalue);
+	CalculateOverallPerformance(rating_info, id);
 }
