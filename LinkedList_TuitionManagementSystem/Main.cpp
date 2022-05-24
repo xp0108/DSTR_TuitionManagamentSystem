@@ -3,6 +3,7 @@
 #include <windows.h>
 #include "Login.h"
 #include "AdditionalFunction.h"
+#include "GenerateData.h"
 
 using namespace std;
 
@@ -21,7 +22,7 @@ int main()
 	loopSymbol(120);
 
 	cout << endl << endl;
-
+	GenerateData();
 	Login();
 
 	return 0;
