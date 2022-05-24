@@ -7,6 +7,7 @@
 void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
     system("cls");
     int arraysize = 100;
+    int count = 0;
     cout << endl << string(180, '-') << endl << displayString  << endl << string(180, '-') << endl;
 
     //Heading
@@ -54,7 +55,7 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
 
         //Skip NULL values
         if (tutor_info[row].tutorID != NULL) {
-
+            count++;
                 /*cout << "Tutor ID: " << tutor_info[row].tutorID << endl;
                 cout << "Tutor name: " << tutor_info[row].tutorName << endl;
                 cout << "Date joined: " << tutor_info[row].dateJoin << endl;
