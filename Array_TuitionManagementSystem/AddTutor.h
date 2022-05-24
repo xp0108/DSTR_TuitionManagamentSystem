@@ -12,7 +12,7 @@ int InputArraySize() {
     return arraysize;
 };
 
-//check if the tutorID axist in the tutor_info array
+//check if the tutorID exist in the tutor_info array
 int CheckTutorID(int tutorID, Tutor tutor_info[], int arraysize) {
     for (int i = 0; i < arraysize; i++) {
         if (tutorID == tutor_info[i].tutorID && !tutor_info[i].tutorName.empty()) {

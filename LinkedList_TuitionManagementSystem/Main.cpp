@@ -24,7 +24,7 @@ int main()
 	loopSymbol(120);
 
 	cout << endl << endl;
-	GenerateData();
+	generateData();
 	Login();
 
 	return 0;
