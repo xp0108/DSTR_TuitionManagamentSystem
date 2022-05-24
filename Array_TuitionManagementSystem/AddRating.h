@@ -8,5 +8,5 @@ void AddRating(Tutor rating_info[], int id, double rating) {
 }
 
 void PushRating(Tutor rating_info[], int id, double ratevalue) {
-	rating_info[id].rating2.push_back(ratevalue);
+	rating_info[id].rating.push_back(ratevalue);
 }

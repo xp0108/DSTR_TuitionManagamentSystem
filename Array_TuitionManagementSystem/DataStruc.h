@@ -15,8 +15,8 @@ struct Tutor
 	string tutorAddress;
 	string tutionName;
 	string subjectName;
-	double rating;
-	vector<double> rating2;
+	//double rating;
+	vector<double> rating;
 	double payCheck;
 };
 
