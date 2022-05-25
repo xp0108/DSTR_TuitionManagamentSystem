@@ -1,3 +1,3 @@
 ﻿  Main.cpp
-C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.9\Array_TuitionManagementSystem\CalculateOverallPerformance.h(8,48): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Array_TuitionManagementSystem.vcxproj -> C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.9\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe
+C:\Users\qiuyi\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\DisplayTutor.h(11,9): warning C4101: 'pages': unreferenced local variable
+  Array_TuitionManagementSystem.vcxproj -> C:\Users\qiuyi\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe

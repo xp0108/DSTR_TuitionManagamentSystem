@@ -8,6 +8,7 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
     system("cls");
     int arraysize = 100;
     int count = 0;
+    int pages;
     cout << endl << string(180, '-') << endl << displayString  << endl << string(180, '-') << endl;
 
     //Heading
@@ -65,46 +66,46 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
                 cout << "Address: " << tutor_info[row].tutorAddress << endl;
                 cout << "Tuition name: " << tutor_info[row].tutionName << endl;
                 cout << endl;*/
-
-            cout
-                << left
-                << setw(15)
-                << tutor_info[row].tutorID
-                << left
-                << setw(15)
-                << tutor_info[row].tutorName
-                << left
-                << setw(15)
-                << tutor_info[row].dateJoin
-                << left
-                << setw(15)
-                << tutor_info[row].dateTerminated
-                << left
-                << setw(15)
-                << tutor_info[row].monthlyHour
-                << left
-                << setw(15)
-                << tutor_info[row].hourlyRate
-                << left
-                << setw(15)
-                << tutor_info[row].tutorPhone
-                << left
-                << setw(15)
-                << tutor_info[row].tutorAddress
-                << left
-                << setw(15)
-                << tutor_info[row].tutionName
-                << left
-                << setw(15)
-                << tutor_info[row].subjectName
-                << left
-                << setw(15)
-                << tutor_info[row].rating
-                << left
-                << setw(15)
-                << tutor_info[row].payCheck
-                << endl;
-            
+            for (int i = 0;i = count; i++) {
+                cout
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutorID
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutorName
+                    << left
+                    << setw(15)
+                    << tutor_info[row].dateJoin
+                    << left
+                    << setw(15)
+                    << tutor_info[row].dateTerminated
+                    << left
+                    << setw(15)
+                    << tutor_info[row].monthlyHour
+                    << left
+                    << setw(15)
+                    << tutor_info[row].hourlyRate
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutorPhone
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutorAddress
+                    << left
+                    << setw(15)
+                    << tutor_info[row].tutionName
+                    << left
+                    << setw(15)
+                    << tutor_info[row].subjectName
+                    << left
+                    << setw(15)
+                    << tutor_info[row].rating
+                    << left
+                    << setw(15)
+                    << tutor_info[row].payCheck
+                    << endl;
+            }
         }
     }
 
