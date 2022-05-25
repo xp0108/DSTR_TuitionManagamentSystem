@@ -145,6 +145,7 @@
     <ClInclude Include="AddTutor.h" />
     <ClInclude Include="DataStruct.h" />
     <ClInclude Include="GenerateData.h" />
+    <ClInclude Include="DisplayTutor.h" />
     <ClInclude Include="Login.h" />
     <ClInclude Include="UserMenuFunction.h" />
   </ItemGroup>
