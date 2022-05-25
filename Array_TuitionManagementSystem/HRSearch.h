@@ -47,7 +47,7 @@ void searchTutor(Tutor tutorArray[])
 		cout << "Tutor Address: " << tutorArray[index].tutorAddress << endl;
 		cout << "Tutor Tuition Name: " << tutorArray[index].tutionName << endl;
 		cout << "Tutor Subject Name: " << tutorArray[index].subjectName << endl;
-		cout << "Tutor Rating: " << tutorArray[index].rating << endl;
+		cout << "Tutor Overall Performance: " << tutorArray[index].rating << endl;
 		cout << "Tutor PayCheck: " << tutorArray[index].payCheck;
 	}
 };

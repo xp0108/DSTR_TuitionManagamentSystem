@@ -12,6 +12,9 @@
 #include "GenerateReport.h"
 #include "UpdateTutor.h"
 #include "DeleteTutor.h"
+#include "AddRating.h"
+#include "SortOverallPerformance.h"
+
 using namespace std;
 
 void KLAdminMenu(Tutor tutorArray[])
@@ -40,7 +43,7 @@ void KLAdminMenu(Tutor tutorArray[])
 		switch (klAdminChoice)
 		{
 		case 1:
-			//function();
+			AddRatingKL(tutorArray);
 			break;
 		case 2:
 			klSearchTutor(tutorArray);
@@ -55,7 +58,7 @@ void KLAdminMenu(Tutor tutorArray[])
 			SortHourlyRateKL(tutorArray);
 			break;
 		case 6:
-			//function();
+			SortOverallPerformanceKL(tutorArray);
 			break;
 		case 7:
 			generateKLTutorReport(tutorArray);
@@ -94,7 +97,7 @@ void JohorAdminMenu(Tutor tutorArray[])
 		switch (johorAdminChoice)
 		{
 		case 1:
-			//function();
+			AddRatingJohor(tutorArray);
 			break;
 		case 2:
 			JohorSearchTutor(tutorArray);
@@ -109,7 +112,7 @@ void JohorAdminMenu(Tutor tutorArray[])
 			SortHourlyRateJohor(tutorArray);
 			break;
 		case 6:
-			//function();
+			SortOverallPerformanceJohor(tutorArray);
 			break;
 		case 7:
 			generateJohorTutorReport(tutorArray);
@@ -165,7 +168,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			searchTutor(tutorArray);
 			break;
 		case 6:
-			searchTutorByRating(tutorArray);
+			//function();
 			break;
 		case 7:
 			SortTutorID(tutorArray);
@@ -174,7 +177,7 @@ void HRManagerMenu(Tutor tutorArray[])
 			SortHourlyRate(tutorArray);
 			break;
 		case 9:
-			//function();
+			SortOverallPerformanceHR(tutorArray);
 			break;
 		case 10:exit(0);
 			break;

@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <vector>
 using namespace std;
 
 struct Tutor
@@ -15,6 +16,7 @@ struct Tutor
 	string tutionName;
 	string subjectName;
 	double rating;
+	vector<double> ratingVector;
 	double payCheck;
 };
 
