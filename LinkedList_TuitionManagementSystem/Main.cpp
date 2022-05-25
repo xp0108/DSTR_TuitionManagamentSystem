@@ -22,7 +22,7 @@ int main()
 	loopSymbol(120);
 
 	cout << endl << endl;
-	generateData();
+	GenerateData();
 	Login();
 
 	return 0;
