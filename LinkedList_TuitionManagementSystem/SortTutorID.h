@@ -14,11 +14,11 @@ void SwapArray(Tutor* currentCarry, Tutor* minCarry) {
 void TutorIDSelectionSortLL()
 {
 	Tutor* current = head;
-	while (current)
+	while (current != NULL)
 	{
 		Tutor* min = current;
 		Tutor* pre = current->nextAddress;
-		while (pre)
+		while (pre != NULL)
 		{
 			if (min->tutorID > pre->tutorID)
 			{
@@ -29,6 +29,7 @@ void TutorIDSelectionSortLL()
 		SwapArray(current, min);
 		current = current->nextAddress;
 	}
+	
 }
 
 void SortTutorID() {

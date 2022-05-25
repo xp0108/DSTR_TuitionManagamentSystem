@@ -50,7 +50,7 @@
     <ClInclude Include="KLSearch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="JohorSearch.h">
+    <ClInclude Include="SearchJohor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

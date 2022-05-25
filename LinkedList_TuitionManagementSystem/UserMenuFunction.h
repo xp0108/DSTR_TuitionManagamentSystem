@@ -6,7 +6,7 @@
 #include "SortTutorID.h"
 #include "HRSearch.h"
 #include "KLSearch.h"
-#include "JohorSearch.h"
+#include "SearchJohor.h"
 using namespace std;
 
 void KLAdminMenu()
