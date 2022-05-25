@@ -1,39 +1,43 @@
 #pragma once
-#include "DataStruc.h"
+#include <iostream>
+#include "AdditionalFeature.h"
+#include "DisplayTutor.h"
+#include "SortTutorID.h"
 
-void searchTutor(Tutor tutorArray[])
-{
-	int tutorID;
+using namespace std;
 
-	cout << "Insert Tutor ID :";
-	while (!(cin >> tutorID)) {
-		cout << "Error: insert Tutor ID :";
-		cin.clear();
-		cin.ignore(123, '\n');
-	}
+// Loop and Swap - Selection Sort
+void OverallPerformanceSelectionSort(Tutor tutorArray[]) {
+	int tutorArraySize = 100;
+	for (int current = 0; current < tutorArraySize - 1; current++) {
+		int minRating = current;
+		// Compare next array
+		for (int i = current + 1; i < tutorArraySize; i++) {
 
-	int index = linearSearchTutor(tutorArray, tutorID);
-	if (index == -1)
-	{
-		system("cls");
-		cout << endl;
-		cout << "Tutor ID not found";
+			// Select the minimum element in each loop.
+			if (tutorArray[i].rating < tutorArray[minRating].rating)
+				minRating = i;
+		}
+
+		// put min at the correct position
+		SwapArray(&tutorArray[minRating], &tutorArray[current]);
 	}
-	else
-	{
-		system("cls");
-		cout << endl;
-		cout << "Tutor ID found" << endl << endl;
-		cout << "Tutor ID: " << tutorArray[index].tutorID << endl;
-		cout << "Tutor Name: " << tutorArray[index].tutorName << endl;
-		cout << "Tutor Date Join: " << tutorArray[index].dateJoin << endl;
-		cout << "Tutor Date Terminated: " << tutorArray[index].dateTerminated << endl;
-		cout << "Tutor Hourly Rate: " << tutorArray[index].hourlyRate << endl;
-		cout << "Tutor Phone: " << tutorArray[index].tutorPhone << endl;
-		cout << "Tutor Address: " << tutorArray[index].tutorAddress << endl;
-		cout << "Tutor Tuition Name: " << tutorArray[index].tutionName << endl;
-		cout << "Tutor Subject Name: " << tutorArray[index].subjectName << endl;
-		cout << "Tutor Rating: " << tutorArray[index].rating << endl;
-		cout << "Tutor PayCheck: " << tutorArray[index].payCheck;
-	}
-};
+}
+
+void SortOverallPerformanceHR(Tutor tutorArray[]) {
+	system("cls");
+	OverallPerformanceSelectionSort(tutorArray);
+	DisplayTutor(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
+}
+
+void SortOverallPerformanceKL(Tutor tutorArray[]) {
+	system("cls");
+	OverallPerformanceSelectionSort(tutorArray);
+	DisplayKLTutor(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
+}
+
+void SortOverallPerformanceJohor(Tutor tutorArray[]) {
+	system("cls");
+	OverallPerformanceSelectionSort(tutorArray);
+	DisplayJohorTutor(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
+}
