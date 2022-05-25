@@ -35,5 +35,6 @@ void SortTutorID() {
 	system("cls");
 	TutorIDSelectionSortLL();
 	DisplayTutor();
+	cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
 	//"Sorted Tutor ID in Acsending Order"
 }
