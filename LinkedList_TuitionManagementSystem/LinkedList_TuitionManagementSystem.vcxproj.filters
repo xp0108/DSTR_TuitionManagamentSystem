@@ -41,5 +41,8 @@
     <ClInclude Include="SortTutorID.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AddRating.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
