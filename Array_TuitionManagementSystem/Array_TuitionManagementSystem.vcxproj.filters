@@ -74,7 +74,7 @@
     <ClInclude Include="CalculateOverallPerformance.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TestDisplay.h">
+    <ClInclude Include="BackupDisplay.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
