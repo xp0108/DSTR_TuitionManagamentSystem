@@ -6,6 +6,8 @@ using namespace std;
 //linear serach tutor array by tutorID
 int klLinearSearchTutor(Tutor* tutorArray, int tutorID) {
 	int size = 100;
+
+	//check if there is any tutor data in the array matches with the user input and the tuition name is KL
 	for (int i = 0; i < size; i++) {
 		if (tutorArray[i].tutorID == tutorID && tutorArray[i].tutionName == "KL") {
 			return i;
@@ -20,6 +22,8 @@ void klSearchTutor(Tutor tutorArray[])
 	int tutorID;
 
 	cout << "Insert Tutor ID :";
+
+	//check if the user input is a integer
 	while (!(cin >> tutorID)) {
 		cout << "Error: insert Tutor ID :";
 		cin.clear();
@@ -27,14 +31,19 @@ void klSearchTutor(Tutor tutorArray[])
 	}
 
 	int index = klLinearSearchTutor(tutorArray, tutorID);
+
+	//if return value is -1, the tutorID is not found
 	if (index == -1)
 	{
+		//clear terminal
 		system("cls");
 		cout << endl;
 		cout << "Tutor ID not found";
 	}
+	//if return value is not -1, print the data
 	else
 	{
+		//clear terminal
 		system("cls");
 		cout << endl;
 		cout << "Tutor ID found" << endl << endl;
@@ -60,12 +69,15 @@ void KLSearchTutorByRating(Tutor tutorArray[])
 	int count = 0;
 
 	cout << "Insert Tutor Rating :";
+
+	//check if the user input is a integer
 	while (!(cin >> rating)) {
 		cout << "Error: insert Tutor Rating :";
 		cin.clear();
 		cin.ignore(123, '\n');
 	}
 
+	//check if any tutor rating is equal to user input and tuition name is KL
 	for (int i = 0; i < size; i++)
 	{
 		if (tutorArray[i].rating == rating && tutorArray[i].tutionName == "KL")
@@ -74,17 +86,23 @@ void KLSearchTutorByRating(Tutor tutorArray[])
 		}
 	}
 
+	//if count is 0, no tutor with user input rating is found
 	if (count == 0)
 	{
+		//clear terminal		
 		system("cls");
 		cout << endl;
 		cout << "Tutor Rating not found";
 	}
+	//if count is not 0, print all tutor with user input rating
 	else
 	{
+		//clear terminal
 		system("cls");
 		cout << endl;
 		cout << "Tutor Rating found" << endl << endl;
+
+		//print all tutor with user input rating and tuition name is KL
 		for (int i = 0; i < size; i++)
 		{
 			if (tutorArray[i].rating == rating && tutorArray[i].tutionName == "KL" && !tutorArray[i].tutorName.empty())

@@ -10,24 +10,9 @@ bool isEmpty(Tutor* head) {
 	}
 }
 
-//void AddNode(Tutor*& head, Tutor*& last, int id, string name, string datejoin,
-//    double rate, string phone, string address, int tcode, int scode) {
 Tutor* AddNode(int id, string name, string datejoin, double work, double rate, string phone, string address,
 	string tname, string subname, double rating, double paycheck) {
 	Tutor* newNode = new Tutor;
-
-	// newNode->tutorID = id;
-	// newNode->tutorName = name;
-	// newNode->dateJoin = datejoin;
-	// newNode->dateTerminated = "N/A";
-	// newNode->hourlyRate = rate;
-	// newNode->tutorPhone = phone;
-	// newNode->tutorAddress = address;
-	// newNode->tutionCode = tcode;
-	// newNode->subjectCode = scode;
-	// head = newNode;
-	// last = newNode;
-	// cout << endl;
 
 	newNode->tutorID = id;
 	newNode->tutorName = name;
@@ -44,30 +29,6 @@ Tutor* AddNode(int id, string name, string datejoin, double work, double rate, s
 	newNode->nextAddress = NULL;
 	return newNode;
 }
-
-// void AddTutor(Tutor*& head, Tutor*& last, int id, string name, string datejoin,
-//     double rate, string phone, string address, int tcode, int scode) {
-//     if (isEmpty(head)) {
-//         AddNode(head, last, id, name, datejoin, rate, phone, address, tcode, scode);
-//     }
-//     else {
-//         Tutor* newNode = new Tutor;
-
-//         newNode->tutorID = id;
-//         newNode->tutorName = name;
-//         newNode->dateJoin = datejoin;
-//         newNode->dateTerminated = "N/A";
-//         newNode->hourlyRate = rate;
-//         newNode->tutorPhone = phone;
-//         newNode->tutorAddress = address;
-//         newNode->tutionCode = tcode;
-//         newNode->subjectCode = scode;
-//         newNode->next = NULL;
-//         newNode->next = newNode;
-//         last = newNode;
-//         cout << endl;
-//     }
-// }
 
 void AddTutorToTheEnd(Tutor* newNode) { //i refer to the proposal de algo
 	// check whether the list is empty
@@ -116,8 +77,6 @@ void Display() { // no need pass the pointer, store in memory, jst direct refer
 }
 
 void CallAdd() {
-	// Tutor* head = NULL;
-	// Tutor* last = NULL;
 	head = NULL; //head var no need define, cuz i make the head as global variable (refer data struct file)
 
 	int id;
@@ -145,9 +104,6 @@ void CallAdd() {
 	cout << "Pay Check: ";
 	cin >> payCheck;
 	cout << endl;
-
-	// AddTutor(head, last, id, name, datej, rate, phone, address, tcode, scode);
-	// Display(head);
 
 	Tutor* newNode = AddNode(id, name, datej, workh, hrate, phone, address, tname, sname, 0, payCheck); //create Node
 	AddTutorToTheEnd(newNode);	//add the created node into LL
