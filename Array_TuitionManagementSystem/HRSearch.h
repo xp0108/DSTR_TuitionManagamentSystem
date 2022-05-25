@@ -3,7 +3,7 @@
 #include "DataStruc.h"
 using namespace std;
 
-//linear serach tutor array by tutorID
+//linear search tutor array by tutorID
 int linearSearchTutor(Tutor* tutorArray, int tutorID) {
 	int size = 100;
 
@@ -61,7 +61,7 @@ void searchTutor(Tutor tutorArray[])
 	}
 };
 
-//serch for all tutor with user input rating
+//search for all tutor with user input rating
 void searchTutorByRating(Tutor tutorArray[])
 {
 	int rating;
