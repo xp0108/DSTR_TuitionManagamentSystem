@@ -55,7 +55,7 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
         //Skip NULL values
         if (tutor_info[row].tutorID != NULL) {
 
-            cout << "TID" << tutor_info[row].tutorID << "\t| ";
+            cout << "TID-" << tutor_info[row].tutorID << "\t| ";
             cout << setw(10) << left << tutor_info[row].tutorName << "\t| ";
             cout << tutor_info[row].dateJoin << "\t| ";
             cout << setw(14) << left << tutor_info[row].dateTerminated << "\t| ";
