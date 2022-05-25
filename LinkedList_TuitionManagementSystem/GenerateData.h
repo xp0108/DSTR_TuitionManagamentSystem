@@ -3,7 +3,7 @@
 #include "DataStruct.h"
 #include "AddTutor.h"
 
-void generateData() {
+void GenerateData() {
 	Tutor* newNode1 = AddNode(1, "Onn", "23/5/2022", 10, 40, "0127120665", "KL", "KL", "Math", 0, 400); //create Node
 	AddTutorToTheEnd(newNode1);
 	Tutor* newNode2 = AddNode(2, "Kelvin", "1/5/2021", 10, 60, "0111111111", "Johor", "Johor", "History", 0, 600); //create Node
