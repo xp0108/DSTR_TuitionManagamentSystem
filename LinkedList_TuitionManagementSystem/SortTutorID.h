@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "DataStruct.h"
+#include "DisplayTutor.h"
 using namespace std;
 
 // function to swap the the position of two elements
@@ -10,7 +11,7 @@ void SwapArray(Tutor* currentCarry, Tutor* minCarry) {
 	*minCarry = temp;
 }
 
-void SelectionSortLL()
+void TutorIDSelectionSortLL()
 {
 	Tutor* current = head;
 	while (current)
@@ -28,4 +29,11 @@ void SelectionSortLL()
 		SwapArray(current, min);
 		current = current->nextAddress;
 	}
+}
+
+void SortTutorID() {
+	system("cls");
+	TutorIDSelectionSortLL();
+	DisplayTutor();
+	//"Sorted Tutor ID in Acsending Order"
 }

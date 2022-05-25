@@ -3,6 +3,7 @@
 #include "DataStruct.h"
 #include "AddTutor.h"
 #include "DisplayTutor.h"
+#include "SortTutorID.h"
 using namespace std;
 
 void KLAdminMenu()
@@ -150,7 +151,7 @@ void HRManagerMenu()
 			//function();
 			break;
 		case 4:
-			displayTutor();
+			DisplayTutor();
 			break;
 		case 5:
 			//function();
@@ -159,7 +160,7 @@ void HRManagerMenu()
 			//function();
 			break;
 		case 7:
-			//function();
+			SortTutorID();
 			break;
 		case 8:
 			//function();
