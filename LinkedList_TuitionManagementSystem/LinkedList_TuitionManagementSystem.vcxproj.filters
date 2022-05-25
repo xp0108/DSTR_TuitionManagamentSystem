@@ -44,5 +44,14 @@
     <ClInclude Include="AddRating.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HRSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KLSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JohorSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
