@@ -13,7 +13,7 @@ int main()
 	RECT r;
 	GetWindowRect(console, &r); //stores the console's current dimensions
 
-	MoveWindow(console, r.left, r.top, 1350, 600, TRUE); // 800 width, 100 height
+	MoveWindow(console, r.left, r.top, 1450, 600, TRUE); // ori: 800 width, 100 height
 
 	loopSymbol(120);
 	cout << endl;
