@@ -4,7 +4,7 @@
 #include <iomanip>
 
 
-void displayTutor() { // no need pass the pointer, store in memory, jst direct refer
+void DisplayTutor() { // no need pass the pointer, store in memory, jst direct refer
 	Tutor* current = head;
 
     cout
