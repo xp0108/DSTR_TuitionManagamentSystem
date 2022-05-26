@@ -32,8 +32,7 @@ void TutorIDSelectionSort(Tutor tutorArray[]) {
 void SortTutorID(Tutor tutorArray[]) {
 	system("cls");
 	TutorIDSelectionSort(tutorArray);
-	DisplayTutor(tutorArray, "Sorted Tutor ID in Acsending Order");
-
+	DisplayTutorSorted(tutorArray, "Sorted Tutor ID in Acsending Order");
 }
 
 void SortTutorIDKL(Tutor tutorArray[]) {
