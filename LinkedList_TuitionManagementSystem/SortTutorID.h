@@ -81,7 +81,23 @@ void TutorIDSelectionSortLL()
 void SortTutorID() {
 	system("cls");
 	TutorIDSelectionSortLL();
-	DisplayTutor();
+	DisplaySortedTutor();
 	cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
 	//"Sorted Tutor ID in Acsending Order"
+}
+
+void SortTutorIDKL() {
+    system("cls");
+    TutorIDSelectionSortLL();
+    DisplayKLTutor();
+    cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
+    //"Sorted Tutor ID in Acsending Order"
+}
+
+void SortTutorIDJohor() {
+    system("cls");
+    TutorIDSelectionSortLL();
+    DisplayJohorTutor();
+    cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
+    //"Sorted Tutor ID in Acsending Order"
 }
