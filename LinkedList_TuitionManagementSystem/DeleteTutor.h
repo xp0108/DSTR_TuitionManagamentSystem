@@ -27,7 +27,7 @@ void UpdateTutorTerminateDate(Tutor* tutorLL) {
 	cout << endl << "Tutor " << tutorLL->tutorName << "'s Termiantion Date Update Successfully !!!";
 }
 
-void CheckDeleteTutor(Tutor* tutorLL) {
+void CheckDeleteTutor(Tutor* selectedTutorID) {
 	time_t getTodayTime = time(0);
 	tm* local_time = localtime(&getTodayTime);
 
@@ -36,8 +36,8 @@ void CheckDeleteTutor(Tutor* tutorLL) {
 	int todayDay = local_time->tm_mday;
 
 	//get terminated date and split
-	string terminatedDate = tutorLL->dateTerminated;
-	cout << endl << "Termination Date: " << tutorLL->dateTerminated << "\t" << tutorLL->tutorName << endl;
+	string terminatedDate = selectedTutorID->dateTerminated;
+	cout << endl << "Termination Date: " << selectedTutorID->dateTerminated << "\t" << selectedTutorID->tutorName << endl;
 	stringstream splitedTerminatedDate(terminatedDate);
 	vector<int> outputSplitedTD;
 	int i;
@@ -56,9 +56,37 @@ void CheckDeleteTutor(Tutor* tutorLL) {
 	int diffDate = CountDiffDate(dateTerminated, dateToday);
 
 	int arrSize = 100;
-	if (diffDate >= 183) //6 months = 183 Days (https://www.datecalculator.org/months-to-days)
+	if (diffDate >= 183)
 	{
+
 		cout << "Yes Please Delete" << endl;
+		//Delete Node
+
+		//if is the selected item is located in the 1st node
+		if (head->tutorID == selectedTutorID->tutorID) {
+			Tutor* current = head;
+			head = head->nextAddress;
+			delete current;
+		}
+		else
+		{
+			// Delete for not equal to 1st node
+			Tutor* current = head->nextAddress; //start from second node to check the keyword
+			//need to find out wherethe to delete the keyword is the current or need to move on
+			Tutor* previous = head; // standby during deletion
+			while (current != NULL)
+			{
+				if (current->tutorID == selectedTutorID->tutorID)
+				{
+					// delete the current
+					previous->nextAddress = current->nextAddress;
+					delete current;
+					return;
+				}
+				previous = current;
+				current = current->nextAddress;
+			}
+		}
 
 	}
 	else
@@ -68,7 +96,7 @@ void CheckDeleteTutor(Tutor* tutorLL) {
 
 }
 
-Tutor* LinearSearchAndUpdateTutor(Tutor* temp) { // no need pass the pointer, store in memory, jst direct refer
+Tutor* LinearSearchAndUpdateTutor(Tutor* inputTutorID) { // no need pass the pointer, store in memory, jst direct refer
 	int ID;
 	bool exist = false;
 
@@ -81,18 +109,18 @@ Tutor* LinearSearchAndUpdateTutor(Tutor* temp) { // no need pass the pointer, st
 	}
 
 	//if there is tutor data
-	if (temp != NULL) {
+	if (inputTutorID != NULL) {
 		//while tutor data is not empty
-		while (temp != NULL) {
+		while (inputTutorID != NULL) {
 			//if the tutorID is found
-			if (temp->tutorID == ID) {
+			if (inputTutorID->tutorID == ID) {
 				exist = true;
-				UpdateTutorTerminateDate(temp);
-				cout << "TutorID found." << temp->tutorName << "\t" << temp->dateTerminated << endl;
-				return temp;
+				UpdateTutorTerminateDate(inputTutorID);
+				cout << "TutorID found." << inputTutorID->tutorName << "\t" << inputTutorID->dateTerminated << endl;
+				return inputTutorID;
 			}
 			//push to next address
-			temp = temp->nextAddress;
+			inputTutorID = inputTutorID->nextAddress;
 		}
 		//if there is no tutor data match the user input
 		if (exist == false) {
@@ -113,9 +141,8 @@ void DeleteTutor() {
 	loopSymbol(120);
 	cout << endl;
 
-	Tutor* tutorLL = head;
+	Tutor* tutorLL = head; //Delete Function = previous
 
 	Tutor* returnTutorNode = LinearSearchAndUpdateTutor(tutorLL);
-	cout << "TutorID found." << returnTutorNode->tutorName << "\t" << returnTutorNode->dateTerminated << endl;
 	CheckDeleteTutor(returnTutorNode);
 }
