@@ -11,7 +11,7 @@ void TitleSystem()
 	cout << endl;
 	cout << "\t\t\t\t\teXcel Tuition Centre Management System" << endl;
 	loopSymbol(120);
-	cout << endl;
+	cout << endl << endl;
 }
 
 void Login()

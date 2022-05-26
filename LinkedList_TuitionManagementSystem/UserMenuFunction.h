@@ -15,7 +15,8 @@ using namespace std;
 
 void KLAdminMenu()
 {
-	for (;;)
+	bool exitFunction = true;
+	while (exitFunction != false)
 	{
 		int klAdminChoice;
 		cout << endl << endl;
@@ -27,7 +28,8 @@ void KLAdminMenu()
 		cout << "5. Sort and display by Tutors Hourly Pay Rate in ascending order" << endl;
 		cout << "6. Sort and display by Tutors Overall Performance in ascending order" << endl;
 		cout << "7. generate report" << endl;
-		cout << "8. Exit" << endl;
+		cout << "8. Logout" << endl;
+		cout << "9. Exit" << endl;
 		cout << "Enter your choice: ";
 		// Validate user input
 		while (!(cin >> klAdminChoice)) {
@@ -59,7 +61,12 @@ void KLAdminMenu()
 		case 7:
 			//function();
 			break;
-		case 8:exit(0);
+		case 8:
+			system("cls");
+			exitFunction = false;
+			break;
+		case 9:
+			exit(0);
 			break;
 		default:
 			cout << "Invalid Option! Please Try Again";
@@ -69,7 +76,8 @@ void KLAdminMenu()
 
 void JohorAdminMenu()
 {
-	for (;;)
+	bool exitFunction = true;
+	while (exitFunction != false)
 	{
 		int johorAdminChoice;
 		cout << endl << endl;
@@ -81,7 +89,8 @@ void JohorAdminMenu()
 		cout << "5. Sort and display by Tutors Hourly Pay Rate in ascending order" << endl;
 		cout << "6. Sort and display by Tutors Overall Performance in ascending order" << endl;
 		cout << "7. generate report" << endl;
-		cout << "8. Exit" << endl;
+		cout << "8. Logout" << endl;
+		cout << "9. Exit" << endl;
 		cout << "Enter your choice: ";
 		// Validate user input
 		while (!(cin >> johorAdminChoice)) {
@@ -113,7 +122,12 @@ void JohorAdminMenu()
 		case 7:
 			//function();
 			break;
-		case 8:exit(0);
+		case 8:
+			system("cls");
+			exitFunction = false;
+			break;
+		case 9:
+			exit(0);
 			break;
 		default:
 			cout << "Invalid Option! Please Try Again";

@@ -5,12 +5,23 @@
 #include "DataStruc.h"
 using namespace std;
 
+void TitleSystem()
+{
+	loopSymbol(120);
+	cout << endl;
+	cout << "\t\t\t\t\teXcel Tuition Centre Management System" << endl;
+	loopSymbol(120);
+	cout << endl << endl;
+}
+
+
 void Login(Tutor tutorArray[])
 {
 	int loginCount = 0;
 
 	while (loginCount < 3)
 	{
+		TitleSystem();
 		string username; string password;
 		cout << "Enter your username: ";
 		cin >> username;
