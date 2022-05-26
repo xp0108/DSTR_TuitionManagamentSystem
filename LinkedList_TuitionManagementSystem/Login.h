@@ -1,8 +1,18 @@
 #pragma once
 #include <iostream>
 #include "UserMenuFunction.h"
+#include "AdditionalFunction.h"
 
 using namespace std;
+
+void TitleSystem()
+{
+	loopSymbol(120);
+	cout << endl;
+	cout << "\t\t\t\t\teXcel Tuition Centre Management System" << endl;
+	loopSymbol(120);
+	cout << endl;
+}
 
 void Login()
 {
@@ -10,6 +20,7 @@ void Login()
 
 	while (loginCount < 3)
 	{
+		TitleSystem();
 		string username; string password;
 		cout << "Enter your username: ";
 		cin >> username;
