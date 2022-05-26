@@ -9,7 +9,6 @@
 #include "JohorSearch.h"
 #include "AddRating.h"
 #include "SortOverallPerformance.h"
-#include "AddTutor2.h"
 #include "UpdateTutor.h"
 #include "GenerateReport.h"
 
