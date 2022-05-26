@@ -53,13 +53,13 @@ void KLAdminMenu()
 			KLSearchTutorByRating();
 			break;
 		case 4:
-			//function();
+			SortTutorIDKL();
 			break;
 		case 5:
-			SortHourlyRate();
+			SortHourlyRateKL();
 			break;
 		case 6:
-			SortOverallPerformance();
+			SortOverallPerformanceKL();
 			break;
 		case 7:
 			GenerateReport("KL");
@@ -114,13 +114,13 @@ void JohorAdminMenu()
 			JohorSearchTutorByRating();
 			break;
 		case 4:
-			//function();
+			SortTutorIDJohor();
 			break;
 		case 5:
-			SortHourlyRate();
+			SortHourlyRateJohor();
 			break;
 		case 6:
-			SortOverallPerformance();
+			SortOverallPerformanceJohor();
 			break;
 		case 7:
 			GenerateReport("Johor");
@@ -177,7 +177,7 @@ void HRManagerMenu()
 			DeleteTutor();
 			break;
 		case 4:
-			DisplayTutor();
+			//DisplayTutor();
 			break;
 		case 5:
 			SearchTutorByTutorID();

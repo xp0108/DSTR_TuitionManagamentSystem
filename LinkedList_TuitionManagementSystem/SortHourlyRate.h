@@ -85,3 +85,19 @@ void SortHourlyRate() {
     cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
     //"Sorted Tutor ID in Acsending Order"
 }
+
+void SortHourlyRateKL() {
+    system("cls");
+    HourlyRateSelectionSortLL();
+    DisplayKLTutor();
+    cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
+    //"Sorted Tutor ID in Acsending Order"
+}
+
+void SortHourlyRateJohor() {
+    system("cls");
+    HourlyRateSelectionSortLL();
+    DisplayJohorTutor();
+    cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
+    //"Sorted Tutor ID in Acsending Order"
+}
