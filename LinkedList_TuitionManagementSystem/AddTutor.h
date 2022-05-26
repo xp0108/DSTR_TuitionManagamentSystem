@@ -77,8 +77,6 @@ void Display() { // no need pass the pointer, store in memory, jst direct refer
 }
 
 void CallAdd() {
-	head = NULL; //head var no need define, cuz i make the head as global variable (refer data struct file)
-
 	int id;
 	double workh, hrate, payCheck;
 	string name, datej, phone, address, tname, sname;
