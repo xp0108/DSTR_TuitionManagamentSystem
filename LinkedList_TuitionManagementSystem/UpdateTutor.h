@@ -41,6 +41,24 @@ void UpdateTutorAddress(Tutor* tutorLL) {
 	cout << endl << "Tutor " << tutorLL->tutorName << " Update Successfully !!!";
 }
 
+void UpdateTutorRating(Tutor* tutorLL) {
+	double updateTutorRating;
+	cout << endl;
+	loopSymbol(100, "-");
+	cout << endl;
+	cout << "Update Tutor Rating" << endl;
+	loopSymbol(100, "-");
+
+	cout << endl << endl;
+
+	updateTutorRating = tutorLL->rating;
+	cout << "Enter " << tutorLL->tutorName << "'s Address: ";
+	cin >> updateTutorRating;
+	tutorLL->rating = updateTutorRating;
+
+	cout << endl << "Tutor " << tutorLL->tutorName << " Update Successfully !!!";
+}
+
 void UpdateTutor() {
 	system("cls");
 	loopSymbol(120);
@@ -99,6 +117,10 @@ void UpdateTutor() {
 						exitFunction = false;
 						break;
 					case 3:
+						UpdateTutorRating(tutorLL);
+						exitFunction = false;
+						break;
+					case 4:
 						exitFunction = false;
 						break;
 					default:
