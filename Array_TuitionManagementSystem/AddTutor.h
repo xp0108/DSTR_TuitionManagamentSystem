@@ -3,16 +3,6 @@
 #include "DataStruc.h"
 #include "AddRating.h"
 
-int InputArraySize() {
-    int arraysize;
-
-    cout << "Number of tutor(s) to add (integers only): ";
-    cin >> arraysize;
-    cout << endl;
-
-    return arraysize;
-};
-
 //check if the tutorID exist in the tutor_info array
 int CheckTutorID(int tutorID, Tutor tutor_info[], int arraysize) {
     for (int i = 0; i < arraysize; i++) {
@@ -26,11 +16,10 @@ int CheckTutorID(int tutorID, Tutor tutor_info[], int arraysize) {
 
 void AddTutor(Tutor tutor_info[]) {
 
-    int size = InputArraySize();
     int rateValue;
 
     // add value to tutor_info
-    for (int row = 0; row < size; row++) {
+    for (int row = 0; row < 100; row++) {
         cout << "Tutor ID (integers only): ";
         cin >> tutor_info[row].tutorID;
 
@@ -74,7 +63,8 @@ void AddTutor(Tutor tutor_info[]) {
             }
 
             tutor_info[row].payCheck = tutor_info[row].monthlyHour * tutor_info[row].hourlyRate;
-                
+            
         }
+        break;
     }
 }
