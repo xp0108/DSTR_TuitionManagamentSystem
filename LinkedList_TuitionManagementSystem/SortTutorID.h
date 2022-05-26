@@ -18,7 +18,8 @@ void TutorIDSelectionSortLL()
 	{
 		Tutor* min = current;
 		Tutor* pre = current->nextAddress;
-		while (pre != NULL)
+		
+		while (pre)
 		{
 			if (min->tutorID > pre->tutorID)
 			{

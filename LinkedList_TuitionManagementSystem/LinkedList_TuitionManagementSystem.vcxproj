@@ -151,6 +151,7 @@
     <ClInclude Include="SearchJohor.h" />
     <ClInclude Include="KLSearch.h" />
     <ClInclude Include="Login.h" />
+    <ClInclude Include="SortOverallPerformance.h" />
     <ClInclude Include="SortTutorID.h" />
     <ClInclude Include="UserMenuFunction.h" />
   </ItemGroup>

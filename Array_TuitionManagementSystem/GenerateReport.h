@@ -3,7 +3,9 @@
 #include <string>
 #include "DataStruc.h"
 
+//generate kl tutor report
 void generateKLTutorReport(Tutor tutor_info[], string displayString = "KL Center Report") {
+    //clear terminal
     system("cls");
     int arraysize = 100;
     cout << endl << string(50, '-') << endl << displayString << endl << string(50, '-') << endl;
@@ -21,19 +23,14 @@ void generateKLTutorReport(Tutor tutor_info[], string displayString = "KL Center
         << "Tutor name"
         << endl;
 
-    // print out tutor_info
+    //print out tutor_info
     for (int row = 0; row < arraysize; row++) {
 
-        //Skip NULL values
+        //skip NULL values
         if (tutor_info[row].tutorID != NULL) {
 
+			//print out tutor_info if tuition name is KL and is not terminated
             if (tutor_info[row].tutionName == "KL" && tutor_info[row].dateTerminated == "") {
-
-                /*cout << "Subject Name: " << tutor_info[row].subjectName << endl;
-                cout << "Tutor ID: " << tutor_info[row].tutorID << endl;
-                cout << "Tutor name: " << tutor_info[row].tutorName << endl;
-                cout << endl;*/
-
                 cout
                     << left
                     << setw(15)
@@ -55,7 +52,9 @@ void generateKLTutorReport(Tutor tutor_info[], string displayString = "KL Center
     cout << string(50, '-') << endl;
 }
 
+//generate Johor tutor report
 void generateJohorTutorReport(Tutor tutor_info[], string displayString = "Johor Center Report") {
+    //clear terminal
     system("cls");
     int arraysize = 100;
     cout << endl << string(50, '-') << endl << displayString << endl << string(50, '-') << endl;
@@ -73,18 +72,14 @@ void generateJohorTutorReport(Tutor tutor_info[], string displayString = "Johor 
         << "Tutor name"
         << endl;
 
-    // print out tutor_info
+    //print out tutor_info
     for (int row = 0; row < arraysize; row++) {
 
-        //Skip NULL values
+        //skip NULL values
         if (tutor_info[row].tutorID != NULL) {
 
+            //print out tutor_info if tuition name is Johor and is not terminated
             if (tutor_info[row].tutionName == "JOHOR" && tutor_info[row].dateTerminated == "") {
-
-                /*cout << "Subject Name: " << tutor_info[row].subjectName << endl;
-                cout << "Tutor ID: " << tutor_info[row].tutorID << endl;
-                cout << "Tutor name: " << tutor_info[row].tutorName << endl;
-                cout << endl;*/
 				
                 cout
                     << left
