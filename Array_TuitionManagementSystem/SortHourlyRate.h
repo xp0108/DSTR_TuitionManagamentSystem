@@ -25,7 +25,7 @@ void HourlyRateSelectionSort(Tutor tutorArray[]) {
 void SortHourlyRate(Tutor tutorArray[]) {
 	system("cls");
 	HourlyRateSelectionSort(tutorArray);
-	DisplayTutor(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
+	DisplayTutorSorted(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
 }
 
 void SortHourlyRateKL(Tutor tutorArray[]) {
