@@ -7,6 +7,8 @@
 #include "HRSearch.h"
 #include "KLSearch.h"
 #include "JohorSearch.h"
+#include "AddRating.h"
+
 using namespace std;
 
 void KLAdminMenu()
@@ -35,7 +37,7 @@ void KLAdminMenu()
 		switch (klAdminChoice)
 		{
 		case 1:
-			//function();
+			KLAddRating();
 			break;
 		case 2:
 			KLSearchTutorByTutorID();
