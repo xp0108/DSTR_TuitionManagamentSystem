@@ -11,6 +11,7 @@
 #include "SortOverallPerformance.h"
 #include "UpdateTutor.h"
 #include "GenerateReport.h"
+#include "DeleteTutor.h"
 
 using namespace std;
 
@@ -172,7 +173,7 @@ void HRManagerMenu()
 			UpdateTutor();
 			break;
 		case 3:
-			//function();
+			DeleteTutor();
 			break;
 		case 4:
 			DisplayTutor();
