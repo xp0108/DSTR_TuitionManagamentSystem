@@ -3,7 +3,7 @@
 #include <string>
 #include "DataStruc.h"
 
-//generate kl tutor report
+//generate tutor report
 void generateTutorReport(Tutor tutor_info[], string tuition, string displayString = "KL Center Report") {
     //clear terminal
     system("cls");
@@ -29,7 +29,7 @@ void generateTutorReport(Tutor tutor_info[], string tuition, string displayStrin
         //skip NULL values
         if (tutor_info[row].tutorID != NULL) {
 
-			//print out tutor_info if tuition name is KL and is not terminated
+			//print out tutor_info if tuition name is matches the tuition value passes and is not terminated
             if (tutor_info[row].tutionName == tuition && tutor_info[row].dateTerminated == "") {
                 cout
                     << left
@@ -47,7 +47,7 @@ void generateTutorReport(Tutor tutor_info[], string tuition, string displayStrin
             }
         }
     }
-
     cout << endl;
     cout << string(50, '-') << endl;
 }
+
