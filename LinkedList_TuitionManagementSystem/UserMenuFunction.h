@@ -11,7 +11,7 @@
 #include "SortOverallPerformance.h"
 #include "UpdateTutor.h"
 #include "GenerateReport.h"
-#include "DeleteTutor.h"
+#include "SortHourlyRate.h"
 
 using namespace std;
 
@@ -55,7 +55,7 @@ void KLAdminMenu()
 			//function();
 			break;
 		case 5:
-			//function();
+			SortHourlyRate();
 			break;
 		case 6:
 			SortOverallPerformance();
@@ -116,7 +116,7 @@ void JohorAdminMenu()
 			//function();
 			break;
 		case 5:
-			//function();
+			SortHourlyRate();
 			break;
 		case 6:
 			SortOverallPerformance();
@@ -188,7 +188,7 @@ void HRManagerMenu()
 			SortTutorID();
 			break;
 		case 8:
-			//function();
+			SortHourlyRate();
 			break;
 		case 9:
 			SortOverallPerformance();
