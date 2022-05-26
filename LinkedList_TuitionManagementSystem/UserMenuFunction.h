@@ -9,6 +9,7 @@
 #include "JohorSearch.h"
 #include "AddRating.h"
 #include "SortOverallPerformance.h"
+#include "AddTutor2.h"
 
 using namespace std;
 
@@ -148,7 +149,8 @@ void HRManagerMenu()
 		switch (hrChoice)
 		{
 		case 1:
-			CallAdd();
+			//CallAdd();
+			AddTutor();
 			break;
 		case 2:
 			//function();

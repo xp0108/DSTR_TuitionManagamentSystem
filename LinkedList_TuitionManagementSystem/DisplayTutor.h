@@ -90,4 +90,6 @@ void DisplayTutor() { // no need pass the pointer, store in memory, jst direct r
 
 		//}
 	}
+        //debug
+        cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
 }

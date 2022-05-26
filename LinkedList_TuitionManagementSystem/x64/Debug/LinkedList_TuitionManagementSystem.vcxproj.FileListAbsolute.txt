@@ -4,3 +4,4 @@ C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem\LinkedList_Tuiti
 C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\x64\Debug\LinkedList_TuitionManagementSystem.exe
 C:\Users\qiuyi\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\x64\Debug\LinkedList_TuitionManagementSystem.exe
 C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.11\LinkedList_TuitionManagementSystem\x64\Debug\LinkedList_TuitionManagementSystem.exe
+C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.12\LinkedList_TuitionManagementSystem\x64\Debug\LinkedList_TuitionManagementSystem.exe
