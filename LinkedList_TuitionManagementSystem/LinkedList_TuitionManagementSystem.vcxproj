@@ -145,6 +145,7 @@
     <ClInclude Include="AdditionalFunction.h" />
     <ClInclude Include="AddRating.h" />
     <ClInclude Include="AddTutor.h" />
+    <ClInclude Include="CheckTutorID.h" />
     <ClInclude Include="DataStruct.h" />
     <ClInclude Include="GenerateData.h" />
     <ClInclude Include="DisplayTutor.h" />

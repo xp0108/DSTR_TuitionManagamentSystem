@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "DataStruct.h"
+#include "CheckTutorID.h"
 
 Tutor* AddNode(int id, string name, string dateJ, double work, double rate,
 	string phone, string addr, string tname, string sname, double ratings, double check) {
@@ -47,30 +48,90 @@ void AddTutor() {
 	string name, dateJ, phone, addr, tname, sname;
 	double work, rate, ratings, check;
 
-	cout << "Tutor ID: ";
-	cin >> id;
-	cout << "Tutor name: ";
-	cin >> name;
-	cout << "Date joined: ";
-	cin >> dateJ;
-	cout << "Working Hour: ";
-	cin >> work;
-	cout << "Hourly rate: ";
-	cin >> rate;
-	cout << "Tutor phone: ";
-	cin >> phone;
-	cout << "Tutor address: ";
-	cin >> addr;
-	cout << "Tuition name: ";
-	cin >> tname;
-	cout << "Subject name: ";
-	cin >> sname;
-	cout << "Rating: ";
-	cin >> ratings;
-	cout << "Pay Check: ";
-	cin >> check;
-	cout << endl;
+	Tutor* temp = head;
+	bool exist = false;
 
-	Tutor* newNode = AddNode(id, name, dateJ, work, rate, phone, addr, tname, sname, ratings, check);
-	AppendNode(newNode);
+	cout << "Tutor ID: ";
+	while (!(cin >> id)) {
+		cout << "Invalid input. Please enter again: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
+		
+	system("cls");
+		
+	if (temp != NULL) {
+		while (temp != NULL) {
+			if (temp->tutorID == id) {
+				exist = true;
+				cout << "Tutor already exists.";
+				break;
+			}
+			//push to next address			
+			temp = temp->nextAddress;
+		}
+
+		if (exist == false) {
+			cout << "Enter tutor's details." << endl << endl;
+			cout << "Tutor name: ";
+			cin >> name;
+			cout << "Date joined: ";
+			cin >> dateJ;
+			cout << "Working Hour: ";
+			cin >> work;
+			cout << "Hourly rate: ";
+			cin >> rate;
+			cout << "Tutor phone: ";
+			cin >> phone;
+			cout << "Tutor address: ";
+			cin >> addr;
+			cout << "Tuition name: ";
+			cin >> tname;
+			cout << "Subject name: ";
+			cin >> sname;
+			cout << "Rating: ";
+			cin >> ratings;
+			cout << "Pay Check: ";
+			cin >> check;
+			cout << endl;
+
+			Tutor* newNode = AddNode(id, name, dateJ, work, rate, phone, addr, tname, sname, ratings, check);
+			AppendNode(newNode);
+		}
+
+	}
+	else {
+		cout << "Tutor list is empty." << endl;
+	}
+	/*
+	if(exist = false) {
+		cout << "Tutor name: ";
+		cin >> name;
+		cout << "Date joined: ";
+		cin >> dateJ;
+		cout << "Working Hour: ";
+		cin >> work;
+		cout << "Hourly rate: ";
+		cin >> rate;
+		cout << "Tutor phone: ";
+		cin >> phone;
+		cout << "Tutor address: ";
+		cin >> addr;
+		cout << "Tuition name: ";
+		cin >> tname;
+		cout << "Subject name: ";
+		cin >> sname;
+		cout << "Rating: ";
+		cin >> ratings;
+		cout << "Pay Check: ";
+		cin >> check;
+		cout << endl;
+
+		Tutor* newNode = AddNode(id, name, dateJ, work, rate, phone, addr, tname, sname, ratings, check);
+		AppendNode(newNode);
+	}
+	else if(exist = true) {
+		cout << "Tutor already exists.";
+	}
+	*/
 }
