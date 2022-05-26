@@ -1,5 +1,6 @@
 #pragma once
 #include "DataStruct.h"
+#include <iostream>
 
 bool isEmpty(Tutor* head) {
 	if (head == NULL) {
