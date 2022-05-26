@@ -3,9 +3,11 @@
 #include "DataStruc.h"
 using namespace std;
 
-//linear serach tutor array by tutorID
+//linear search tutor array by tutorID
 int linearSearchTutor(Tutor* tutorArray, int tutorID) {
 	int size = 100;
+
+	//check if there is any tutor data in the array matches with the user input
 	for (int i = 0; i < size; i++) {
 		if (tutorArray[i].tutorID == tutorID) {
 			return i;
@@ -20,6 +22,8 @@ void searchTutor(Tutor tutorArray[])
 	int tutorID;
 
 	cout << "Insert Tutor ID :";
+
+	//check if the user input is a integer
 	while (!(cin >> tutorID)) {
 		cout << "Error: insert Tutor ID :";
 		cin.clear();
@@ -27,14 +31,19 @@ void searchTutor(Tutor tutorArray[])
 	}
 
 	int index = linearSearchTutor(tutorArray, tutorID);
+
+	//if return value is -1, the tutorID is not found
 	if (index == -1)
 	{
+		//clear terminal
 		system("cls");
 		cout << endl;
 		cout << "Tutor ID not found";
 	}
+	//if return value is not -1, print the data
 	else
 	{
+		//clear terminal
 		system("cls");
 		cout << endl;
 		cout << "Tutor ID found" << endl << endl;
@@ -52,7 +61,7 @@ void searchTutor(Tutor tutorArray[])
 	}
 };
 
-//serch for all tutor with user input rating
+//search for all tutor with user input rating
 void searchTutorByRating(Tutor tutorArray[])
 {
 	int rating;
@@ -60,12 +69,15 @@ void searchTutorByRating(Tutor tutorArray[])
 	int count = 0;
 
 	cout << "Insert Tutor Rating :";
+
+	//check if the user input is a integer
 	while (!(cin >> rating)) {
 		cout << "Error: insert Tutor Rating :";
 		cin.clear();
 		cin.ignore(123, '\n');
 	}
 
+	//check if any tutor rating is equal to user input
 	for (int i = 0; i < size; i++)
 	{
 		if (tutorArray[i].rating == rating)
@@ -74,17 +86,23 @@ void searchTutorByRating(Tutor tutorArray[])
 		}
 	}
 	
+	//if count is 0, no tutor with user input rating is found
 	if (count == 0)
 	{
+		//clear terminal
 		system("cls");
 		cout << endl;
 		cout << "Tutor Rating not found";
 	}
+	//if count is not 0, print all tutor with user input rating
 	else
 	{
+		//clear terminal
 		system("cls");
 		cout << endl;
 		cout << "Tutor Rating found" << endl << endl;
+		
+		//print all tutor with user input rating
 		for (int i = 0; i < size; i++)
 		{
 			if (tutorArray[i].rating == rating && !tutorArray[i].tutorName.empty())

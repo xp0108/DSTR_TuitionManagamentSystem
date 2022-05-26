@@ -18,5 +18,6 @@ struct Tutor
 	string subjectName;
 	double rating;
 	double payCheck;
+
 	Tutor* nextAddress; //link
 } *head;
