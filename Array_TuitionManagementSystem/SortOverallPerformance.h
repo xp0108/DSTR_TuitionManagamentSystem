@@ -27,17 +27,17 @@ void OverallPerformanceSelectionSort(Tutor tutorArray[]) {
 void SortOverallPerformanceHR(Tutor tutorArray[]) {
 	system("cls");
 	OverallPerformanceSelectionSort(tutorArray);
-	DisplayTutor(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
+	DisplayTutorSorted(tutorArray, "Sorted Overall Performance Rating in Acsending Order");
 }
 
 void SortOverallPerformanceKL(Tutor tutorArray[]) {
 	system("cls");
 	OverallPerformanceSelectionSort(tutorArray);
-	DisplayKLTutor(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
+	DisplayKLTutor(tutorArray, "Sorted Overall Performance Rating in Acsending Order");
 }
 
 void SortOverallPerformanceJohor(Tutor tutorArray[]) {
 	system("cls");
 	OverallPerformanceSelectionSort(tutorArray);
-	DisplayJohorTutor(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
+	DisplayJohorTutor(tutorArray, "Sorted Overall Performance Rating in Acsending Order");
 }

@@ -7,6 +7,7 @@
 void DisplayTutor() { // no need pass the pointer, store in memory, jst direct refer
 	Tutor* current = head;
 
+    system("cls");
     cout
         << left
         << setw(15)
