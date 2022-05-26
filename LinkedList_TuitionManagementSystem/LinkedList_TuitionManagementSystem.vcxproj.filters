@@ -62,5 +62,8 @@
     <ClInclude Include="GenerateReport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="UpdateTutor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
