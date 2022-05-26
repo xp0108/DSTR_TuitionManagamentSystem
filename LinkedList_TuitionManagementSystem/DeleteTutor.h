@@ -19,10 +19,10 @@ void UpdateTutorTerminateDate(Tutor* tutorLL) {
 
 	cout << endl << endl;
 
-	updateTerminateDate = tutorLL->tutorAddress;
+	updateTerminateDate = tutorLL->dateTerminated;
 	cout << "Enter " << tutorLL->tutorName << "'s Termiantion Date: ";
 	cin >> updateTerminateDate;
-	tutorLL->tutorPhone = updateTerminateDate;
+	tutorLL->dateTerminated = updateTerminateDate;
 
 	cout << endl << "Tutor " << tutorLL->tutorName << "'s Termiantion Date Update Successfully !!!";
 }
@@ -37,7 +37,7 @@ void CheckDeleteTutor(Tutor* tutorLL) {
 
 	//get terminated date and split
 	string terminatedDate = tutorLL->dateTerminated;
-
+	cout << endl << "Termination Date: " << tutorLL->dateTerminated << "\t" << tutorLL->tutorName << endl;
 	stringstream splitedTerminatedDate(terminatedDate);
 	vector<int> outputSplitedTD;
 	int i;
@@ -54,7 +54,7 @@ void CheckDeleteTutor(Tutor* tutorLL) {
 	Date dateToday = { todayDay, todayMonth, todayYear };
 
 	int diffDate = CountDiffDate(dateTerminated, dateToday);
-	cout << endl << "DIFF" << diffDate << endl;
+
 	int arrSize = 100;
 	if (diffDate >= 183) //6 months = 183 Days (https://www.datecalculator.org/months-to-days)
 	{
@@ -68,48 +68,54 @@ void CheckDeleteTutor(Tutor* tutorLL) {
 
 }
 
+Tutor* LinearSearchAndUpdateTutor(Tutor* temp) { // no need pass the pointer, store in memory, jst direct refer
+	int ID;
+	bool exist = false;
+
+	//check if the user input is integer
+	cout << "Enter the tutor ID you want to search: ";
+	while (!(cin >> ID)) {
+		cout << "Invalid input. Please enter again: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
+
+	//if there is tutor data
+	if (temp != NULL) {
+		//while tutor data is not empty
+		while (temp != NULL) {
+			//if the tutorID is found
+			if (temp->tutorID == ID) {
+				exist = true;
+				UpdateTutorTerminateDate(temp);
+				cout << "TutorID found." << temp->tutorName << "\t" << temp->dateTerminated << endl;
+				return temp;
+			}
+			//push to next address
+			temp = temp->nextAddress;
+		}
+		//if there is no tutor data match the user input
+		if (exist == false) {
+			cout << "TutorID not found." << endl;
+			return 0;
+		}
+	}
+	//if there is no tutor data
+	else {
+		cout << "Tutor list is empty." << endl;
+	}
+}
+
 void DeleteTutor() {
 	system("cls");
 	loopSymbol(120);
 	cout << endl << "Delete Tutor Record" << endl;
 	loopSymbol(120);
+	cout << endl;
 
 	Tutor* tutorLL = head;
-	int inputTutorID;
-	bool exist = false;
 
-	// Check is int input
-	cout << endl << "Enter Tutor ID :";
-	while (!(cin >> inputTutorID)) {
-		cout << endl << "Integer Only !!" << endl << "Enter Tutor ID Again : ";
-		cin.clear();
-		cin.ignore(123, '\n');
-	}
-
-	//if there is tutor data	
-	if (tutorLL != NULL) {
-		//while tutor data is not empty	
-		while (tutorLL != NULL) {
-			//if the tutorID is found and tuitionName is KL
-			if (tutorLL->tutorID == inputTutorID) {
-				cout << "Tutor Name: " << tutorLL->tutorName << endl;
-				exist = true;
-
-				UpdateTutorTerminateDate(tutorLL);
-			}
-			//push to next address			
-			tutorLL = tutorLL->nextAddress;
-		}
-
-		//if there is no tutor data match the user input
-		if (exist == false) {
-			cout << "Tutor ID not found." << endl;
-		}
-	}
-
-	//if there is no tutor data
-	else {
-		cout << "Tutor list is empty." << endl;
-	}
-
+	Tutor* returnTutorNode = LinearSearchAndUpdateTutor(tutorLL);
+	cout << "TutorID found." << returnTutorNode->tutorName << "\t" << returnTutorNode->dateTerminated << endl;
+	CheckDeleteTutor(returnTutorNode);
 }
