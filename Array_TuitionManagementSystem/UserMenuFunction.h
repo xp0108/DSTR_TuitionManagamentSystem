@@ -19,7 +19,8 @@ using namespace std;
 
 void KLAdminMenu(Tutor tutorArray[])
 {
-	for (;;)
+	bool exitFunction = true;
+	while (exitFunction != false)
 	{
 		int klAdminChoice;
 		cout << endl << endl;
@@ -31,7 +32,8 @@ void KLAdminMenu(Tutor tutorArray[])
 		cout << "5. Sort and display by Tutors Hourly Pay Rate in ascending order" << endl;
 		cout << "6. Sort and display by Tutors Overall Performance in ascending order" << endl;
 		cout << "7. generate report" << endl;
-		cout << "8. Exit" << endl;
+		cout << "8. Logout" << endl;
+		cout << "9. Exit" << endl;
 		cout << "Enter your choice: ";
 		// Validate user input
 		while (!(cin >> klAdminChoice)) {
@@ -63,7 +65,12 @@ void KLAdminMenu(Tutor tutorArray[])
 		case 7:
 			generateKLTutorReport(tutorArray);
 			break;
-		case 8:exit(0);
+		case 8:
+			system("cls");
+			exitFunction = false;
+			break;
+		case 9:
+			exit(0);
 			break;
 		default:
 			cout << "Invalid Option! Please Try Again";
@@ -73,7 +80,9 @@ void KLAdminMenu(Tutor tutorArray[])
 
 void JohorAdminMenu(Tutor tutorArray[])
 {
-	for (;;)
+
+	bool exitFunction = true;
+	while (exitFunction != false)
 	{
 		int johorAdminChoice;
 		cout << endl << endl;
@@ -85,7 +94,8 @@ void JohorAdminMenu(Tutor tutorArray[])
 		cout << "5. Sort and display by Tutors Hourly Pay Rate in ascending order" << endl;
 		cout << "6. Sort and display by Tutors Overall Performance in ascending order" << endl;
 		cout << "7. generate report" << endl;
-		cout << "8. Exit" << endl;
+		cout << "8. Logout" << endl;
+		cout << "9. Exit" << endl;
 		cout << "Enter your choice: ";
 		// Validate user input
 		while (!(cin >> johorAdminChoice)) {
@@ -117,7 +127,12 @@ void JohorAdminMenu(Tutor tutorArray[])
 		case 7:
 			generateJohorTutorReport(tutorArray);
 			break;
-		case 8:exit(0);
+		case 8:
+			system("cls");
+			exitFunction = false;
+			break;
+		case 9:
+			exit(0);
 			break;
 		default:
 			cout << "Invalid Option! Please Try Again";
@@ -127,7 +142,8 @@ void JohorAdminMenu(Tutor tutorArray[])
 
 void HRManagerMenu(Tutor tutorArray[])
 {
-	for (;;)
+	bool exitFunction = true;
+	while (exitFunction != false)
 	{
 		int hrChoice;
 		cout << endl << endl;
@@ -141,7 +157,8 @@ void HRManagerMenu(Tutor tutorArray[])
 		cout << "7. Sort and display by Tutors ID in ascending order" << endl;
 		cout << "8. Sort and display by Tutors Hourly Pay Rate in ascending order" << endl;
 		cout << "9. Sort and display by Tutors Overall Performance in ascending order" << endl;
-		cout << "10. Exit" << endl;
+		cout << "10. Logout" << endl;
+		cout << "11. Exit" << endl;
 		cout << "Enter your choice: ";
 		// Validate user input
 		while (!(cin >> hrChoice)) {
@@ -179,7 +196,12 @@ void HRManagerMenu(Tutor tutorArray[])
 		case 9:
 			SortOverallPerformanceHR(tutorArray);
 			break;
-		case 10:exit(0);
+		case 10:
+			system("cls");
+			exitFunction = false;
+			break;
+		case 11:
+			exit(0);
 			break;
 		default:
 			cout << "Invalid Option! Please Try Again";
