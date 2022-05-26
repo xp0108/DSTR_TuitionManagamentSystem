@@ -56,10 +56,10 @@
     <ClInclude Include="SortOverallPerformance.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AddTutor2.h">
+    <ClInclude Include="AdditionalFunction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AdditionalFunction.h">
+    <ClInclude Include="GenerateReport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UpdateTutor.h">

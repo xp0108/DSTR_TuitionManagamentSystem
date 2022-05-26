@@ -11,6 +11,7 @@
 #include "SortOverallPerformance.h"
 #include "AddTutor2.h"
 #include "UpdateTutor.h"
+#include "GenerateReport.h"
 
 using namespace std;
 
@@ -60,7 +61,7 @@ void KLAdminMenu()
 			SortOverallPerformance();
 			break;
 		case 7:
-			//function();
+			GenerateReport("KL");
 			break;
 		case 8:
 			system("cls");
@@ -121,7 +122,7 @@ void JohorAdminMenu()
 			SortOverallPerformance();
 			break;
 		case 7:
-			//function();
+			GenerateReport("Johor");
 			break;
 		case 8:
 			system("cls");
@@ -166,7 +167,6 @@ void HRManagerMenu()
 		switch (hrChoice)
 		{
 		case 1:
-			//CallAdd();
 			AddTutor();
 			break;
 		case 2:
