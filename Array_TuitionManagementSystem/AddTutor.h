@@ -40,7 +40,7 @@ void AddTutor(Tutor tutor_info[]) {
             break;
         }
         else {
-
+                
             cout << "Full name: ";
             cin >> tutor_info[row].tutorName;
             cout << "Date joined: ";
@@ -74,6 +74,7 @@ void AddTutor(Tutor tutor_info[]) {
             }
 
             tutor_info[row].payCheck = tutor_info[row].monthlyHour * tutor_info[row].hourlyRate;
+                
         }
     }
 }
