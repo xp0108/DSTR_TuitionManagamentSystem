@@ -63,7 +63,7 @@ void KLAdminMenu(Tutor tutorArray[])
 			SortOverallPerformanceKL(tutorArray);
 			break;
 		case 7:
-			generateKLTutorReport(tutorArray);
+			generateTutorReport(tutorArray, "KL");
 			break;
 		case 8:
 			system("cls");
@@ -125,7 +125,7 @@ void JohorAdminMenu(Tutor tutorArray[])
 			SortOverallPerformanceJohor(tutorArray);
 			break;
 		case 7:
-			generateJohorTutorReport(tutorArray);
+			generateTutorReport(tutorArray, "JOHOR");
 			break;
 		case 8:
 			system("cls");
