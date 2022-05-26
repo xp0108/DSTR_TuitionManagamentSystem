@@ -81,6 +81,6 @@ void SelectionSortOP()
 void SortOverallPerformance() {
     system("cls");
     SelectionSortOP();
-    DisplayTutor();
+    DisplaySortedTutor();
     cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
 }

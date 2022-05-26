@@ -81,7 +81,7 @@ void HourlyRateSelectionSortLL()
 void SortHourlyRate() {
     system("cls");
     HourlyRateSelectionSortLL();
-    DisplayTutor();
+    DisplaySortedTutor();
     cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
     //"Sorted Tutor ID in Acsending Order"
 }
