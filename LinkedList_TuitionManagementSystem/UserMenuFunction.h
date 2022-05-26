@@ -123,7 +123,8 @@ void JohorAdminMenu()
 
 void HRManagerMenu()
 {
-	for (;;)
+	bool exitFunction = true;
+	while (exitFunction != false)
 	{
 		int hrChoice;
 		cout << endl << endl;
@@ -137,7 +138,8 @@ void HRManagerMenu()
 		cout << "7. Sort and display by Tutors ID in ascending order" << endl;
 		cout << "8. Sort and display by Tutors Hourly Pay Rate in ascending order" << endl;
 		cout << "9. Sort and display by Tutors Overall Performance in ascending order" << endl;
-		cout << "10. Exit" << endl;
+		cout << "10. Logout" << endl;
+		cout << "11. Exit" << endl;
 		cout << "Enter your choice: ";
 		// Validate user input
 		while (!(cin >> hrChoice)) {
@@ -176,7 +178,12 @@ void HRManagerMenu()
 		case 9:
 			SortOverallPerformance();
 			break;
-		case 10:exit(0);
+		case 10:
+			system("cls");
+			exitFunction = false;
+			break;
+		case 11:
+			exit(0);
 			break;
 		default:
 			cout << "Invalid Option! Please Try Again";
