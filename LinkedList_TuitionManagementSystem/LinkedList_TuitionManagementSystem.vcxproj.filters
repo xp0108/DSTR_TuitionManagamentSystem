@@ -53,5 +53,8 @@
     <ClInclude Include="JohorSearch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SortOverallPerformance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

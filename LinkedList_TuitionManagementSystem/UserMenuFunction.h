@@ -8,6 +8,7 @@
 #include "KLSearch.h"
 #include "JohorSearch.h"
 #include "AddRating.h"
+#include "SortOverallPerformance.h"
 
 using namespace std;
 
@@ -52,7 +53,7 @@ void KLAdminMenu()
 			//function();
 			break;
 		case 6:
-			//function();
+			SortOverallPerformance();
 			break;
 		case 7:
 			//function();
@@ -106,7 +107,7 @@ void JohorAdminMenu()
 			//function();
 			break;
 		case 6:
-			//function();
+			SortOverallPerformance();
 			break;
 		case 7:
 			//function();
@@ -171,7 +172,7 @@ void HRManagerMenu()
 			//function();
 			break;
 		case 9:
-			//function();
+			SortOverallPerformance();
 			break;
 		case 10:exit(0);
 			break;
