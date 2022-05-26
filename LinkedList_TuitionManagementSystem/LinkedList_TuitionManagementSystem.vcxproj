@@ -155,6 +155,7 @@
     <ClInclude Include="Login.h" />
     <ClInclude Include="SortOverallPerformance.h" />
     <ClInclude Include="SortTutorID.h" />
+    <ClInclude Include="UpdateTutor.h" />
     <ClInclude Include="UserMenuFunction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

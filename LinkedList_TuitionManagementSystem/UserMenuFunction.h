@@ -10,6 +10,7 @@
 #include "AddRating.h"
 #include "SortOverallPerformance.h"
 #include "AddTutor2.h"
+#include "UpdateTutor.h"
 
 using namespace std;
 
@@ -169,7 +170,7 @@ void HRManagerMenu()
 			AddTutor();
 			break;
 		case 2:
-			//function();
+			UpdateTutor();
 			break;
 		case 3:
 			//function();

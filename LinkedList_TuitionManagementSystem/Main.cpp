@@ -16,8 +16,6 @@ int main()
 
 	MoveWindow(console, r.left, r.top, 1350, 600, TRUE); // 800 width, 100 height
 
-
-	cout << endl << endl;
 	GenerateData();
 	Login();
 
