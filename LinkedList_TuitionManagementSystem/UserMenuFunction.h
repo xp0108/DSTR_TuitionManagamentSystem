@@ -91,7 +91,7 @@ void JohorAdminMenu()
 		switch (johorAdminChoice)
 		{
 		case 1:
-			//function();
+			JohorAddRating();
 			break;
 		case 2:
 			JohorSearchTutorByTutorID();
