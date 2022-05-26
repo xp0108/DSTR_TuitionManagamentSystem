@@ -10,6 +10,6 @@ void GenerateData() {
 	AppendNode(newNode2);
 	Tutor* newNode3 = AddNode(13, "YW", "15/5/2020", 10, 40, "022222222", "KL", "KL", "English", 5, 400); //create Node
 	AppendNode(newNode3);
-	Tutor* newNode4 = AddNode(10, "XP", "4/7/2021", 10, 80, "022222222", "Johor", "Johor", "History", 0, 800); //create Node
+	Tutor* newNode4 = AddNode(10, "XP", "4/7/2021", 10, 80, "022222222", "Johor", "Johor", "English", 0, 800); //create Node
 	AppendNode(newNode4);
 }

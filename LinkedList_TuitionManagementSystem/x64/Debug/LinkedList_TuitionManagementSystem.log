@@ -1,4 +1,4 @@
 ﻿  Main.cpp
-C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.14\LinkedList_TuitionManagementSystem\SortTutorID.h(13,24): warning C4101: 'rating': unreferenced local variable
-C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.14\LinkedList_TuitionManagementSystem\SortOverallPerformance.h(14,24): warning C4101: 'rating': unreferenced local variable
-  LinkedList_TuitionManagementSystem.vcxproj -> C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.14\LinkedList_TuitionManagementSystem\x64\Debug\LinkedList_TuitionManagementSystem.exe
+C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\SortTutorID.h(13,24): warning C4101: 'rating': unreferenced local variable
+C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\SortOverallPerformance.h(14,24): warning C4101: 'rating': unreferenced local variable
+  LinkedList_TuitionManagementSystem.vcxproj -> C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\x64\Debug\LinkedList_TuitionManagementSystem.exe
