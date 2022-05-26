@@ -12,6 +12,7 @@
 #include "UpdateTutor.h"
 #include "GenerateReport.h"
 #include "SortHourlyRate.h"
+#include "DeleteTutor.h"
 
 using namespace std;
 
