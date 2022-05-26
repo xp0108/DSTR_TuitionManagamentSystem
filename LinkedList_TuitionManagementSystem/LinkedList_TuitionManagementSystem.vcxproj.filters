@@ -56,9 +56,6 @@
     <ClInclude Include="SortOverallPerformance.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AddTutor2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="AdditionalFunction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
