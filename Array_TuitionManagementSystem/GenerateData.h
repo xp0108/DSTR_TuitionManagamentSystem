@@ -3,7 +3,7 @@
 #include "DataStruc.h"
 
 void GenerateData(Tutor tutor_info[]) {
-    tutor_info[1].tutorID = 11;
+    tutor_info[1].tutorID = 99;
     tutor_info[1].tutorName = "Onn";
     tutor_info[1].dateJoin = "11/05/2021";
     tutor_info[1].dateTerminated = "";
