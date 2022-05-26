@@ -18,6 +18,7 @@ void TutorIDSelectionSortLL()
 	{
 		Tutor* min = current;
 		Tutor* pre = current->nextAddress;
+		
 		while (pre)
 		{
 			if (min->tutorID > pre->tutorID)
@@ -35,5 +36,6 @@ void SortTutorID() {
 	system("cls");
 	TutorIDSelectionSortLL();
 	DisplayTutor();
+	cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
 	//"Sorted Tutor ID in Acsending Order"
 }
