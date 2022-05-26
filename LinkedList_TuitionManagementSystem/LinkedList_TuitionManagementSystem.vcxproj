@@ -146,6 +146,7 @@
     <ClInclude Include="AddRating.h" />
     <ClInclude Include="AddTutor.h" />
     <ClInclude Include="DataStruct.h" />
+    <ClInclude Include="DeleteTutor.h" />
     <ClInclude Include="GenerateData.h" />
     <ClInclude Include="DisplayTutor.h" />
     <ClInclude Include="GenerateReport.h" />
