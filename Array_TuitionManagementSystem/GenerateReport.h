@@ -4,7 +4,7 @@
 #include "DataStruc.h"
 
 //generate tutor report
-void generateTutorReport(Tutor tutor_info[], string tuition, string displayString = "KL Center Report") {
+void generateTutorReport(Tutor tutor_info[], string tuition, string displayString = "Report") {
     //clear terminal
     system("cls");
     int arraysize = 100;
