@@ -2,4 +2,5 @@
 C:\Users\qiuyi\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\SortTutorID.h(13,24): warning C4101: 'rating': unreferenced local variable
 C:\Users\qiuyi\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\SortOverallPerformance.h(14,24): warning C4101: 'rating': unreferenced local variable
 C:\Users\qiuyi\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\SortHourlyRate.h(13,24): warning C4101: 'rating': unreferenced local variable
-  LinkedList_TuitionManagementSystem.vcxproj -> C:\Users\qiuyi\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\x64\Debug\LinkedList_TuitionManagementSystem.exe
+C:\Users\qiuyi\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\UserMenuFunction.h(179,17): error C2660: 'DisplayTutor': function does not take 0 arguments
+C:\Users\qiuyi\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\DisplayTutor.h(24,6): message : see declaration of 'DisplayTutor'
