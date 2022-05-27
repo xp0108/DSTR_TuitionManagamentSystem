@@ -50,11 +50,12 @@ void UpdateTutorRating(Tutor* tutorLL) {
 	loopSymbol(100, "-");
 
 	cout << endl << endl;
-
-	updateTutorRating = tutorLL->rating;
+	double oldrating = tutorLL->rating;
 	cout << "Enter " << tutorLL->tutorName << "'s Address: ";
 	cin >> updateTutorRating;
+	updateTutorRating = (oldrating + updateTutorRating) / 2;
 	tutorLL->rating = updateTutorRating;
+
 
 	cout << endl << "Tutor " << tutorLL->tutorName << " Update Successfully !!!";
 }
