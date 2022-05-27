@@ -23,8 +23,11 @@ void HourlyRateSelectionSort(Tutor tutorArray[]) {
 }
 
 void SortHourlyRate(Tutor tutorArray[]) {
+	//clear screen 
 	system("cls");
+	//call the selection sort function
 	HourlyRateSelectionSort(tutorArray);
+	//call display function
 	DisplayTutorSorted(tutorArray, "Sorted Hourly Pay Rate in Acsending Order");
 }
 
