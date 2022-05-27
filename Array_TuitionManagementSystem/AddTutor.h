@@ -21,7 +21,12 @@ void AddTutor(Tutor tutor_info[]) {
     // add value to tutor_info
     for (int row = 0; row < 100; row++) {
         cout << "Tutor ID (integers only): ";
-        cin >> tutor_info[row].tutorID;
+
+        while (!(cin >> tutor_info[row].tutorID)) {
+            cout << "Invalid input. Integers only: ";
+            cin.clear();
+            cin.ignore(123, '\n');
+        }
 
         int index = CheckTutorID(tutor_info[row].tutorID, tutor_info, 100);
 
