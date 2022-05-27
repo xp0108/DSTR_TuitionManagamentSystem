@@ -107,7 +107,7 @@ void GenerateData(Tutor tutor_info[]) {
     tutor_info[8].rating = 3.5;
 	tutor_info[8].payCheck = tutor_info[8].monthlyHour * tutor_info[8].hourlyRate;
 
-    tutor_info[9].tutorID = 99;
+    tutor_info[9].tutorID = 11;
     tutor_info[9].tutorName = "Aaron";
     tutor_info[9].dateJoin = "10/09/2020";
     tutor_info[9].dateTerminated = "";
