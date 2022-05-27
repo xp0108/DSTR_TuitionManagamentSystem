@@ -13,9 +13,13 @@ void SwapArray(Tutor* currentCarry, Tutor* minCarry) {
 
 // Loop and Swap - Selection Sort
 void TutorIDSelectionSort(Tutor tutorArray[]) {
+
 	int tutorArraySize = 100;
+
 	for (int current = 0; current < tutorArraySize - 1; current++) {
+
 		int minTutorID = current;
+
 		// Compare next array
 		for (int i = current + 1; i < tutorArraySize; i++) {
 
@@ -24,14 +28,17 @@ void TutorIDSelectionSort(Tutor tutorArray[]) {
 				minTutorID = i;
 		}
 
-		// put min at the correct position
+		// put minimum array at the correct position
 		SwapArray(&tutorArray[minTutorID], &tutorArray[current]);
 	}
 }
 
 void SortTutorID(Tutor tutorArray[]) {
+	//clear screen 
 	system("cls");
+	//call the selection sort function
 	TutorIDSelectionSort(tutorArray);
+	//call display function
 	DisplayTutorSorted(tutorArray, "Sorted Tutor ID in Acsending Order");
 }
 
