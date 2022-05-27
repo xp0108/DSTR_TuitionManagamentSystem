@@ -142,7 +142,7 @@ void DeleteTutor() {
 	cout << endl;
 
 	Tutor* tutorLL = head; //Delete Function = previous
-
-	Tutor* returnTutorNode = LinearSearchAndUpdateTutor(tutorLL);
+	Tutor* returnTutorNode = nullptr;
+	returnTutorNode = LinearSearchAndUpdateTutor(tutorLL);
 	CheckDeleteTutor(returnTutorNode);
 }
