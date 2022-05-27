@@ -67,7 +67,6 @@ void UpdateTutor() {
 
 	Tutor* tutorLL = head;
 	int inputTutorID;
-	string address;
 	bool exist = false;
 
 	// Check is int input

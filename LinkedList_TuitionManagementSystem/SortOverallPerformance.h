@@ -2,7 +2,6 @@
 #include <iostream>
 #include "DataStruct.h"
 #include "DisplayTutor.h"
-
 using namespace std;
 
 void SelectionSortOP()
@@ -81,6 +80,20 @@ void SelectionSortOP()
 void SortOverallPerformance() {
     system("cls");
     SelectionSortOP();
-    DisplayTutor();
+    DisplaySortedTutor();
+    cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
+}
+
+void SortOverallPerformanceKL() {
+    system("cls");
+    SelectionSortOP();
+    DisplayKLTutor();
+    cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
+}
+
+void SortOverallPerformanceJohor() {
+    system("cls");
+    SelectionSortOP();
+    DisplayJohorTutor();
     cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
 }
