@@ -25,8 +25,11 @@ void OverallPerformanceSelectionSort(Tutor tutorArray[]) {
 }
 
 void SortOverallPerformanceHR(Tutor tutorArray[]) {
+	//clear screen 
 	system("cls");
+	//call the selection sort function
 	OverallPerformanceSelectionSort(tutorArray);
+	//call display function
 	DisplayTutorSorted(tutorArray, "Sorted Overall Performance Rating in Acsending Order");
 }
 
