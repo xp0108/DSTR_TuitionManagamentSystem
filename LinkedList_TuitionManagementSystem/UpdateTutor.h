@@ -5,6 +5,7 @@
 using namespace std;
 
 void UpdateTutorPhono(Tutor* tutorLL) {
+	// Store input
 	string updateTutorPhone;
 	cout << endl;
 	loopSymbol(100, "-");
@@ -14,15 +15,16 @@ void UpdateTutorPhono(Tutor* tutorLL) {
 
 	cout << endl << endl;
 
-	updateTutorPhone = tutorLL->tutorAddress;
 	cout << "Enter " << tutorLL->tutorName << "'s Phone Number: ";
 	cin >> updateTutorPhone;
+	// replacing existing data with inputted input
 	tutorLL->tutorPhone = updateTutorPhone;
 
 	cout << endl << "Tutor " << tutorLL->tutorName << " Update Successfully !!!";
 }
 
 void UpdateTutorAddress(Tutor* tutorLL) {
+	// Store input
 	string updateTutorAddress;
 	cout << endl;
 	loopSymbol(100, "-");
@@ -32,8 +34,6 @@ void UpdateTutorAddress(Tutor* tutorLL) {
 
 	cout << endl << endl;
 
-
-	updateTutorAddress = tutorLL->tutorAddress;
 	cout << "Enter " << tutorLL->tutorName << "'s Address: ";
 	cin >> updateTutorAddress;
 	tutorLL->tutorAddress = updateTutorAddress;
@@ -42,6 +42,7 @@ void UpdateTutorAddress(Tutor* tutorLL) {
 }
 
 void UpdateTutorRating(Tutor* tutorLL) {
+	// Store input
 	double updateTutorRating;
 	cout << endl;
 	loopSymbol(100, "-");
@@ -82,12 +83,12 @@ void UpdateTutor() {
 	if (tutorLL != NULL) {
 		//while tutor data is not empty	
 		while (tutorLL != NULL) {
-			//if the tutorID is found and tuitionName is KL
+			//if the tutorID is found
 			if (tutorLL->tutorID == inputTutorID) {
 				cout << "Tutor Name: " << tutorLL->tutorName << endl;
 				exist = true;
 
-				//Update Menu - address or phone
+				//Update Menu - address or phone or rating
 				bool exitFunction = true;
 				while (exitFunction != false)
 				{
@@ -144,3 +145,4 @@ void UpdateTutor() {
 		cout << "Tutor list is empty." << endl;
 	}
 }
+

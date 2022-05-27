@@ -80,7 +80,7 @@ void UpdateTutor(Tutor tutorArray[])
 		cin.ignore(123, '\n');
 	}
 
-	//Search Function - check tutor exist & return tutorArray
+	//Linear Search Function - check tutor exist & return tutorArray
 	int checkTutorID = linearSearchTutor(tutorArray, tutorID);
 
 	while (checkTutorID == -1)
