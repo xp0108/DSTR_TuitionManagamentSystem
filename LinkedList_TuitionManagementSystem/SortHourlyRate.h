@@ -10,8 +10,7 @@ void HourlyRateSelectionSortLL()
     Tutor* index = NULL;
     int id;
     string name, dateJ, dateT, phone, address, tname, sname;
-    double work, rate, rating, check;
-    double temp;
+    double work, rate, check;
 
     // Traverse the List
     while (current) {
@@ -20,9 +19,6 @@ void HourlyRateSelectionSortLL()
         // Traverse the unsorted sublist
         while (index) {
             if (current->hourlyRate > index->hourlyRate) {
-                temp = current->rating;
-                current->rating = index->rating;
-                index->rating = temp;
 
                 id = current->tutorID;
                 current->tutorID = index->tutorID;
@@ -72,7 +68,7 @@ void HourlyRateSelectionSortLL()
 
             index = index->nextAddress;
         }
-
+        // Refering to following node
         current = current->nextAddress;
     }
 

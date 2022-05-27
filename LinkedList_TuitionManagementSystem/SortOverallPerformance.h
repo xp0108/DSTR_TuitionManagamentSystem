@@ -69,7 +69,7 @@ void SelectionSortOP()
                 index->payCheck = check;
 
             }
-            
+            // Refering to following node
             index = index->nextAddress;
         }
 
