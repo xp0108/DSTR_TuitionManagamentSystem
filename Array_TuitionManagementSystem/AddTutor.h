@@ -17,24 +17,26 @@ int CheckTutorID(int tutorID, Tutor tutor_info[], int arraysize) {
 void AddTutor(Tutor tutor_info[]) {
 
     int rateValue;
+    int id;
 
     // add value to tutor_info
     for (int row = 0; row < 100; row++) {
         cout << "Tutor ID (integers only): ";
 
-        while (!(cin >> tutor_info[row].tutorID)) {
+        while (!(cin >> id)) {
             cout << "Invalid input. Integers only: ";
             cin.clear();
             cin.ignore(123, '\n');
         }
 
-        int index = CheckTutorID(tutor_info[row].tutorID, tutor_info, 100);
+        int index = CheckTutorID(id, tutor_info, 100);
 
         if (index == 0) {
             break;
         }
         else {
-                
+            
+            tutor_info[row].tutorID = id;
             cout << "Full name: ";
             cin >> tutor_info[row].tutorName;
             cout << "Date joined: ";
