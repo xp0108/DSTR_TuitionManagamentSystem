@@ -60,10 +60,10 @@ void JohorSearchTutorByRating() {
 	int rating;
 	bool exist = false;
 
-	//check if the user input is integer	
 	cout << "Enter the rating you want to search: ";
-	while (!(cin >> rating)) {
-		cout << "Invalid input. Please enter again: ";
+	//check if the user input is a integer and between 1 - 5
+	while (!(cin >> rating) || rating < 1 || rating > 5) {
+		cout << "Error: insert Tutor Rating :";
 		cin.clear();
 		cin.ignore(123, '\n');
 	}

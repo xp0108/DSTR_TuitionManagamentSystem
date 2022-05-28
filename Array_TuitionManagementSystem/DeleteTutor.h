@@ -43,8 +43,8 @@ void CheckDeleteTutor(Tutor tutorArray[], int tutorTDIndex, Tutor* deleteArrayTu
 	vector<int> outputSplitedTD;
 	int i;
 	while (splitedTerminatedDate >> i) {
-		outputSplitedTD.push_back(i);
-		splitedTerminatedDate.ignore(1);
+		outputSplitedTD.push_back(i); //deliminater ("/")
+		splitedTerminatedDate.ignore(1); //ignore /
 	}
 
 	int dayITD = outputSplitedTD[0];
@@ -100,8 +100,42 @@ void DeleteTutor(Tutor tutorArray[]) {
 
 	cout << "Tutor Name: " << tutorArray[checkTutorID].tutorName << endl;
 
-	UpdateTutorTerminateDate(tutorArray, checkTutorID);
-	cout << endl << endl;
-	CheckDeleteTutor(tutorArray, checkTutorID, &tutorArray[checkTutorID]);
+	//Update Menu - address or phone
+	bool exitFunction = true;
+	while (exitFunction != false)
+	{
+		int updateChoice;
+		cout << endl << endl;
+		cout << " ** DELETE MENU **" << endl;
+		cout << "1. Update Termination Date" << endl;
+		cout << "2. Check Termination Date (>6months)" << endl;
+		cout << "3. Exit Update Function" << endl;
+		cout << "Enter your choice: ";
+		// Validate user input
+		while (!(cin >> updateChoice)) {
+			cout << endl << "Invalid Input !!!" << endl;
+			cout << "Enter you choice again: ";
+			cin.clear();
+			cin.ignore(123, '\n');
+		}
+		switch (updateChoice)
+		{
+		case 1:
+			UpdateTutorTerminateDate(tutorArray, checkTutorID);
+			cout << endl << endl;
+			CheckDeleteTutor(tutorArray, checkTutorID, &tutorArray[checkTutorID]);
+			exitFunction = false;
+			break;
+		case 2:
+			CheckDeleteTutor(tutorArray, checkTutorID, &tutorArray[checkTutorID]);
+			exitFunction = false;
+			break;
+		case 3:
+			exitFunction = false;
+			break;
+		default:
+			cout << "Invalid Option! Please Try Again";
+		}
+	}
 
 }
