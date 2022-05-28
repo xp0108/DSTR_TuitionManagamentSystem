@@ -22,8 +22,8 @@ void JohorSearchTutorByTutorID() { // no need pass the pointer, store in memory,
 	if (temp != NULL) {
 		//while tutor data is not empty	
 		while (temp != NULL) {
-			//if the tutorID is found and tuitionName is Johor
-			if (temp->tutorID == ID && temp->tutionName == "Johor") {
+			//if the tutorID is found and tuitionName is JOHOR
+			if (temp->tutorID == ID && temp->tutionName == "JOHOR") {
 				cout << "TutorID found: " << endl << endl;
 				cout << "Tutor ID: " << temp->tutorID << endl;
 				cout << "Tutor name: " << temp->tutorName << endl;
@@ -74,8 +74,8 @@ void JohorSearchTutorByRating() {
 	if (temp != NULL) {
 		//while tutor data is not empty
 		while (temp != NULL) {
-			//if the tutor rating is found and tuitionName is Johor
-			if (temp->rating == rating && temp->tutionName == "Johor") {
+			//if the tutor rating is found and tuitionName is JOHOR
+			if (temp->rating == rating && temp->tutionName == "JOHOR") {
 				cout << "TutorID found: " << endl << endl;
 				cout << "Tutor ID: " << temp->tutorID << endl;
 				cout << "Tutor name: " << temp->tutorName << endl;
