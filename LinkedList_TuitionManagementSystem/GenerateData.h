@@ -4,7 +4,7 @@
 #include "AddTutor.h"
 
 void GenerateData() {
-	Tutor* newNode1 = AddNode(15, "Onn", "23/5/2022", 10, 40, "0127120665", "Puchong", "KL", "Math", 2, 400); //create Node
+	Tutor* newNode1 = AddNode(99, "Onn", "23/5/2022", 10, 40, "0127120665", "Puchong", "KL", "Math", 2, 400); //create Node
 	AppendNode(newNode1);
 	Tutor* newNode2 = AddNode(9, "Kelvin", "1/5/2021", 10, 60, "0146745920", "Muar", "JOHOR", "History", 1, 600); //create Node
 	AppendNode(newNode2);

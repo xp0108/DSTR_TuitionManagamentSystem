@@ -98,7 +98,7 @@ void UpdateTutor() {
 
 	Tutor* tutorLL = head;
 	int inputTutorID;
-	bool exist = false;
+	bool tutorIDExist = false;
 
 	// Check is int input
 	cout << endl << "Enter Tutor ID :";
@@ -115,7 +115,7 @@ void UpdateTutor() {
 			//if the tutorID is found
 			if (tutorLL->tutorID == inputTutorID) {
 				cout << "Tutor Name: " << tutorLL->tutorName << endl;
-				exist = true;
+				tutorIDExist = true;
 
 				//Update Menu - address or phone or rating
 				bool exitFunction = true;
@@ -164,7 +164,7 @@ void UpdateTutor() {
 		}
 
 		//if there is no tutor data match the user input
-		if (exist == false) {
+		if (tutorIDExist == false) {
 			cout << "Tutor ID not found." << endl;
 		}
 	}
