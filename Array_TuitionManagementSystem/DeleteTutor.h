@@ -100,7 +100,7 @@ void DeleteTutor(Tutor tutorArray[]) {
 
 	cout << "Tutor Name: " << tutorArray[checkTutorID].tutorName << endl;
 
-	//Update Menu - address or phone
+	//Delete Menu - update termination date & check
 	bool exitFunction = true;
 	while (exitFunction != false)
 	{
