@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 #include "HRSearch.h"
 #include "UserMenuFunction.h"
 #include "DataStruc.h"
@@ -19,6 +20,15 @@ void UpdateTutorPhone(Tutor updateTutorAdd[], int tutorArr) {
 
 	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << "'s Phone Number: ";
 	cin >> updateTutorPhone;
+
+	// validation for phono number, if lesser than 10 number counted as invalid
+	while (updateTutorPhone.length() < 10)
+	{
+		cout << "Not enough Length. Insert Tutor Phone No: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+		cin >> updateTutorPhone;
+	}
 	
 	//replace existing content with user inputted data
 	updateTutorAdd[tutorArr].tutorPhone = updateTutorPhone;
@@ -37,9 +47,19 @@ void UpdateTutorAddress(Tutor updateTutorAdd[], int tutorArr) {
 	loopSymbol(100, "-");
 	cout << endl << endl;
 
-	//replace existing content with user inputted data
 	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << "'s Address: ";
 	cin >> updateTutorAddress;
+
+	// validation for phono number, if lesser than 10 number counted as invalid
+	while (updateTutorAddress.length() < 2)
+	{
+		cout << "Not enough Length. Insert Tutor Address: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+		cin >> updateTutorAddress;
+	}
+
+	//replace existing content with user inputted data
 	updateTutorAdd[tutorArr].tutorAddress = updateTutorAddress;
 
 	cout << endl << "Tutor " << updateTutorAdd[tutorArr].tutorName << " Update Successfully !!!";
@@ -56,9 +76,16 @@ void UpdateTutorRating(Tutor updateTutorAdd[], int tutorArr) {
 	loopSymbol(100, "-");
 	cout << endl << endl;
 
-	//replace existing content with user inputted data
 	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << "'s New Rating: ";
-	cin >> updateTutorRating;
+
+	//check if the user input is a integer and between 1 - 5
+	while (!(cin >> updateTutorRating) || updateTutorRating < 1 || updateTutorRating > 5) {
+		cout << "Error: insert Tutor Rating :";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
+
+	//replace existing content with user inputted data
 	PushRating(updateTutorAdd, tutorArr, updateTutorRating);
 
 	cout << endl << "Tutor " << updateTutorAdd[tutorArr].tutorName << " Update Successfully !!!";
