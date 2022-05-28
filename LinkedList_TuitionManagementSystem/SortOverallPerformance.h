@@ -69,7 +69,7 @@ void SelectionSortOP()
                 index->payCheck = check;
 
             }
-            
+            // Refering to following node
             index = index->nextAddress;
         }
 
@@ -80,20 +80,17 @@ void SelectionSortOP()
 void SortOverallPerformance() {
     system("cls");
     SelectionSortOP();
-    DisplaySortedTutor();
-    cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
+    DisplaySortedTutor("Sorted Overall Performance in Acsending Order");
 }
 
 void SortOverallPerformanceKL() {
     system("cls");
     SelectionSortOP();
-    DisplayKLTutor();
-    cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
+    DisplayKLTutor("Sorted Overall Performance in Acsending Order");
 }
 
 void SortOverallPerformanceJohor() {
     system("cls");
     SelectionSortOP();
-    DisplayJohorTutor();
-    cout << "No of tutor in LL: " << ::sizeOfLinkedList << endl;
+    DisplayJohorTutor("Sorted Overall Performance in Acsending Order");
 }

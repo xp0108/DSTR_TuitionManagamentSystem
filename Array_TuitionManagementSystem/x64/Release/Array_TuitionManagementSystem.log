@@ -1,0 +1,7 @@
+﻿  Main.cpp
+D:\Degree L2 - Sem 2\DSTR - Data Structures\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\CalculateOverallPerformance.h(8,48): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 361 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Array_TuitionManagementSystem.vcxproj -> D:\Degree L2 - Sem 2\DSTR - Data Structures\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Release\Array_TuitionManagementSystem.exe

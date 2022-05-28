@@ -7,32 +7,37 @@
 using namespace std;
 
 void UpdateTutorPhone(Tutor updateTutorAdd[], int tutorArr) {
+	//use to store user input
 	string updateTutorPhone;
+
 	cout << endl;
 	loopSymbol(100, "-");
 	cout << endl;
 	cout << "Update Tutor Phone Number" << endl;
 	loopSymbol(100, "-");
-
 	cout << endl << endl;
 
 	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << "'s Phone Number: ";
 	cin >> updateTutorPhone;
+	
+	//replace existing content with user inputted data
 	updateTutorAdd[tutorArr].tutorPhone = updateTutorPhone;
 
 	cout << endl << "Tutor " << updateTutorAdd[tutorArr].tutorName << " Update Successfully !!!";
 }
 
 void UpdateTutorAddress(Tutor updateTutorAdd[], int tutorArr) {
+	//use to store user input
 	string updateTutorAddress;
+
 	cout << endl;
 	loopSymbol(100, "-");
 	cout << endl;
 	cout << "Update Tutor Address" << endl;
 	loopSymbol(100, "-");
-
 	cout << endl << endl;
 
+	//replace existing content with user inputted data
 	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << "'s Address: ";
 	cin >> updateTutorAddress;
 	updateTutorAdd[tutorArr].tutorAddress = updateTutorAddress;
@@ -41,15 +46,17 @@ void UpdateTutorAddress(Tutor updateTutorAdd[], int tutorArr) {
 }
 
 void UpdateTutorRating(Tutor updateTutorAdd[], int tutorArr) {
+	//use to store user input
 	double updateTutorRating;
+
 	cout << endl;
 	loopSymbol(100, "-");
 	cout << endl;
 	cout << "Update Tutor Rating" << endl;
 	loopSymbol(100, "-");
-
 	cout << endl << endl;
 
+	//replace existing content with user inputted data
 	cout << "Enter " << updateTutorAdd[tutorArr].tutorName << "'s New Rating: ";
 	cin >> updateTutorRating;
 	PushRating(updateTutorAdd, tutorArr, updateTutorRating);
@@ -73,15 +80,19 @@ void UpdateTutor(Tutor tutorArray[])
 		cin.ignore(123, '\n');
 	}
 
-	//Search Function - check tutor exist & return tutorArray
+	//Linear Search Function - check tutor exist & return tutorArray
 	int checkTutorID = linearSearchTutor(tutorArray, tutorID);
+
 	while (checkTutorID == -1)
 	{
-		cout << "Tutor ID not found !!! " << endl << "Enter Tutor ID Again: ";
-		cin.clear();
-		cin >> tutorID;
-		checkTutorID = linearSearchTutor(tutorArray, tutorID);
+	
+			cout << "Tutor ID not found !!! " << endl << "Enter Tutor ID Again: ";
+			cin.clear();
+			cin >> tutorID;
+			checkTutorID = linearSearchTutor(tutorArray, tutorID);
+		
 	}
+
 
 	cout << "Tutor Name: " << tutorArray[checkTutorID].tutorName << endl;
 	//Update Menu - address or phone
