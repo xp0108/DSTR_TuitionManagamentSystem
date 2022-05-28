@@ -16,9 +16,8 @@ int CheckTutorID(int tutorID, Tutor tutor_info[], int arraysize) {
 
 void AddTutor(Tutor tutor_info[]) {
 
-    int rateValue;
     int id;
-
+    string tCenter;
     // add value to tutor_info
     for (int row = 0; row < 100; row++) {
         cout << "Tutor ID (integers only): ";
@@ -48,12 +47,41 @@ void AddTutor(Tutor tutor_info[]) {
             cout << "Address: ";
             cin >> tutor_info[row].tutorAddress;
             cout << "Tuition Center: ";
-            cin >> tutor_info[row].tutionName;
+            bool exitFunction = true;
+            while (exitFunction != false)
+            {
+                int tutorCenterChoice;
+                cout << endl << endl;
+                cout << " Select Tutor Center" << endl;
+                cout << "1. KL" << endl;
+                cout << "2. JOHOR" << endl;
+                cout << "Enter your choice: ";
+                // Validate user input
+                while (!(cin >> tutorCenterChoice)) {
+                    cout << endl << "Invalid Input !!!" << endl;
+                    cout << "Enter you choice again: ";
+                    cin.clear();
+                    cin.ignore(123, '\n');
+                }
+                switch (tutorCenterChoice)
+                {
+                case 1:
+                    tutor_info[row].tutionName = "KL";
+                    exitFunction = false;
+                    break;
+                case 2:
+                    tutor_info[row].tutionName = "JOHOR";
+                    exitFunction = false;
+                    break;
+                default:
+                    cout << "Invalid Option! Please Try Again";
+                }
+            }
+            cout << endl;
             cout << "Subject Name: ";
             cin >> tutor_info[row].subjectName;
-            cout << "Rating: ";
-            cin >> rateValue;
-            PushRating(tutor_info, row, rateValue);
+            // default, rating is 0
+            PushRating(tutor_info, row, 0);
             cout << endl;
 
             if (tutor_info[row].subjectName == "English" || tutor_info[row].subjectName == "BM" || tutor_info[row].subjectName == "Mandarin") {
