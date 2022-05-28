@@ -123,7 +123,7 @@ void JohorAdminMenu()
 			SortOverallPerformanceJohor();
 			break;
 		case 7:
-			GenerateReport("Johor");
+			GenerateReport("JOHOR");
 			break;
 		case 8:
 			system("cls");
