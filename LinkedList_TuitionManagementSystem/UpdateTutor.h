@@ -17,6 +17,16 @@ void UpdateTutorPhono(Tutor* tutorLL) {
 
 	cout << "Enter " << tutorLL->tutorName << "'s Phone Number: ";
 	cin >> updateTutorPhone;
+
+	// validation for phono number, if lesser than 10 number counted as invalid
+	while (updateTutorPhone.length() < 10)
+	{
+		cout << "Not enough Length. Insert Tutor Phone No: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+		cin >> updateTutorPhone;
+	}
+
 	// replacing existing data with inputted input
 	tutorLL->tutorPhone = updateTutorPhone;
 
@@ -36,6 +46,17 @@ void UpdateTutorAddress(Tutor* tutorLL) {
 
 	cout << "Enter " << tutorLL->tutorName << "'s Address: ";
 	cin >> updateTutorAddress;
+
+	// validation for phono number, if lesser than 10 number counted as invalid
+	while (updateTutorAddress.length() < 2)
+	{
+		cout << "Not enough Length. Insert Tutor Address: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+		cin >> updateTutorAddress;
+	}
+
+	//replace existing content with user inputted data
 	tutorLL->tutorAddress = updateTutorAddress;
 
 	cout << endl << "Tutor " << tutorLL->tutorName << " Update Successfully !!!";
@@ -53,7 +74,15 @@ void UpdateTutorRating(Tutor* tutorLL) {
 	cout << endl << endl;
 	double oldrating = tutorLL->rating;
 	cout << "Enter " << tutorLL->tutorName << "'s Address: ";
-	cin >> updateTutorRating;
+
+	//validation - check if the user input is a integer and between 1 - 5
+	while (!(cin >> updateTutorRating) || updateTutorRating < 1 || updateTutorRating > 5) {
+		cout << "Error: insert Tutor Rating :";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
+
+	//replace existing content with user inputted data
 	updateTutorRating = (oldrating + updateTutorRating) / 2;
 	tutorLL->rating = updateTutorRating;
 
@@ -69,7 +98,7 @@ void UpdateTutor() {
 
 	Tutor* tutorLL = head;
 	int inputTutorID;
-	bool exist = false;
+	bool tutorIDExist = false;
 
 	// Check is int input
 	cout << endl << "Enter Tutor ID :";
@@ -86,7 +115,7 @@ void UpdateTutor() {
 			//if the tutorID is found
 			if (tutorLL->tutorID == inputTutorID) {
 				cout << "Tutor Name: " << tutorLL->tutorName << endl;
-				exist = true;
+				tutorIDExist = true;
 
 				//Update Menu - address or phone or rating
 				bool exitFunction = true;
@@ -135,7 +164,7 @@ void UpdateTutor() {
 		}
 
 		//if there is no tutor data match the user input
-		if (exist == false) {
+		if (tutorIDExist == false) {
 			cout << "Tutor ID not found." << endl;
 		}
 	}

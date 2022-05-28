@@ -8,3 +8,4 @@ C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.9\Array_Tuiti
 C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.14\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe
 C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.15\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe
 C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.16\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe
+C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.17\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe

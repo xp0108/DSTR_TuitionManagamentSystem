@@ -9,23 +9,6 @@
 
 using namespace std;
 
-void UpdateTutorTerminateDate(Tutor* tutorLL) {
-	string updateTerminateDate;
-	cout << endl;
-	loopSymbol(100, "-");
-	cout << endl;
-	cout << "Update Tutor Termination Date" << endl;
-	loopSymbol(100, "-");
-
-	cout << endl << endl;
-
-	updateTerminateDate = tutorLL->dateTerminated;
-	cout << "Enter " << tutorLL->tutorName << "'s Termiantion Date: ";
-	cin >> updateTerminateDate;
-	tutorLL->dateTerminated = updateTerminateDate;
-
-	cout << endl << "Tutor " << tutorLL->tutorName << "'s Termiantion Date Update Successfully !!!";
-}
 
 void CheckDeleteTutor(Tutor* selectedTutorID) {
 	time_t getTodayTime = time(0);
@@ -37,7 +20,7 @@ void CheckDeleteTutor(Tutor* selectedTutorID) {
 
 	//get terminated date and split
 	string terminatedDate = selectedTutorID->dateTerminated;
-	cout << endl << "Termination Date: " << selectedTutorID->dateTerminated << "\t" << selectedTutorID->tutorName << endl;
+	cout << endl << "Termination Date: " << selectedTutorID->dateTerminated << "\t" << selectedTutorID->tutorName << endl << endl;
 	stringstream splitedTerminatedDate(terminatedDate);
 	vector<int> outputSplitedTD;
 	int i;
@@ -95,6 +78,27 @@ void CheckDeleteTutor(Tutor* selectedTutorID) {
 
 }
 
+void UpdateTutorTerminateDate(Tutor* tutorLL) {
+	string updateTerminateDate;
+	cout << endl;
+	loopSymbol(100, "-");
+	cout << endl;
+	cout << "Update Tutor Termination Date" << endl;
+	loopSymbol(100, "-");
+
+	cout << endl << endl;
+
+	updateTerminateDate = tutorLL->dateTerminated;
+	cout << "Enter " << tutorLL->tutorName << "'s Termiantion Date: ";
+	cin >> updateTerminateDate;
+	tutorLL->dateTerminated = updateTerminateDate;
+
+	cout << endl << "Tutor " << tutorLL->tutorName << "'s Termiantion Date Update Successfully !!!";
+
+	CheckDeleteTutor(tutorLL);
+}
+
+
 Tutor* LinearSearchAndUpdateTutor(Tutor* inputTutorID) { // no need pass the pointer, store in memory, jst direct refer
 	int ID;
 	bool exist = false;
@@ -114,8 +118,8 @@ Tutor* LinearSearchAndUpdateTutor(Tutor* inputTutorID) { // no need pass the poi
 			//if the tutorID is found
 			if (inputTutorID->tutorID == ID) {
 				exist = true;
-				UpdateTutorTerminateDate(inputTutorID);
-				cout << "TutorID found." << inputTutorID->tutorName << "\t" << inputTutorID->dateTerminated << endl;
+				//UpdateTutorTerminateDate(inputTutorID);
+				cout << "TutorID Name: " << inputTutorID->tutorName << endl;
 				return inputTutorID;
 			}
 			//push to next address
@@ -142,6 +146,48 @@ void DeleteTutor() {
 
 	Tutor* tutorLL = head; //Delete Function = previous
 	Tutor* returnTutorNode = nullptr;
+
 	returnTutorNode = LinearSearchAndUpdateTutor(tutorLL);
-	CheckDeleteTutor(returnTutorNode);
+
+	while (returnTutorNode == 0)
+	{
+		cin.clear();
+		returnTutorNode = LinearSearchAndUpdateTutor(tutorLL);
+	}
+	//Update Menu - address or phone
+	bool exitFunction = true;
+	while (exitFunction != false)
+	{
+		int updateChoice;
+		cout << endl << endl;
+		cout << " ** DELETE MENU **" << endl;
+		cout << "1. Update Termination Date" << endl;
+		cout << "2. Check Termination Date (>6months)" << endl;
+		cout << "3. Exit Update Function" << endl;
+		cout << "Enter your choice: ";
+		// Validate user input
+		while (!(cin >> updateChoice)) {
+			cout << endl << "Invalid Input !!!" << endl;
+			cout << "Enter you choice again: ";
+			cin.clear();
+			cin.ignore(123, '\n');
+		}
+		switch (updateChoice)
+		{
+		case 1:
+			UpdateTutorTerminateDate(tutorLL);
+			//CheckDeleteTutor(returnTutorNode);
+			exitFunction = false;
+			break;
+		case 2:
+			CheckDeleteTutor(returnTutorNode);
+			exitFunction = false;
+			break;
+		case 3:
+			exitFunction = false;
+			break;
+		default:
+			cout << "Invalid Option! Please Try Again";
+		}
+	}
 }

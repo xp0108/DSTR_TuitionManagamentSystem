@@ -70,8 +70,8 @@ void searchTutorByRating(Tutor tutorArray[])
 
 	cout << "Insert Tutor Rating :";
 
-	//check if the user input is a integer
-	while (!(cin >> rating)) {
+	//check if the user input is a integer and between 0 - 5
+	while (!(cin >> rating) || rating < 0 || rating > 5) {
 		cout << "Error: insert Tutor Rating :";
 		cin.clear();
 		cin.ignore(123, '\n');
