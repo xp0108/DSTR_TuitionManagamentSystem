@@ -55,7 +55,6 @@ void CheckDeleteTutor(Tutor* selectedTutorID) {
 
 	int diffDate = CountDiffDate(dateTerminated, dateToday);
 
-	int arrSize = 100;
 	if (diffDate >= 183)
 	{
 
