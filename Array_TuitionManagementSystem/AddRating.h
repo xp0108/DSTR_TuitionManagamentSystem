@@ -19,12 +19,14 @@ void AddRatingKL(Tutor rating_info[]) {
 	cout << "Enter tutor ID: ";
 	cin >> id;
 
+	// check existance of tutor id in kl branch
 	int tutorID = klLinearSearchTutor(rating_info, id);
 	if (tutorID == -1) {
 		system("cls");
 		cout << endl;
 		cout << "Tutor ID not found";
 	}
+	// if the tutor id exists
 	else {
 		cout << "Enter rating: ";
 		cin >> rateValue;
@@ -39,12 +41,15 @@ void AddRatingJohor(Tutor rating_info[]) {
 	cout << "Enter tutor ID: ";
 	cin >> id;
 
+	// check the existance of tutor id in johor branch
 	int tutorID = JohorLinearSearchTutor(rating_info, id);
 	if (tutorID == -1) {
 		system("cls");
 		cout << endl;
 		cout << "Tutor ID not found";
 	}
+
+	// if the tutor exists
 	else {
 		cout << "Enter rating: ";
 		cin >> rateValue;
