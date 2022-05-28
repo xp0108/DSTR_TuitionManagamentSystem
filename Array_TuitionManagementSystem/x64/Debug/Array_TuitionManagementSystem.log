@@ -1,4 +1,4 @@
 ﻿  Main.cpp
-D:\Degree L2 - Sem 2\DSTR - Data Structures\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\CalculateOverallPerformance.h(10,48): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  LINK : D:\Degree L2 - Sem 2\DSTR - Data Structures\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe not found or not built by the last incremental link; performing full link
-  Array_TuitionManagementSystem.vcxproj -> D:\Degree L2 - Sem 2\DSTR - Data Structures\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe
+C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\CalculateOverallPerformance.h(10,48): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  LINK : C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe not found or not built by the last incremental link; performing full link
+  Array_TuitionManagementSystem.vcxproj -> C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\Array_TuitionManagementSystem\x64\Debug\Array_TuitionManagementSystem.exe
