@@ -7,7 +7,6 @@
 void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
 	system("cls");
 	int currentrow, maxRow, maxPage, arraysize = (sizeof(tutor_info)/ sizeof(* tutor_info)), currentPage = 1;
-	cout << "arraysize: " << arraysize <<endl;
 	//5 rows of tutor's data in each Page
 	if (arraysize % 5 != 0) {
 		maxPage = (arraysize / 5) + 1;
@@ -35,7 +34,6 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
 	cout << endl << string(193, '-') << endl << string(85, ' ') << displayString << endl << string(193, '-') << endl;
 
 	//Heading
-	cout << "Current row: " << currentrow << "\nMax Row: " << maxRow << endl;
 	cout << "TutorID" << "\t| ";
 	cout << setw(10) << left << "TutorName" << "\t| ";
 	cout << "DateJoined" << "\t| ";
@@ -71,7 +69,7 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
 	}
 
 	cout << string(193, '-') << endl;
-	cout << "Page  " << currentPage << " of " << maxPage << endl;
+	cout << "Page  " << currentPage << endl;
 
 	//In display list menu
 	bool exitFunction = true;
