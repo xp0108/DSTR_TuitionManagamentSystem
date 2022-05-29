@@ -47,7 +47,7 @@ void AddTutor(Tutor tutor_info[]) {
 			cout << "Full name: ";
 			cin >> tutor_info[row].tutorName;
 			cout << endl;
-			
+
 			// date format validation
 			cout << "Date joined: " << endl;
 			bool exitDate = false;
@@ -72,7 +72,7 @@ void AddTutor(Tutor tutor_info[]) {
 					cin.ignore(123, '\n');
 				}
 
-				if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && day > 0 && day <= 31){
+				if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && day > 0 && day <= 31) {
 					cout << "It is valid" << endl;
 					sday = to_string(day);
 					smonth = to_string(month);
@@ -117,14 +117,14 @@ void AddTutor(Tutor tutor_info[]) {
 					else {
 						cout << "Invalid date, please enter again." << endl;
 					}
-				
+
 				}
 				else {
 					cout << "Invalid date, please enter again." << endl;
 				}
-			
+
 			}
-			
+
 
 			tutor_info[row].dateJoin = date;
 			cout << endl;
@@ -254,17 +254,17 @@ void AddTutor(Tutor tutor_info[]) {
 					tutor_info[row].subjectName = "Computing";
 					tutor_info[row].hourlyRate = 80;
 					exitSubjectName = false;
-				break;   
+					break;
 				case 8:
 					tutor_info[row].subjectName = "History";
 					tutor_info[row].hourlyRate = 60;
 					exitSubjectName = false;
-				break;    
+					break;
 				case 9:
 					tutor_info[row].subjectName = "Economics";
 					tutor_info[row].hourlyRate = 60;
 					exitSubjectName = false;
-				break;   
+					break;
 				case 10:
 					tutor_info[row].subjectName = "Accounting";
 					tutor_info[row].hourlyRate = 60;
