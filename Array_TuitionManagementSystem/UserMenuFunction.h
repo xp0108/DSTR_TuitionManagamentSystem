@@ -170,6 +170,7 @@ void HRManagerMenu(Tutor tutorArray[])
 		switch (hrChoice)
 		{
 		case 1:
+			//add();
 			AddTutor(tutorArray);
 			break;
 		case 2:
