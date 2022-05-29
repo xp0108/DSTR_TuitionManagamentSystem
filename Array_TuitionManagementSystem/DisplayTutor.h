@@ -100,6 +100,7 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
 			switch (displayMenu)
 			{
 			case 1:
+				system("cls");
 				currentPage = currentPage + 1;
 				currentrow = (currentPage - 1) * 5;
 
@@ -146,6 +147,7 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
 			switch (displayMenu)
 			{
 			case 1:
+				system("cls");
 				currentPage = currentPage + 1;
 				currentrow = (currentPage - 1) * 5;
 
@@ -181,6 +183,7 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
 				cout << "Page  " << currentPage << endl;
 				break;
 			case 2:
+				system("cls");
 				currentPage = currentPage - 1;
 				currentrow = (currentPage - 1) * 5;
 
