@@ -55,7 +55,8 @@ void AddTutor() {
 	int id;
 	string name, dateJ, phone, addr, tname, sname;
 	double work, rate, check;
-
+	int day, month, year;
+	string date, sday, smonth, syear;
 	Tutor* temp = head;
 	bool exist = false;
 
@@ -89,15 +90,107 @@ void AddTutor() {
 			cout << "Tutor name: ";
 			cin >> name;
 			cout << "Date joined: ";
-			cin >> dateJ;
+
+			// validate date input
+			bool exitDate = false;
+
+			while (exitDate != true) {
+				cout << "Day (1-31): ";
+				while ((!(cin >> day)) || day < 1 || day > 31) {
+					cout << "Numbers 1-31 only: ";
+					cin.clear();
+					cin.ignore(123, '\n');
+				}
+				cout << "Month (1-12): ";
+				while ((!(cin >> month)) || month < 1 || month > 12) {
+					cout << "Numbers 1-12 only: ";
+					cin.clear();
+					cin.ignore(123, '\n');
+				}
+				cout << "Year (4 digits): ";
+				while ((!(cin >> year)) || year < 1000 || year > 2100) {
+					cout << "Invalid year, input again: ";
+					cin.clear();
+					cin.ignore(123, '\n');
+				}
+
+				if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && day > 0 && day <= 31) {
+					cout << "It is valid" << endl;
+					sday = to_string(day);
+					smonth = to_string(month);
+					syear = to_string(year);
+					date = sday + "/" + smonth + "/" + syear;
+					cout << endl;
+					cout << "Date joined: " << date << endl;
+					exitDate = true;
+
+				}
+				else if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 0 && day <= 30) {
+					cout << "It is Valid" << endl;
+					sday = to_string(day);
+					smonth = to_string(month);
+					syear = to_string(year);
+					date = sday + "/" + smonth + "/" + syear;
+					cout << endl;
+					cout << "Date joined: " << date << endl;
+					exitDate = true;
+				}
+				else if (month == 2) {
+					if ((year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)) && day > 0 && day <= 29) {
+						cout << "It is Valid" << endl;
+						sday = to_string(day);
+						smonth = to_string(month);
+						syear = to_string(year);
+						date = sday + "/" + smonth + "/" + syear;
+						cout << endl;
+						cout << "Date joined: " << date << endl;
+						exitDate = true;
+					}
+					else if (day > 0 && day <= 28) {
+						cout << "It is Valid" << endl;
+						sday = to_string(day);
+						smonth = to_string(month);
+						syear = to_string(year);
+						date = sday + "/" + smonth + "/" + syear;
+						cout << endl;
+						cout << "Date joined: " << date << endl;
+						exitDate = true;
+					}
+					else {
+						cout << "Invalid date, please enter again." << endl;
+					}
+
+				}
+				else {
+					cout << "Invalid date, please enter again." << endl;
+				}
+
+			}
+			dateJ = date;
+			cout << endl;
+
 			cout << "Working Hour: ";
 			while (!(cin >> work)) {
 				cout << "Invalid Working Hour. Please enter again: ";
 				cin.clear();
 				cin.ignore(123, '\n');
 			}
+
+			// validate phone number length
+			string veriphone;
 			cout << "Tutor phone: ";
-			cin >> phone;
+			cin >> veriphone;
+
+			while (veriphone.length() < 10)
+			{
+				cout << "Invalid phone number, enter again: ";
+				cin.clear();
+				cin.ignore(123, '\n');
+				cin >> veriphone;
+			}
+
+			phone = veriphone;
+
 			cout << "Tutor address: ";
 			cin >> addr;
 			cout << endl;
