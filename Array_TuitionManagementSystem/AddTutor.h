@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include <iterator>
 #include "DataStruc.h"
 #include "AddRating.h"
 
@@ -31,10 +30,10 @@ int GetTutorSize(Tutor tutor_info[]) {
 
 void AddTutor(Tutor tutor_info[]) {
 
-	int id;
-	string tCenter;
+	int id, day, month, year;
+	string tCenter, date, sday, smonth, syear;
+
 	// add value to tutor_info
-	
 	int sizeTutor = GetTutorSize(tutor_info);
 	sizeTutor = sizeTutor + 1;
 	for (int row = sizeTutor; row < 100; row++) {
@@ -46,11 +45,15 @@ void AddTutor(Tutor tutor_info[]) {
 			cin.ignore(123, '\n');
 		}
 
+		// check whether tutor id exists
 		int index = CheckTutorID(id, tutor_info, 100);
 
+		// if exists
 		if (index == 0) {
 			break;
 		}
+
+		// if not exists
 		else {
 
 			tutor_info[row].tutorID = id;
@@ -139,12 +142,36 @@ void AddTutor(Tutor tutor_info[]) {
 			tutor_info[row].dateJoin = date;
 			cout << endl;
 			cout << "Working Hour: ";
-			cin >> tutor_info[row].monthlyHour;
+
+			// validate working hour integer
+			int verihour;
+			while (!(cin >> verihour)) {
+				cout << "Numbers only: ";
+				cin.clear();
+				cin.ignore(123, '\n');
+			}
+
+			tutor_info[row].monthlyHour = verihour;
+
+			// validate phone number length
+			string veriphone;
 			cout << "Phone number: ";
-			cin >> tutor_info[row].tutorPhone;
+			cin >> veriphone;
+
+			while (veriphone.length() < 10)
+			{
+				cout << "Invalid phone number, enter again: ";
+				cin.clear();
+				cin.ignore(123, '\n');
+				cin >> veriphone;
+			}
+
+			tutor_info[row].tutorPhone = veriphone;
+
 			cout << "Address: ";
 			cin >> tutor_info[row].tutorAddress;
 			cout << endl;
+
 			//Menu for Tuition Center
 			cout << "Tuition Center: ";
 			bool exitTuitionCenterMenu = true;
