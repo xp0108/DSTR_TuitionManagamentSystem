@@ -108,7 +108,7 @@ void AddTutor(Tutor tutor_info[]) {
 						exitDate = true;
 					}
 					else {
-						cout << "It is Invalid" << endl;
+						cout << "Invalid date, please enter again." << endl;
 					}
 				
 				}
