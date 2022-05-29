@@ -177,7 +177,7 @@ void HRManagerMenu()
 			DeleteTutor();
 			break;
 		case 4:
-			DisplaySortedTutor();
+			DisplayTutor();
 			//DisplayTutor();
 			break;
 		case 5:
