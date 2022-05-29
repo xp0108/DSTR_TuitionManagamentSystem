@@ -44,6 +44,7 @@ void AddTutor(Tutor tutor_info[]) {
 			tutor_info[row].tutorID = id;
 			cout << "Full name: ";
 			cin >> tutor_info[row].tutorName;
+			cout << endl;
 			
 			// date format validation
 			cout << "Date joined: " << endl;
@@ -75,6 +76,7 @@ void AddTutor(Tutor tutor_info[]) {
 					smonth = to_string(month);
 					syear = to_string(year);
 					date = sday + "/" + smonth + "/" + syear;
+					cout << endl;
 					cout << "Date joined: " << date << endl;
 					exitDate = true;
 
@@ -85,6 +87,7 @@ void AddTutor(Tutor tutor_info[]) {
 					smonth = to_string(month);
 					syear = to_string(year);
 					date = sday + "/" + smonth + "/" + syear;
+					cout << endl;
 					cout << "Date joined: " << date << endl;
 					exitDate = true;
 				}
@@ -95,6 +98,7 @@ void AddTutor(Tutor tutor_info[]) {
 						smonth = to_string(month);
 						syear = to_string(year);
 						date = sday + "/" + smonth + "/" + syear;
+						cout << endl;
 						cout << "Date joined: " << date << endl;
 						exitDate = true;
 					}
@@ -104,6 +108,7 @@ void AddTutor(Tutor tutor_info[]) {
 						smonth = to_string(month);
 						syear = to_string(year);
 						date = sday + "/" + smonth + "/" + syear;
+						cout << endl;
 						cout << "Date joined: " << date << endl;
 						exitDate = true;
 					}
@@ -117,14 +122,34 @@ void AddTutor(Tutor tutor_info[]) {
 			
 
 			tutor_info[row].dateJoin = date;
-
+			cout << endl;
 			cout << "Working Hour: ";
-			cin >> tutor_info[row].monthlyHour;
+
+			// validate working hour integer
+			int verihour;
+			while (!(cin >> verihour)) {
+				cout << endl << "Invalid Input !!!" << endl;
+				cin.clear();
+				cin.ignore(123, '\n');
+			}
+
+			tutor_info[row].monthlyHour = verihour;
+
 			cout << "Phone number: ";
-			cin >> tutor_info[row].tutorPhone;
+
+			// validate phone number length
+			string veriphone;
+			while (veriphone.length() < 10) {
+				cout << endl << "Minimum 10 characters: " << endl;
+				cin.clear();
+				cin.ignore(123, '\n');
+			}
+			tutor_info[row].tutorPhone = veriphone;
+
 			cout << "Address: ";
 			cin >> tutor_info[row].tutorAddress;
 			cout << endl;
+
 			//Menu for Tuition Center
 			cout << "Tuition Center: ";
 			bool exitTuitionCenterMenu = true;
