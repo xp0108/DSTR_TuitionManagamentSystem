@@ -10,6 +10,14 @@
 
 using namespace std;
 
+bool isNumber(const string& s)
+{
+	for (char const& ch : s) {
+		if (isdigit(ch) == 0)
+			return false;
+	}
+	return true;
+}
 
 void CheckDeleteTutor(Tutor* selectedTutorID) {
 	time_t getTodayTime = time(0);
@@ -21,62 +29,68 @@ void CheckDeleteTutor(Tutor* selectedTutorID) {
 
 	//get terminated date and split
 	string terminatedDate = selectedTutorID->dateTerminated;
-	cout << endl << "Termination Date: " << selectedTutorID->dateTerminated << "\t" << selectedTutorID->tutorName << endl << endl;
-	stringstream splitedTerminatedDate(terminatedDate);
-	vector<int> outputSplitedTD;
-	int i;
-	while (splitedTerminatedDate >> i) {
-		outputSplitedTD.push_back(i);
-		splitedTerminatedDate.ignore(1);
-	}
 
-	int dayITD = outputSplitedTD[0];
-	int monthITD = outputSplitedTD[1];
-	int yearITD = outputSplitedTD[2];
+	//Validate termination date, is equal to date. 
+	bool isInt = isNumber(terminatedDate);
 
-	Date dateTerminated = { dayITD,monthITD,yearITD };
-	Date dateToday = { todayDay, todayMonth, todayYear };
+	if (isInt == 1) {
+		stringstream splitedTerminatedDate(terminatedDate);
+		vector<int> outputSplitedTD;
+		int i;
+		while (splitedTerminatedDate >> i) {
+			outputSplitedTD.push_back(i);
+			splitedTerminatedDate.ignore(1);
+		}
 
-	int diffDate = CountDiffDate(dateTerminated, dateToday);
+		int dayITD = outputSplitedTD[0];
+		int monthITD = outputSplitedTD[1];
+		int yearITD = outputSplitedTD[2];
 
-	if (diffDate >= 183)
-	{
+		Date dateTerminated = { dayITD,monthITD,yearITD };
+		Date dateToday = { todayDay, todayMonth, todayYear };
 
-		cout << "Yes Please Delete" << endl;
-		//Delete Node
+		int diffDate = CountDiffDate(dateTerminated, dateToday);
 
-		//if is the selected item is located in the 1st node
-		if (head->tutorID == selectedTutorID->tutorID) {
-			Tutor* current = head;
-			head = head->nextAddress;
-			delete current;
+		if (diffDate >= 183)
+		{
+
+			cout << "Yes Please Delete" << endl;
+			//Delete Node
+
+			//if is the selected item is located in the 1st node
+			if (head->tutorID == selectedTutorID->tutorID) {
+				Tutor* current = head;
+				head = head->nextAddress;
+				delete current;
+			}
+			else
+			{
+				// Delete for not equal to 1st node
+				Tutor* current = head->nextAddress; //start from second node to check the keyword
+				//need to find out wherethe to delete the keyword is the current or need to move on
+				Tutor* previous = head; // standby during deletion
+				while (current != NULL)
+				{
+					if (current->tutorID == selectedTutorID->tutorID)
+					{
+						// delete the current
+						previous->nextAddress = current->nextAddress;
+						delete current;
+						return;
+					}
+					previous = current;
+					current = current->nextAddress;
+				}
+			}
+
 		}
 		else
 		{
-			// Delete for not equal to 1st node
-			Tutor* current = head->nextAddress; //start from second node to check the keyword
-			//need to find out wherethe to delete the keyword is the current or need to move on
-			Tutor* previous = head; // standby during deletion
-			while (current != NULL)
-			{
-				if (current->tutorID == selectedTutorID->tutorID)
-				{
-					// delete the current
-					previous->nextAddress = current->nextAddress;
-					delete current;
-					return;
-				}
-				previous = current;
-				current = current->nextAddress;
-			}
+			cout << "Not reach the due yet" << endl;
 		}
-
-	}
-	else
-	{
-		cout << "Not reach the due yet" << endl;
 	}
 
+	cout << "PLEASE UPDATE TERMINATION DATE !!!!";
 }
 
 void UpdateTutorTerminateDate(Tutor* tutorLL) {
@@ -92,7 +106,8 @@ void UpdateTutorTerminateDate(Tutor* tutorLL) {
 	cout << endl << endl;
 
 	updateTerminateDate = tutorLL->dateTerminated;
-	cout << "Enter " << tutorLL->tutorName << "'s Termiantion Date: " <<endl;
+	cout << "Enter " << tutorLL->tutorName << "'s Termiantion Date: " << endl;
+
 
 	//Validation for Termination Date
 	cout << "Day (1-31): ";

@@ -132,9 +132,8 @@ void CheckDeleteTutor(Tutor tutorArray[], int tutorTDIndex, Tutor* deleteArrayTu
 	//get terminated date and split
 	string terminatedDate = tutorArray[tutorTDIndex].dateTerminated;
 
+	//Validate termination date, is equal to date. 
 	bool isInt = isNumber(terminatedDate);
-
-	cout << isInt;
 
 	if (isInt == 0) {
 
