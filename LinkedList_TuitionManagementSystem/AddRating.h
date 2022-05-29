@@ -34,7 +34,13 @@ void KLAddRating() {
 
 				// get user input
 				cout << "Enter new rating: ";
-				cin >> ratingval;
+
+				//check if the user input is a integer and between 1 - 5
+				while (!(cin >> ratingval) || ratingval < 1 || ratingval > 5) {
+					cout << "Please insert number between 1-5 :";
+					cin.clear();
+					cin.ignore(123, '\n');
+				}
 
 				// perform calculation and store the result in newrating
 				newrating = (oldrating + ratingval) / 2;
@@ -92,7 +98,13 @@ void JohorAddRating() {
 
 				// get user input
 				cout << "Enter new rating: ";
-				cin >> ratingval;
+				
+				//check if the user input is a integer and between 1 - 5
+				while (!(cin >> ratingval) || ratingval < 1 || ratingval > 5) {
+					cout << "Please insert number between 1-5 :";
+					cin.clear();
+					cin.ignore(123, '\n');
+				}
 
 				// perform calculation and store the result in newrating
 				newrating = (oldrating + ratingval) / 2;
