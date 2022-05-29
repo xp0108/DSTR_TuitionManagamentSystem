@@ -64,7 +64,7 @@ void JohorSearchTutor(Tutor tutorArray[])
 //search for all tutor with user input rating
 void JohorSearchTutorByRating(Tutor tutorArray[])
 {
-	int rating;
+	double rating;
 	int size = 100;
 	int count = 0;
 

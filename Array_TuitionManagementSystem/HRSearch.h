@@ -64,7 +64,7 @@ void searchTutor(Tutor tutorArray[])
 //search for all tutor with user input rating
 void searchTutorByRating(Tutor tutorArray[])
 {
-	int rating;
+	double rating;
 	int size = 100;
 	int count = 0;
 
