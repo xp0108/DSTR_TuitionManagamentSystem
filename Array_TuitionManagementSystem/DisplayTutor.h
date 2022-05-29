@@ -6,8 +6,7 @@
 
 void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
 	system("cls");
-	int currentrow, maxRow, maxPage, arraysize = sizeof(tutor_info), currentPage = 1;
-
+	int currentrow, maxRow, maxPage, arraysize = (sizeof(tutor_info)/ sizeof(* tutor_info)), currentPage = 1;
 	//5 rows of tutor's data in each Page
 	if (arraysize % 5 != 0) {
 		maxPage = (arraysize / 5) + 1;
@@ -70,7 +69,7 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
 	}
 
 	cout << string(193, '-') << endl;
-	cout << "Page  " << currentPage << " of " << maxPage << endl;
+	cout << "Page  " << currentPage << endl;
 
 	//In display list menu
 	bool exitFunction = true;
@@ -78,23 +77,154 @@ void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
 	while (exitFunction != false)
 	{
 		int displayMenu;
-		cout << "\n1. Next Page" << endl << "2. Back To Menu" << endl << "Enter your choice: ";
-		while (!(cin >> displayMenu)) {
-			cout << endl << "Invalid Input !!!" << endl;
-			cout << "Enter you choice again: ";
-			cin.clear();
-			cin.ignore('\n');
+		if (currentPage == 1) {
+			cout << "\n1. Next Page" << endl << "2. Back To Menu" << endl << "Enter your choice: ";
+			while (!(cin >> displayMenu)) {
+				cout << endl << "Invalid Input !!!" << endl;
+				cout << "Enter you choice again: ";
+				cin.clear();
+				cin.ignore('\n');
+			}
 		}
-		switch (displayMenu)
-		{
-		case 1:
-			currentPage = currentPage + 1;
-			break;
-		case 2:
-			exitFunction = false;
-			break;
-		default:
-			cout << "Invalid Option! Please Try Again";
+		else {
+			cout << "\n1. Next Page" << endl << "2. Previous Page" << endl << "3. Back To Menu" << endl << "Enter your choice : ";
+			while (!(cin >> displayMenu)) {
+				cout << endl << "Invalid Input !!!" << endl;
+				cout << "Enter you choice again: ";
+				cin.clear();
+				cin.ignore('\n');
+			}
+		}
+
+		if(currentPage == 1){
+			switch (displayMenu)
+			{
+			case 1:
+				system("cls");
+				currentPage = currentPage + 1;
+				currentrow = (currentPage - 1) * 5;
+
+				if (currentPage == maxPage) {
+					maxRow = 5 * (arraysize / 5) + (arraysize % 5);
+				}
+				else {
+					maxRow = 5 * currentPage;
+				}
+
+				cout << endl << string(193, '-') << endl << string(85, ' ') << displayString << endl << string(193, '-') << endl;
+
+				for (int row = currentrow; row < maxRow; row++) {
+
+					//Skip NULL values
+					if (tutor_info[row].tutorID != NULL) {
+
+						cout << tutor_info[row].tutorID << "\t| ";
+						cout << setw(10) << left << tutor_info[row].tutorName << "\t| ";
+						cout << tutor_info[row].dateJoin << "\t| ";
+						cout << setw(14) << left << tutor_info[row].dateTerminated << "\t| ";
+						cout << setw(8) << left << tutor_info[row].monthlyHour << "\t| ";
+						cout << setw(10) << left << tutor_info[row].hourlyRate << "\t| ";
+						cout << setw(10) << left << tutor_info[row].tutorPhone << "\t| ";
+						cout << setw(10) << left << tutor_info[row].tutorAddress << "\t| ";
+						cout << setw(10) << left << tutor_info[row].tutionName << "\t | ";
+						cout << setw(10) << left << tutor_info[row].subjectName << "\t | ";
+						cout << setw(5) << left << tutor_info[row].rating << "\t | ";
+						cout << setw(8) << left << tutor_info[row].payCheck << "\t | " << endl;
+					}
+				}
+				cout << string(193, '-') << endl;
+				cout << "Page  " << currentPage << endl;
+				break;
+			case 2:
+				exitFunction = false;
+				break;
+			default:
+				cout << "Invalid Option! Please Try Again";
+			}
+
+		}
+		else {
+			switch (displayMenu)
+			{
+			case 1:
+				system("cls");
+				currentPage = currentPage + 1;
+				currentrow = (currentPage - 1) * 5;
+
+				if (currentPage == maxPage) {
+					maxRow = 5 * (arraysize / 5) + (arraysize % 5);
+				}
+				else {
+					maxRow = 5 * currentPage;
+				}
+
+				cout << endl << string(193, '-') << endl << string(85, ' ') << displayString << endl << string(193, '-') << endl;
+
+				for (int row = currentrow; row < maxRow; row++) {
+
+					//Skip NULL values
+					if (tutor_info[row].tutorID != NULL) {
+
+						cout << tutor_info[row].tutorID << "\t| ";
+						cout << setw(10) << left << tutor_info[row].tutorName << "\t| ";
+						cout << tutor_info[row].dateJoin << "\t| ";
+						cout << setw(14) << left << tutor_info[row].dateTerminated << "\t| ";
+						cout << setw(8) << left << tutor_info[row].monthlyHour << "\t| ";
+						cout << setw(10) << left << tutor_info[row].hourlyRate << "\t| ";
+						cout << setw(10) << left << tutor_info[row].tutorPhone << "\t| ";
+						cout << setw(10) << left << tutor_info[row].tutorAddress << "\t| ";
+						cout << setw(10) << left << tutor_info[row].tutionName << "\t | ";
+						cout << setw(10) << left << tutor_info[row].subjectName << "\t | ";
+						cout << setw(5) << left << tutor_info[row].rating << "\t | ";
+						cout << setw(8) << left << tutor_info[row].payCheck << "\t | " << endl;
+					}
+				}
+				cout << string(193, '-') << endl;
+				cout << "Page  " << currentPage << endl;
+				break;
+			case 2:
+				system("cls");
+				currentPage = currentPage - 1;
+				currentrow = (currentPage - 1) * 5;
+
+				if (currentPage == maxPage) {
+					maxRow = 5 * (arraysize / 5) + (arraysize % 5);
+				}
+				else {
+					maxRow = 5 * currentPage;
+				}
+
+				cout << endl << string(193, '-') << endl << string(85, ' ') << displayString << endl << string(193, '-') << endl;
+
+				for (int row = currentrow; row < maxRow; row++) {
+
+					//Skip NULL values
+					if (tutor_info[row].tutorID != NULL) {
+
+						cout << tutor_info[row].tutorID << "\t| ";
+						cout << setw(10) << left << tutor_info[row].tutorName << "\t| ";
+						cout << tutor_info[row].dateJoin << "\t| ";
+						cout << setw(14) << left << tutor_info[row].dateTerminated << "\t| ";
+						cout << setw(8) << left << tutor_info[row].monthlyHour << "\t| ";
+						cout << setw(10) << left << tutor_info[row].hourlyRate << "\t| ";
+						cout << setw(10) << left << tutor_info[row].tutorPhone << "\t| ";
+						cout << setw(10) << left << tutor_info[row].tutorAddress << "\t| ";
+						cout << setw(10) << left << tutor_info[row].tutionName << "\t | ";
+						cout << setw(10) << left << tutor_info[row].subjectName << "\t | ";
+						cout << setw(5) << left << tutor_info[row].rating << "\t | ";
+						cout << setw(8) << left << tutor_info[row].payCheck << "\t | " << endl;
+					}
+				}
+				cout << string(193, '-') << endl;
+				cout << "Page  " << currentPage << endl;
+				break;
+
+			case 3:
+				exitFunction = false;
+				break;
+			default:
+				cout << "Invalid Option! Please Try Again";
+			}
 		}
 	}
 
