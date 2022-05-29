@@ -66,6 +66,7 @@ void AddTutor(Tutor tutor_info[]) {
 			bool exitDate = false;
 
 			while (exitDate != true) {
+				while (exitDate != true) {
 				cout << "Day (1-31): ";
 				while ((!(cin >> day)) || day < 1 || day > 31) {
 					cout << "Numbers 1-31 only: ";
@@ -135,6 +136,8 @@ void AddTutor(Tutor tutor_info[]) {
 				else {
 					cout << "Invalid date, please enter again." << endl;
 				}
+
+			}
 
 			}
 

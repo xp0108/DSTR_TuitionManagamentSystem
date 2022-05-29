@@ -4,6 +4,7 @@
 #include <string> 
 #include <ctime>    
 #include <sstream>
+#include <string>
 #include "DataStruct.h"
 #include "AdditionalFunction.h"
 
@@ -80,6 +81,8 @@ void CheckDeleteTutor(Tutor* selectedTutorID) {
 
 void UpdateTutorTerminateDate(Tutor* tutorLL) {
 	string updateTerminateDate;
+	int day, month, year;
+	string sday, smonth, syear;
 	cout << endl;
 	loopSymbol(100, "-");
 	cout << endl;
@@ -89,8 +92,89 @@ void UpdateTutorTerminateDate(Tutor* tutorLL) {
 	cout << endl << endl;
 
 	updateTerminateDate = tutorLL->dateTerminated;
-	cout << "Enter " << tutorLL->tutorName << "'s Termiantion Date: ";
-	cin >> updateTerminateDate;
+	cout << "Enter " << tutorLL->tutorName << "'s Termiantion Date: " <<endl;
+
+	//Validation for Termination Date
+	cout << "Day (1-31): ";
+	while ((!(cin >> day)) || day < 1 || day > 31) {
+		cout << "Numbers 1-31 only: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
+
+	cout << endl << endl;
+
+	cout << "Month (1-12): ";
+	while ((!(cin >> month)) || month < 1 || month > 12) {
+		cout << "Numbers 1-12 only: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
+
+	cout << endl << endl;
+
+	cout << "Year (4 digits): ";
+	while ((!(cin >> year)) || year < 1000 || year > 2100) {
+		cout << "Invalid year, input again: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
+
+	cout << endl << endl;
+
+	if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && day > 0 && day <= 31) {
+		cout << "It is valid" << endl;
+		sday = to_string(day);
+		smonth = to_string(month);
+		syear = to_string(year);
+		updateTerminateDate = sday + "/" + smonth + "/" + syear;
+		cout << endl;
+		cout << "Termination Date: " << updateTerminateDate << endl;
+
+
+	}
+	else if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 0 && day <= 30) {
+		cout << "It is Valid" << endl;
+		sday = to_string(day);
+		smonth = to_string(month);
+		syear = to_string(year);
+		updateTerminateDate = sday + "/" + smonth + "/" + syear;
+		cout << endl;
+		cout << "Termination Date: " << updateTerminateDate << endl;
+
+	}
+	else if (month == 2) {
+		if ((year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)) && day > 0 && day <= 29) {
+			cout << "It is Valid" << endl;
+			sday = to_string(day);
+			smonth = to_string(month);
+			syear = to_string(year);
+
+			//Combine the input day, month, year into dd/mm/yyyy format
+			updateTerminateDate = sday + "/" + smonth + "/" + syear;
+			cout << endl;
+			cout << "Termination Date: " << updateTerminateDate << endl;
+
+		}
+		else if (day > 0 && day <= 28) {
+			cout << "It is Valid" << endl;
+			sday = to_string(day);
+			smonth = to_string(month);
+			syear = to_string(year);
+			updateTerminateDate = sday + "/" + smonth + "/" + syear;
+			cout << endl;
+			cout << "Termination Date: " << updateTerminateDate << endl;
+
+		}
+		else {
+			cout << "Invalid date, please enter again." << endl;
+		}
+
+	}
+	else {
+		cout << "Invalid date, please enter again." << endl;
+	}
+
 	tutorLL->dateTerminated = updateTerminateDate;
 
 	cout << endl << "Tutor " << tutorLL->tutorName << "'s Termiantion Date Update Successfully !!!";
