@@ -29,7 +29,14 @@ void AddRatingKL(Tutor rating_info[]) {
 	// if the tutor id exists
 	else {
 		cout << "Enter rating: ";
-		cin >> rateValue;
+
+		//check if the user input is a integer and between 1 - 5
+		while (!(cin >> rateValue) || rateValue < 1 || rateValue > 5) {
+			cout << "Please insert number between 1-5 :";
+			cin.clear();
+			cin.ignore(123, '\n');
+		}
+
 		PushRating(rating_info, tutorID, rateValue);
 	}
 }
@@ -52,7 +59,14 @@ void AddRatingJohor(Tutor rating_info[]) {
 	// if the tutor exists
 	else {
 		cout << "Enter rating: ";
-		cin >> rateValue;
+
+		//check if the user input is a integer and between 1 - 5
+		while (!(cin >> rateValue) || rateValue < 1 || rateValue > 5) {
+			cout << "Please insert number between 1-5 :";
+			cin.clear();
+			cin.ignore(123, '\n');
+		}
+
 		PushRating(rating_info, tutorID, rateValue);
 	}
 }

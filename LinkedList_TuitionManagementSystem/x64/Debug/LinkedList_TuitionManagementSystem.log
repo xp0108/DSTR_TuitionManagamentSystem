@@ -1,5 +1,1 @@
-﻿  Main.cpp
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\SortOverallPerformance.h(13,24): warning C4101: 'rating': unreferenced local variable
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\CheckTutorID.h(41): warning C4715: 'CheckTutorID': not all control paths return a value
-C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\DeleteTutor.h(138): warning C4715: 'LinearSearchAndUpdateTutor': not all control paths return a value
-  LinkedList_TuitionManagementSystem.vcxproj -> C:\Users\cheio\OneDrive\Documents\GitHub\DSTR_TuitionManagamentSystem\LinkedList_TuitionManagementSystem\x64\Debug\LinkedList_TuitionManagementSystem.exe
+﻿LINK : fatal error LNK1104: cannot open file 'C:\Users\Hong Yen Wai\Desktop\DSTR\DSTR_TuitionManagementSystem v0.20\LinkedList_TuitionManagementSystem\x64\Debug\LinkedList_TuitionManagementSystem.exe'
