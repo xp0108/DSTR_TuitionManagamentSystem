@@ -7,6 +7,7 @@
 void DisplayTutor(Tutor tutor_info[], string displayString = "Tutor Records") {
 	system("cls");
 	int currentrow, maxRow, maxPage, arraysize = (sizeof(tutor_info)/ sizeof(* tutor_info)), currentPage = 1;
+
 	//5 rows of tutor's data in each Page
 	if (arraysize % 5 != 0) {
 		maxPage = (arraysize / 5) + 1;

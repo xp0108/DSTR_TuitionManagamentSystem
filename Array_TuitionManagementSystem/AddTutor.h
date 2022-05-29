@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <iterator>
 #include "DataStruc.h"
 #include "AddRating.h"
 
@@ -17,13 +18,26 @@ int CheckTutorID(int tutorID, Tutor tutor_info[], int arraysize) {
 	return -1;
 };
 
+int GetTutorSize(Tutor tutor_info[]) {
+	int size = 0;
+
+	for (int i = 0; i < 100; i++) {
+		if (!tutor_info[i].tutorName.empty()) {
+			size++;
+		}
+	}
+	return size;
+}
+
 void AddTutor(Tutor tutor_info[]) {
 
-	int id, day, month, year;
-	string tCenter, date, sday, smonth, syear;
-
+	int id;
+	string tCenter;
 	// add value to tutor_info
-	for (int row = 0; row < 100; row++) {
+	
+	int sizeTutor = GetTutorSize(tutor_info);
+	sizeTutor = sizeTutor + 1;
+	for (int row = sizeTutor; row < 100; row++) {
 		cout << "Tutor ID (integers only): ";
 
 		while (!(cin >> id)) {
@@ -32,133 +46,25 @@ void AddTutor(Tutor tutor_info[]) {
 			cin.ignore(123, '\n');
 		}
 
-		// check whether tutor id exists
 		int index = CheckTutorID(id, tutor_info, 100);
 
-		// if exists
 		if (index == 0) {
 			break;
 		}
-
-		// if not exists
 		else {
 
 			tutor_info[row].tutorID = id;
 			cout << "Full name: ";
 			cin >> tutor_info[row].tutorName;
-			cout << endl;
-			
-			// date format validation
-			cout << "Date joined: " << endl;
-			bool exitDate = false;
-
-			while (exitDate != true) {
-				cout << "Day (1-31): ";
-				while ((!(cin >> day)) || day < 1 || day > 31) {
-					cout << "Numbers 1-31 only: ";
-					cin.clear();
-					cin.ignore(123, '\n');
-				}
-				cout << "Month (1-12): ";
-				while ((!(cin >> month)) || month < 1 || month > 12) {
-					cout << "Numbers 1-12 only: ";
-					cin.clear();
-					cin.ignore(123, '\n');
-				}
-				cout << "Year (4 digits): ";
-				while ((!(cin >> year)) || year < 1000 || year > 2100) {
-					cout << "Invalid year, input again: ";
-					cin.clear();
-					cin.ignore(123, '\n');
-				}
-
-				if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && day > 0 && day <= 31){
-					cout << "It is valid" << endl;
-					sday = to_string(day);
-					smonth = to_string(month);
-					syear = to_string(year);
-					date = sday + "/" + smonth + "/" + syear;
-					cout << endl;
-					cout << "Date joined: " << date << endl;
-					exitDate = true;
-
-				}
-				else if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 0 && day <= 30) {
-					cout << "It is Valid" << endl;
-					sday = to_string(day);
-					smonth = to_string(month);
-					syear = to_string(year);
-					date = sday + "/" + smonth + "/" + syear;
-					cout << endl;
-					cout << "Date joined: " << date << endl;
-					exitDate = true;
-				}
-				else if (month == 2) {
-					if ((year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)) && day > 0 && day <= 29) {
-						cout << "It is Valid" << endl;
-						sday = to_string(day);
-						smonth = to_string(month);
-						syear = to_string(year);
-						date = sday + "/" + smonth + "/" + syear;
-						cout << endl;
-						cout << "Date joined: " << date << endl;
-						exitDate = true;
-					}
-					else if (day > 0 && day <= 28) {
-						cout << "It is Valid" << endl;
-						sday = to_string(day);
-						smonth = to_string(month);
-						syear = to_string(year);
-						date = sday + "/" + smonth + "/" + syear;
-						cout << endl;
-						cout << "Date joined: " << date << endl;
-						exitDate = true;
-					}
-					else {
-						cout << "Invalid date, please enter again." << endl;
-					}
-				
-				}
-				else {
-					cout << "Invalid date, please enter again." << endl;
-				}
-			
-			}
-			
-
-			tutor_info[row].dateJoin = date;
-			cout << endl;
+			cout << "Date joined: ";
+			cin >> tutor_info[row].dateJoin;
 			cout << "Working Hour: ";
-
-			// validate working hour integer
-			int verihour;
-			while (!(cin >> verihour)) {
-				cout << "Numbers only: ";
-				cin.clear();
-				cin.ignore(123, '\n');
-			}
-
-			tutor_info[row].monthlyHour = verihour;
-
-			// validate phone number length
-			string veriphone;
+			cin >> tutor_info[row].monthlyHour;
 			cout << "Phone number: ";
-			cin >> veriphone;
-
-			while (veriphone.length() < 10)
-			{
-				cout << "Invalid phone number, enter again: ";
-				cin.clear();
-				cin.ignore(123, '\n');
-				cin >> veriphone;
-			}
-
-			tutor_info[row].tutorPhone = veriphone;
-
+			cin >> tutor_info[row].tutorPhone;
 			cout << "Address: ";
 			cin >> tutor_info[row].tutorAddress;
 			cout << endl;
-
 			//Menu for Tuition Center
 			cout << "Tuition Center: ";
 			bool exitTuitionCenterMenu = true;
