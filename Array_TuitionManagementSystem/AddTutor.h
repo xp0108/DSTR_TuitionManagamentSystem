@@ -4,6 +4,8 @@
 #include "DataStruc.h"
 #include "AddRating.h"
 
+using namespace std;
+
 //check if the tutorID exist in the tutor_info array
 int CheckTutorID(int tutorID, Tutor tutor_info[], int arraysize) {
 	for (int i = 0; i < arraysize; i++) {
@@ -81,7 +83,7 @@ void AddTutor(Tutor tutor_info[]) {
 					exitDate = true;
 
 				}
-				else if (month == 4 || month == 6 || month == 9 || month == 11 && day > 0 && day <= 30) {
+				else if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 0 && day <= 30) {
 					cout << "It is Valid" << endl;
 					sday = to_string(day);
 					smonth = to_string(month);
@@ -117,6 +119,9 @@ void AddTutor(Tutor tutor_info[]) {
 					}
 				
 				}
+				else {
+					cout << "Invalid date, please enter again." << endl;
+				}
 			
 			}
 			
@@ -128,22 +133,26 @@ void AddTutor(Tutor tutor_info[]) {
 			// validate working hour integer
 			int verihour;
 			while (!(cin >> verihour)) {
-				cout << endl << "Invalid Input !!!" << endl;
+				cout << "Numbers only: ";
 				cin.clear();
 				cin.ignore(123, '\n');
 			}
 
 			tutor_info[row].monthlyHour = verihour;
 
-			cout << "Phone number: ";
-
 			// validate phone number length
 			string veriphone;
-			while (veriphone.length() < 10) {
-				cout << endl << "Minimum 10 characters: " << endl;
+			cout << "Phone number: ";
+			cin >> veriphone;
+
+			while (veriphone.length() < 10)
+			{
+				cout << "Invalid phone number, enter again: ";
 				cin.clear();
 				cin.ignore(123, '\n');
+				cin >> veriphone;
 			}
+
 			tutor_info[row].tutorPhone = veriphone;
 
 			cout << "Address: ";
