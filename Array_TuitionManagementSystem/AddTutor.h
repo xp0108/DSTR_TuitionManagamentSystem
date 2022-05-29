@@ -28,11 +28,15 @@ void AddTutor(Tutor tutor_info[]) {
 			cin.ignore(123, '\n');
 		}
 
+		// check whether tutor id exists
 		int index = CheckTutorID(id, tutor_info, 100);
 
+		// if exists
 		if (index == 0) {
 			break;
 		}
+
+		// if not exists
 		else {
 
 			tutor_info[row].tutorID = id;

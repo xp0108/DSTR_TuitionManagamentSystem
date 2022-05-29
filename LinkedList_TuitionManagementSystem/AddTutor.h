@@ -220,7 +220,7 @@ void AddTutor() {
 				}
 			}
 			cout << endl;
-			check = work + rate;
+			check = work * rate;
 			cout << endl;
 
 			Tutor* newNode = AddNode(id, name, dateJ, work, rate, phone, addr, tname, sname, 0, check);
