@@ -3,6 +3,19 @@
 #include "DataStruc.h"
 
 void GenerateData(Tutor tutor_info[]) {
+    tutor_info[0].tutorID = 5;
+    tutor_info[0].tutorName = "xp";
+    tutor_info[0].dateJoin = "11/05/2021";
+    tutor_info[0].dateTerminated = "";
+    tutor_info[0].monthlyHour = 10;
+    tutor_info[0].hourlyRate = 60;
+    tutor_info[0].tutorPhone = "0123456789";
+    tutor_info[0].tutorAddress = "Bukit Jalil";
+    tutor_info[0].tutionName = "KL";
+    tutor_info[0].subjectName = "History";
+    tutor_info[0].rating = 0;
+    tutor_info[0].payCheck = tutor_info[0].monthlyHour * tutor_info[0].hourlyRate;
+
     tutor_info[1].tutorID = 99;
     tutor_info[1].tutorName = "Onn";
     tutor_info[1].dateJoin = "11/05/2021";
