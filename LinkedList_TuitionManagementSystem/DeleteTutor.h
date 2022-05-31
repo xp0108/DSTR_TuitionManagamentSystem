@@ -4,11 +4,20 @@
 #include <string> 
 #include <ctime>    
 #include <sstream>
+#include <string>
 #include "DataStruct.h"
 #include "AdditionalFunction.h"
 
 using namespace std;
 
+bool isNumber(const string& s)
+{
+	for (char const& ch : s) {
+		if (isdigit(ch) == 0)
+			return false;
+	}
+	return true;
+}
 
 void CheckDeleteTutor(Tutor* selectedTutorID) {
 	time_t getTodayTime = time(0);
@@ -20,66 +29,74 @@ void CheckDeleteTutor(Tutor* selectedTutorID) {
 
 	//get terminated date and split
 	string terminatedDate = selectedTutorID->dateTerminated;
-	cout << endl << "Termination Date: " << selectedTutorID->dateTerminated << "\t" << selectedTutorID->tutorName << endl << endl;
-	stringstream splitedTerminatedDate(terminatedDate);
-	vector<int> outputSplitedTD;
-	int i;
-	while (splitedTerminatedDate >> i) {
-		outputSplitedTD.push_back(i);
-		splitedTerminatedDate.ignore(1);
-	}
 
-	int dayITD = outputSplitedTD[0];
-	int monthITD = outputSplitedTD[1];
-	int yearITD = outputSplitedTD[2];
+	//Validate termination date, is equal to date. 
+	bool isInt = isNumber(terminatedDate);
 
-	Date dateTerminated = { dayITD,monthITD,yearITD };
-	Date dateToday = { todayDay, todayMonth, todayYear };
+	if (isInt == 1) {
+		stringstream splitedTerminatedDate(terminatedDate);
+		vector<int> outputSplitedTD;
+		int i;
+		while (splitedTerminatedDate >> i) {
+			outputSplitedTD.push_back(i);
+			splitedTerminatedDate.ignore(1);
+		}
 
-	int diffDate = CountDiffDate(dateTerminated, dateToday);
+		int dayITD = outputSplitedTD[0];
+		int monthITD = outputSplitedTD[1];
+		int yearITD = outputSplitedTD[2];
 
-	if (diffDate >= 183)
-	{
+		Date dateTerminated = { dayITD,monthITD,yearITD };
+		Date dateToday = { todayDay, todayMonth, todayYear };
 
-		cout << "Yes Please Delete" << endl;
-		//Delete Node
+		int diffDate = CountDiffDate(dateTerminated, dateToday);
 
-		//if is the selected item is located in the 1st node
-		if (head->tutorID == selectedTutorID->tutorID) {
-			Tutor* current = head;
-			head = head->nextAddress;
-			delete current;
+		if (diffDate >= 183)
+		{
+
+			cout << "Yes Please Delete" << endl;
+			//Delete Node
+
+			//if is the selected item is located in the 1st node
+			if (head->tutorID == selectedTutorID->tutorID) {
+				Tutor* current = head;
+				head = head->nextAddress;
+				delete current;
+			}
+			else
+			{
+				// Delete for not equal to 1st node
+				Tutor* current = head->nextAddress; //start from second node to check the keyword
+				//need to find out wherethe to delete the keyword is the current or need to move on
+				Tutor* previous = head; // standby during deletion
+				while (current != NULL)
+				{
+					if (current->tutorID == selectedTutorID->tutorID)
+					{
+						// delete the current
+						previous->nextAddress = current->nextAddress;
+						delete current;
+						return;
+					}
+					previous = current;
+					current = current->nextAddress;
+				}
+			}
+
 		}
 		else
 		{
-			// Delete for not equal to 1st node
-			Tutor* current = head->nextAddress; //start from second node to check the keyword
-			//need to find out wherethe to delete the keyword is the current or need to move on
-			Tutor* previous = head; // standby during deletion
-			while (current != NULL)
-			{
-				if (current->tutorID == selectedTutorID->tutorID)
-				{
-					// delete the current
-					previous->nextAddress = current->nextAddress;
-					delete current;
-					return;
-				}
-				previous = current;
-				current = current->nextAddress;
-			}
+			cout << "Not reach the due yet" << endl;
 		}
-
-	}
-	else
-	{
-		cout << "Not reach the due yet" << endl;
 	}
 
+	cout << "PLEASE UPDATE TERMINATION DATE !!!!";
 }
 
 void UpdateTutorTerminateDate(Tutor* tutorLL) {
 	string updateTerminateDate;
+	int day, month, year;
+	string sday, smonth, syear;
 	cout << endl;
 	loopSymbol(100, "-");
 	cout << endl;
@@ -89,8 +106,90 @@ void UpdateTutorTerminateDate(Tutor* tutorLL) {
 	cout << endl << endl;
 
 	updateTerminateDate = tutorLL->dateTerminated;
-	cout << "Enter " << tutorLL->tutorName << "'s Termiantion Date: ";
-	cin >> updateTerminateDate;
+	cout << "Enter " << tutorLL->tutorName << "'s Termiantion Date: " << endl;
+
+
+	//Validation for Termination Date
+	cout << "Day (1-31): ";
+	while ((!(cin >> day)) || day < 1 || day > 31) {
+		cout << "Numbers 1-31 only: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
+
+	cout << endl << endl;
+
+	cout << "Month (1-12): ";
+	while ((!(cin >> month)) || month < 1 || month > 12) {
+		cout << "Numbers 1-12 only: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
+
+	cout << endl << endl;
+
+	cout << "Year (4 digits): ";
+	while ((!(cin >> year)) || year < 1000 || year > 2100) {
+		cout << "Invalid year, input again: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
+
+	cout << endl << endl;
+
+	if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && day > 0 && day <= 31) {
+		cout << "It is valid" << endl;
+		sday = to_string(day);
+		smonth = to_string(month);
+		syear = to_string(year);
+		updateTerminateDate = sday + "/" + smonth + "/" + syear;
+		cout << endl;
+		cout << "Termination Date: " << updateTerminateDate << endl;
+
+
+	}
+	else if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 0 && day <= 30) {
+		cout << "It is Valid" << endl;
+		sday = to_string(day);
+		smonth = to_string(month);
+		syear = to_string(year);
+		updateTerminateDate = sday + "/" + smonth + "/" + syear;
+		cout << endl;
+		cout << "Termination Date: " << updateTerminateDate << endl;
+
+	}
+	else if (month == 2) {
+		if ((year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)) && day > 0 && day <= 29) {
+			cout << "It is Valid" << endl;
+			sday = to_string(day);
+			smonth = to_string(month);
+			syear = to_string(year);
+
+			//Combine the input day, month, year into dd/mm/yyyy format
+			updateTerminateDate = sday + "/" + smonth + "/" + syear;
+			cout << endl;
+			cout << "Termination Date: " << updateTerminateDate << endl;
+
+		}
+		else if (day > 0 && day <= 28) {
+			cout << "It is Valid" << endl;
+			sday = to_string(day);
+			smonth = to_string(month);
+			syear = to_string(year);
+			updateTerminateDate = sday + "/" + smonth + "/" + syear;
+			cout << endl;
+			cout << "Termination Date: " << updateTerminateDate << endl;
+
+		}
+		else {
+			cout << "Invalid date, please enter again." << endl;
+		}
+
+	}
+	else {
+		cout << "Invalid date, please enter again." << endl;
+	}
+
 	tutorLL->dateTerminated = updateTerminateDate;
 
 	cout << endl << "Tutor " << tutorLL->tutorName << "'s Termiantion Date Update Successfully !!!";
