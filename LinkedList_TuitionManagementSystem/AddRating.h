@@ -89,8 +89,8 @@ void JohorAddRating() {
 		// while tutor data is not empty	
 		while (temp != NULL) {
 
-			// if the tutorID is found and tuitionName is Johor
-			if (temp->tutorID == ID && temp->tutionName == "Johor") {
+			// if the tutorID is found and tuitionName is JOHOR
+			if (temp->tutorID == ID && temp->tutionName == "JOHOR") {
 				cout << "Tutor ID found. " << endl << endl;
 
 				// save the existing rating into oldrating variable
