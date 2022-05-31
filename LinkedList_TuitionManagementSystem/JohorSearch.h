@@ -57,7 +57,7 @@ void JohorSearchTutorByTutorID() { // no need pass the pointer, store in memory,
 //search multiple tutor in tutor list with rating
 void JohorSearchTutorByRating() {
 	Tutor* temp = head;
-	int rating;
+	double rating;
 	bool exist = false;
 
 	cout << "Enter the rating you want to search: ";

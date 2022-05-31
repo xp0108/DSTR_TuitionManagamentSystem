@@ -9,6 +9,7 @@ void HourlyRateSelectionSortLL()
     Tutor* current = head;
     Tutor* index = NULL;
     int id;
+	
     string name, dateJ, dateT, phone, address, tname, sname;
     double work, rate, check;
 

@@ -73,7 +73,7 @@ void UpdateTutorRating(Tutor* tutorLL) {
 
 	cout << endl << endl;
 	double oldrating = tutorLL->rating;
-	cout << "Enter " << tutorLL->tutorName << "'s Address: ";
+	cout << "Enter " << tutorLL->tutorName << "'s Rating: ";
 
 	//validation - check if the user input is a integer and between 1 - 5
 	while (!(cin >> updateTutorRating) || updateTutorRating < 1 || updateTutorRating > 5) {

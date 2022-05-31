@@ -57,7 +57,7 @@ void KLSearchTutorByTutorID() { // no need pass the pointer, store in memory, js
 //search multiple tutor in tutor list with rating
 void KLSearchTutorByRating() {
 	Tutor* temp = head;
-	int rating;
+	double rating;
 	bool exist = false;
 	
 	cout << "Enter the rating you want to search: ";
