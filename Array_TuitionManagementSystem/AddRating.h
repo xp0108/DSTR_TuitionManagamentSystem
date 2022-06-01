@@ -17,7 +17,11 @@ void AddRatingKL(Tutor rating_info[]) {
 	int id;
 
 	cout << "Enter tutor ID: ";
-	cin >> id;
+	while (!(cin >> id)) {
+		cout << "Integer Only. Tutor ID: ";
+		cin.clear();
+		cin.ignore(123, '\n');
+	}
 
 	// check existance of tutor id in kl branch
 	int tutorID = klLinearSearchTutor(rating_info, id);
